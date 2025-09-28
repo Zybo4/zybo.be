@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -21,36 +20,76 @@
   </div>
   <h1>Projets</h1>
   <div class="grid">
+    
+    <!-- Projet CI/CD -->
     <div class="card">
-      <h2>CI/CD GitHub Pages</h2>
-      <p>Pipeline minimal avec GitHub Actions pour déployer automatiquement le site après chaque <em>push</em>.</p>
-      <p><span class="tag">DevOps</span></p>
-      <pre><code>on: push
+      <h2>🚀 CI/CD GitHub Pages</h2>
+      <p>
+        Mise en place d’un pipeline <strong>CI/CD</strong> avec <strong>GitHub Actions</strong>. 
+        Chaque fois que je fais un <em>push</em> sur la branche <code>main</code>, 
+        le site est automatiquement déployé sur <strong>zybo.be</strong>.
+      </p>
+      <p><span class="tag">DevOps</span> <span class="tag">CI/CD</span> <span class="tag">GitHub Actions</span></p>
+      <h3>Workflow YAML</h3>
+      <pre><code>name: Deploy website
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - uses: actions/checkout@v4
-      # Build si besoin
-      - uses: actions/upload-pages-artifact@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
-      - uses: actions/deploy-pages@v4</code></pre>
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4</code></pre>
     </div>
+
+    <!-- Projet SSH -->
     <div class="card">
-      <h2>Durcissement SSH</h2>
-      <p>Exemple de configuration sécurisée : désactiver root, forcer les clés, changer le port, fail2ban, etc.</p>
+      <h2>🛡️ Durcissement SSH</h2>
+      <p>
+        Exemple de configuration sécurisée sur un serveur Linux : 
+        désactiver root, forcer les clés, changer le port, activer fail2ban.
+      </p>
       <p><span class="tag">Sécurité</span></p>
       <pre><code>PermitRootLogin no
 PasswordAuthentication no
 PubkeyAuthentication yes
 Port 2222</code></pre>
     </div>
+
+    <!-- Projet Monitoring -->
     <div class="card">
-      <h2>Monitoring gratuit</h2>
-      <p>Utilisation de Grafana Cloud (free) + node_exporter local pour visualiser CPU/RAM.</p>
+      <h2>📊 Monitoring gratuit</h2>
+      <p>
+        Mise en place de <strong>Grafana Cloud (free)</strong> + <code>node_exporter</code> local 
+        pour collecter et visualiser des métriques système (CPU, RAM, disque).
+      </p>
       <p><span class="tag">Sysadmin</span></p>
     </div>
+
   </div>
 </div>
 </body>
