@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mini Dashboard — État du serveur | Zybo</title>
+  <meta name="description" content="Mini dashboard pour vérifier l'état de services (uptime & latence) — zybo.be">
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid #22324e}
+    .ok{background:#0f2b1e;border-color:#1e4d39;color:#b6ffd4}
+    .bad{background:#2b0f12;border-color:#4d1e24;color:#ffb6c1}
+    .warn{background:#2b2610;border-color:#4d4320;color:#ffe4a3}
+    .muted{color:var(--muted)}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+    .small{font-size:12px}
+    .stack{display:flex;flex-direction:column;gap:6px}
+    .row{display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .skeleton{background:linear-gradient(90deg,#0b1222 25%,#111a2f 37%,#0b1222 63%);border-radius:8px;background-size:400% 100%;animation:skeleton 1.4s ease infinite;height:12px}
+    @keyframes skeleton{0%{background-position:100% 50%}100%{background-position:0 50%}}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <a href="/">Accueil</a>
+    <a href="/projects.html">Projets</a>
+    <a href="/lab/">Lab Réseau</a>
+    <a href="/devops/">DevOps</a>
+    <a href="/security/">Sécurité</a>
+    <a href="/marketing/">Marketing</a>
+    <a href="/legal/">Legal/RGPD</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+
+  <div class="card">
+    <span class="badge">Zybo.be</span>
+    <h1>📊 Mini Dashboard — État des services</h1>
+    <p>Contrôles <em>client-side</em> (sans serveur) toutes les 10&nbsp;s : <strong>UP/DOWN</strong>, <strong>latence</strong>, <strong>HTTP</strong>. Idéal pour commencer, puis on branchera ta VM avec de vraies métriques (Prometheus/Grafana).</p>
+    <p class="small muted">Note : certains services peuvent bloquer les requêtes cross‑origin (CORS). Dans ce cas, le statut affichera <em>bloqué</em> même si le service est UP.</p>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <h2>🔎 Services surveillés</h2>
+      <div>
+        <button class="btn" id="refreshBtn" title="Forcer un rafraîchissement">Rechecker</button>
+      </div>
+    </div>
+    <div class="status-grid" id="cards">
+      <!-- Cards injected by JS -->
+    </div>
+    <p class="small muted">Auto-refresh : <span id="refreshEvery">10 s</span> • Dernier check : <span id="lastCheck">—</span></p>
+  </div>
+
+  <div class="card">
+    <h2>➕ Ajouter tes propres endpoints</h2>
+    <p>Édite le tableau <code>targets</code> dans le script ci-dessous pour ajouter des URLs (APIs, pages d'app, etc.). Pour tes services privés (ex: VM), veille à autoriser CORS ou passe via un petit proxy/heartbeat.</p>
+  </div>
+
+  <div class="footer">© 2025 Redouane Boufdan — zybo.be</div>
+</div>
+
+<script>
+const targets = [
+  {
+    id: 'site',
+    name: 'Zybo (ce site)',
+    url: '/',              // même origine
+    expects: 200
+  },
+  {
+    id: 'gh_api',
+    name: 'GitHub API',
+    url: 'https://api.github.com/',
+    expects: 200
+  },
+  {
+    id: 'dns_google',
+    name: 'Google DNS over HTTPS (résolution zybo.be)',
+    url: 'https://dns.google/resolve?name=zybo.be&type=A',
+    expects: 200
+  },
+  {
+    id: 'grafana',
+    name: 'Grafana.com (réf)',
+    url: 'https://grafana.com/',
+    expects: 200
+  }
+];
+
+const cards = document.getElementById('cards');
+const lastCheck = document.getElementById('lastCheck');
+const refreshBtn = document.getElementById('refreshBtn');
+
+function fmt(dt){
+  return new Date(dt).toLocaleString(undefined, {hour12:false});
+}
+function ms(v){
+  return typeof v === 'number' ? v.toFixed(0)+' ms' : '—';
+}
+function badge(status){
+  if(status==='UP') return '<span class="chip ok">● UP</span>';
+  if(status==='WARN') return '<span class="chip warn">● WARN</span>';
+  if(status==='CORS') return '<span class="chip warn">● bloqué (CORS)</span>';
+  return '<span class="chip bad">● DOWN</span>';
+}
+
+function cardSkeleton(t){
+  return `
+  <div class="card" id="card-${t.id}">
+    <div class="row">
+      <h3>${t.name}</h3>
+      <span class="chip muted small">test en cours…</span>
+    </div>
+    <div class="stack">
+      <div class="row"><span class="muted small">Statut</span><div class="skeleton" style="width:80px"></div></div>
+      <div class="row"><span class="muted small">Latence</span><div class="skeleton" style="width:60px"></div></div>
+      <div class="row"><span class="muted small">HTTP</span><div class="skeleton" style="width:50px"></div></div>
+      <div class="row"><span class="muted small">Détails</span><div class="skeleton" style="width:120px"></div></div>
+    </div>
+  </div>`;
+}
+
+function renderSkeletons(){
+  cards.innerHTML = targets.map(cardSkeleton).join('');
+}
+renderSkeletons();
+
+async function checkTarget(t){
+  const start = performance.now();
+  let status = 'DOWN', latency = null, http = '—', details = '';
+  try{
+    const ctrl = new AbortController();
+    const timeout = setTimeout(() => ctrl.abort('timeout'), 8000);
+    const res = await fetch(t.url, {method:'GET', cache:'no-store', signal: ctrl.signal});
+    clearTimeout(timeout);
+    latency = performance.now() - start;
+    http = res.status;
+    if(res.ok){
+      status = 'UP';
+      if(t.expects && res.status !== t.expects){ status = 'WARN'; details = 'Code inattendu'; }
+    }else{
+      // Certaines pages renvoient 0/opaque/no-cors → essayer de détecter CORS
+      details = 'Réponse non OK';
+    }
+  }catch(err){
+    if(err && (''+err).includes('TypeError: Failed to fetch')){
+      status = 'CORS';
+      details = 'Requête bloquée (CORS) ou réseau';
+    }else if(err && (''+err).includes('abort')){
+      status = 'DOWN';
+      details = 'Timeout';
+    }else{
+      status = 'DOWN';
+      details = (err && err.message) ? err.message : 'Erreur inconnue';
+    }
+  }
+  return {id:t.id,name:t.name,url:t.url,status,latency,http,details};
+}
+
+function renderResult(r){
+  const el = document.getElementById('card-'+r.id);
+  if(!el) return;
+  el.innerHTML = `
+    <div class="row">
+      <h3>${r.name}</h3>
+      ${badge(r.status)}
+    </div>
+    <div class="stack mono small">
+      <div class="row"><span class="muted">Latence</span><span>${ms(r.latency)}</span></div>
+      <div class="row"><span class="muted">HTTP</span><span>${r.http}</span></div>
+      <div class="row"><span class="muted">URL</span><span>${r.url}</span></div>
+      <div class="row"><span class="muted">Note</span><span>${r.details || '—'}</span></div>
+    </div>
+  `;
+}
+
+async function runAll(){
+  renderSkeletons();
+  const results = await Promise.all(targets.map(checkTarget));
+  results.forEach(renderResult);
+  lastCheck.textContent = fmt(Date.now());
+}
+
+let interval = null;
+function startAuto(){
+  runAll();
+  interval = setInterval(runAll, 10000);
+}
+refreshBtn.addEventListener('click', runAll);
+startAuto();
+</script>
+</body>
+</html>

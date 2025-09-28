@@ -47,7 +47,6 @@ ExecStart=/usr/local/bin/node_exporter
 [Install]
 WantedBy=multi-user.target
 EOF
-sudo mkdir -p /var/lib/node_exporter &amp;&amp; sudo chown node_exporter:node_exporter /var/lib/node_exporter
 sudo systemctl daemon-reload
 sudo systemctl enable --now node_exporter
 sudo systemctl status node_exporter --no-pager</code></pre>
@@ -58,8 +57,6 @@ sudo systemctl status node_exporter --no-pager</code></pre>
     <h2>2) Créer un compte Grafana Cloud (free)</h2>
     <p>Créer un stack gratuit, puis ajouter une source de données <strong>Prometheus</strong>.
     Dans “Prometheus remote write”, récupère l’URL et le token.</p>
-    <p>Option A (simple) : utiliser l’agent Grafana Agent.<br>
-       Option B (rapide pour démo) : laisser node_exporter exposé et ajouter un dashboard “Node Exporter Full”.</p>
   </div>
 
   <div class="card">
