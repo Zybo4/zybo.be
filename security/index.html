@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -19,10 +18,61 @@
     <a href="/legal/">Legal/RGPD</a>
     <a href="/contact.html">Contact</a>
   </div>
-  <h1>Sécurité</h1>
+
+  <h1>🛡️ Sécurité</h1>
+
   <div class="card">
-    <p>Guides durcissement, démonstrations contrôlées, bonnes pratiques et conformité.</p>
+    <p>
+      Dans cette section, je documente mes travaux de cybersécurité : 
+      <strong>durcissement de serveurs</strong>, démonstrations de vulnérabilités contrôlées,
+      bonnes pratiques et conformité.
+    </p>
   </div>
+
+  <!-- Projet : SSH Hardening -->
+  <div class="card">
+    <h2>🔐 Durcissement SSH</h2>
+    <p>
+      Exemple pratique de sécurisation d’un serveur Linux via la configuration SSH.
+      On compare la situation <strong>avant</strong> (non sécurisé) et <strong>après</strong> (durci).
+    </p>
+
+    <h3>Avant (configuration par défaut, risquée) ❌</h3>
+    <pre><code># /etc/ssh/sshd_config
+PermitRootLogin yes
+PasswordAuthentication yes
+PubkeyAuthentication yes
+Port 22</code></pre>
+
+    <p>Problèmes :</p>
+    <ul>
+      <li>Connexion root autorisée → risque d’attaque par force brute.</li>
+      <li>Authentification par mot de passe → vulnérable aux attaques dictionnaires.</li>
+      <li>Port standard 22 → facilement ciblé par les bots.</li>
+    </ul>
+
+    <h3>Après (durcissement appliqué) ✅</h3>
+    <pre><code># /etc/ssh/sshd_config
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+Port 2222
+
+# Installation et activation de fail2ban
+sudo apt install fail2ban -y
+systemctl enable fail2ban --now</code></pre>
+
+    <p>Améliorations :</p>
+    <ul>
+      <li><strong>Root interdit</strong> → les attaquants doivent deviner un utilisateur normal.</li>
+      <li><strong>Clés SSH obligatoires</strong> → bien plus sécurisé que les mots de passe.</li>
+      <li><strong>Port personnalisé (2222)</strong> → réduit le bruit des scans automatiques.</li>
+      <li><strong>fail2ban</strong> → bloque automatiquement les IP après plusieurs tentatives.</li>
+    </ul>
+
+    <p><span class="tag">Linux</span> <span class="tag">SSH</span> <span class="tag">Cybersécurité</span></p>
+  </div>
+
 </div>
 </body>
 </html>
