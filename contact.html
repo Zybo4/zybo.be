@@ -1,0 +1,37 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Zybo</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <a href="/">Accueil</a>
+    <a href="/projects.html">Projets</a>
+    <a href="/lab/">Lab Réseau</a>
+    <a href="/devops/">DevOps</a>
+    <a href="/security/">Sécurité</a>
+    <a href="/marketing/">Marketing</a>
+    <a href="/legal/">Legal/RGPD</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+  <h1>Contact</h1>
+  <div class="card">
+    <p>Formulaire via <a href="https://formspree.io/" target="_blank">Formspree</a>. Remplacez l'URL d'action par la vôtre.</p>
+    <form method="POST" action="https://formspree.io/f/your_form_id">
+      <div class="row">
+        <div><label>Nom</label><input name="name" required></div>
+        <div><label>Email</label><input name="_replyto" type="email" required></div>
+      </div>
+      <label>Message</label>
+      <textarea name="message" rows="6" required></textarea>
+      <p><button class="btn" type="submit">Envoyer</button></p>
+    </form>
+  </div>
+</div>
+</body>
+</html>

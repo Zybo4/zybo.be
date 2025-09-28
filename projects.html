@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projets — Zybo</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <a href="/">Accueil</a>
+    <a href="/projects.html">Projets</a>
+    <a href="/lab/">Lab Réseau</a>
+    <a href="/devops/">DevOps</a>
+    <a href="/security/">Sécurité</a>
+    <a href="/marketing/">Marketing</a>
+    <a href="/legal/">Legal/RGPD</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+  <h1>Projets</h1>
+  <div class="grid">
+    <div class="card">
+      <h2>CI/CD GitHub Pages</h2>
+      <p>Pipeline minimal avec GitHub Actions pour déployer automatiquement le site après chaque <em>push</em>.</p>
+      <p><span class="tag">DevOps</span></p>
+      <pre><code>on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Build si besoin
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4</code></pre>
+    </div>
+    <div class="card">
+      <h2>Durcissement SSH</h2>
+      <p>Exemple de configuration sécurisée : désactiver root, forcer les clés, changer le port, fail2ban, etc.</p>
+      <p><span class="tag">Sécurité</span></p>
+      <pre><code>PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+Port 2222</code></pre>
+    </div>
+    <div class="card">
+      <h2>Monitoring gratuit</h2>
+      <p>Utilisation de Grafana Cloud (free) + node_exporter local pour visualiser CPU/RAM.</p>
+      <p><span class="tag">Sysadmin</span></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
