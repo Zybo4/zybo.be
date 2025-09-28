@@ -22,22 +22,25 @@
 
   <h1>Contact</h1>
   <div class="card">
-    <p>Ce formulaire ouvrira votre application mail et pré-remplira les champs pour envoyer à <strong>Redouaneboufdan@outlook.com</strong>.</p>
+    <p>Utilisez ce formulaire pour m’envoyer un message. Les mails arrivent directement dans ma boîte Outlook 📩.</p>
 
-    <form action="mailto:Redouaneboufdan@outlook.com?subject=Contact%20depuis%20Zybo.be" method="post" enctype="text/plain">
+    <form action="https://formspree.io/f/xblzdnaj" method="POST">
       <div class="row">
         <div>
-          <label>Nom</label>
-          <input type="text" name="Nom" required>
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required>
         </div>
         <div>
-          <label>Email</label>
-          <input type="email" name="Email" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
         </div>
       </div>
 
-      <label>Message</label>
-      <textarea name="Message" rows="6" required></textarea>
+      <label for="subject">Sujet</label>
+      <input type="text" id="subject" name="subject" placeholder="Sujet du message" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
 
       <p><button class="btn" type="submit">Envoyer</button></p>
     </form>
