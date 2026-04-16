@@ -3,84 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Monitoring — Zybo</title>
+  <title>Suivi et monitoring | Zybo</title>
+  <meta name="description" content="Exemple de page Zybo dédiée au suivi, monitoring et pilotage d'outils ou d'infrastructures.">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-<div class="container">
-  <div class="nav">
-      <a href="/">Accueil</a>
-      <a href="/projects.html">Projets</a>
-      <a href="/lab/">Lab Réseau</a>
-      <a href="/devops/">DevOps</a>
-      <a href="/security/">Sécurité</a>
-      <a href="/marketing/">Marketing</a>
-      <a href="/legal/">Legal/RGPD</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/server-status.html">Status</a>
+  <div class="site-shell">
+    <div class="container">
+      <header class="topbar">
+        <a class="brand" href="/">
+          <div class="brand-mark">ZB</div>
+          <div class="brand-copy">
+            <strong>Zybo</strong>
+            <span>Informatique, web et visibilité</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="/">Accueil</a>
+          <a href="/projects.html">Solutions</a>
+          <a href="/devops/">Sites web</a>
+          <a href="/marketing/">Visibilité</a>
+          <a href="/legal/">Immobilier</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero-panel page-hero">
+          <p class="eyebrow">Pilotage et suivi</p>
+          <h1>Exemple de page de monitoring et d'analyse.</h1>
+          <p>Cette page montre qu'un service digital peut aussi intégrer un volet de suivi, d'indicateurs ou de contrôle pour garder une vision claire de la performance.</p>
+        </section>
+
+        <section class="grid grid-2">
+          <article class="card">
+            <h2>Pourquoi intégrer du suivi ?</h2>
+            <ul class="check-list">
+              <li>Identifier plus vite les lenteurs ou erreurs</li>
+              <li>Garder un œil sur les performances clés</li>
+              <li>Montrer une approche sérieuse et structurée</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h2>Cas d'usage</h2>
+            <p>Tableaux de bord internes, suivi de pages stratégiques, contrôle de disponibilité, supervision légère ou reporting pour clients et partenaires.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span><strong>Zybo</strong> | Monitoring et pilotage</span>
+        <span>Pages techniques avec la même identité visuelle</span>
+      </footer>
     </div>
-
-  <h1>📊 Monitoring gratuit (Grafana Cloud + node_exporter)</h1>
-
-  <div class="card">
-    <p>Objectif : collecter CPU/RAM/Disque d’une machine Linux et les afficher sur un dashboard
-    <strong>gratuit</strong> avec Grafana Cloud. Idéal pour un rôle Sysadmin/DevOps.</p>
-    <p><span class="tag">Sysadmin</span> <span class="tag">Monitoring</span> <span class="tag">Grafana</span></p>
   </div>
-
-  <div class="card">
-    <h2>1) Installer <code>node_exporter</code> sur la machine</h2>
-    <p>Sur une VM Ubuntu :</p>
-    <pre><code>sudo useradd --no-create-home --shell /usr/sbin/nologin node_exporter
-VER="1.8.1"
-curl -L -o node_exporter.tar.gz https://github.com/prometheus/node_exporter/releases/download/v${VER}/node_exporter-${VER}.linux-amd64.tar.gz
-tar -xzf node_exporter.tar.gz
-sudo mv node_exporter-${VER}.linux-amd64/node_exporter /usr/local/bin/
-sudo tee /etc/systemd/system/node_exporter.service &lt;&lt;'EOF'
-[Unit]
-Description=Prometheus Node Exporter
-After=network-online.target
-[Service]
-User=node_exporter
-Group=node_exporter
-Type=simple
-ExecStart=/usr/local/bin/node_exporter
-[Install]
-WantedBy=multi-user.target
-EOF
-sudo systemctl daemon-reload
-sudo systemctl enable --now node_exporter
-sudo systemctl status node_exporter --no-pager</code></pre>
-    <p>Par défaut, les métriques sont exposées sur <code>http://&lt;IP_VM&gt;:9100/metrics</code>.</p>
-  </div>
-
-  <div class="card">
-    <h2>2) Créer un compte Grafana Cloud (free)</h2>
-    <p>Créer un stack gratuit, puis ajouter une source de données <strong>Prometheus</strong>.
-    Dans “Prometheus remote write”, récupère l’URL et le token.</p>
-  </div>
-
-  <div class="card">
-    <h2>3) Importer un dashboard</h2>
-    <p>Dans Grafana &rarr; Dashboards &rarr; Import &rarr; cherche “Node Exporter”.
-       Tu obtiens CPU, mémoire, disque, réseau, load average…</p>
-  </div>
-
-  <div class="card">
-    <h2>4) Résultat et analyse</h2>
-    <ul>
-      <li>CPU : pics d’usage = charge applicative ou process anormal.</li>
-      <li>RAM : proche de 100% = swap/latences.</li>
-      <li>Disque : seuil d’alerte à &gt; 80% d’occupation.</li>
-    </ul>
-    <p>Ajoute une capture de ton dashboard ici pour ton portfolio.</p>
-  </div>
-
-  <div class="card">
-    <h2>5) Bonus (alertes)</h2>
-    <p>Configure des alertes (CPU &gt; 90% pendant 5 min, Disque &lt; 20% libre) pour recevoir un email.</p>
-  </div>
-
-</div>
 </body>
 </html>

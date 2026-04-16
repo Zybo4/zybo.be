@@ -1,29 +1,77 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Aspects juridiques ICT — Zybo</title>
+  <title data-i18n-title="page_title">Immobilier et valorisation | Zybo</title>
+  <meta name="description" data-i18n-meta="meta_description" content="Zybo aide à valoriser des biens et services immobiliers grâce à une présentation digitale plus claire, plus premium et plus rassurante.">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
-<body>
-<div class="container">
-  <div class="nav">
-      <a href="/">Accueil</a>
-      <a href="/projects.html">Projets</a>
-      <a href="/lab/">Lab Réseau</a>
-      <a href="/devops/">DevOps</a>
-      <a href="/security/">Sécurité</a>
-      <a href="/marketing/">Marketing</a>
-      <a href="/legal/">Legal/RGPD</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/server-status.html">Status</a>
+<body data-page="realestate">
+  <div class="site-shell">
+    <div class="container">
+      <header class="topbar">
+        <a class="brand" href="/">
+          <div class="brand-mark">
+            <img src="/assets/logo-zybo.png" alt="Logo Zybo">
+          </div>
+          <div class="brand-copy">
+            <strong>Zybo</strong>
+            <span data-i18n="brand_tagline">Informatique, web et visibilité</span>
+          </div>
+        </a>
+        <div class="topbar-actions">
+          <nav class="nav" aria-label="Navigation principale">
+            <a href="/" data-i18n="nav_home">Accueil</a>
+            <a href="/projects.html" data-i18n="nav_solutions">Solutions</a>
+            <a href="/devops/" data-i18n="nav_web">Sites web</a>
+            <a href="/marketing/" data-i18n="nav_visibility">Visibilité</a>
+            <a class="is-active" href="/legal/" data-i18n="nav_realestate">Immobilier</a>
+            <a href="/contact.html" data-i18n="nav_contact">Contact</a>
+          </nav>
+          <div class="lang-switcher" aria-label="Language switcher">
+            <button type="button" data-lang="fr">FR</button>
+            <button type="button" data-lang="nl">NL</button>
+            <button type="button" data-lang="en">ENG</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-panel page-hero">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Accompagnement immobilier</p>
+          <h1 data-i18n="hero_title">Mieux présenter un bien, un service ou une offre immobilière.</h1>
+          <p data-i18n="hero_text">Une bonne présentation digitale peut rassurer plus vite, clarifier les points forts d'un bien et donner une image plus haut de gamme à ton activité immobilière.</p>
+        </section>
+
+        <section class="grid grid-2">
+          <article class="card">
+            <h2>Ce que nous pouvons faire</h2>
+            <ul class="check-list">
+              <li>Créer une page dédiée à un bien ou à une activité immobilière</li>
+              <li>Mettre en avant les informations essentielles avec plus de lisibilité</li>
+              <li>Renforcer l'image de sérieux et de confiance</li>
+              <li>Structurer une présentation plus premium pour la vente</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h2>Pourquoi c'est utile</h2>
+            <p>Dans l'immobilier, la première impression compte énormément. Une présentation claire, élégante et cohérente augmente la qualité perçue et peut aider à mieux convaincre.</p>
+            <div class="tag-row">
+              <span class="tag">Valorisation</span>
+              <span class="tag">Confiance</span>
+              <span class="tag">Présentation premium</span>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span data-i18n="footer_left"><strong>Zybo</strong> | Immobilier et image digitale</span>
+        <span data-i18n="footer_right">Pages premium pour mieux présenter</span>
+      </footer>
     </div>
-  <h1>Aspects juridiques ICT</h1>
-  <div class="card">
-    <p>Mentions légales, cookies, RGPD : ce site est un exercice pédagogique.</p>
   </div>
-</div>
+  <script src="/assets/i18n.js"></script>
 </body>
 </html>

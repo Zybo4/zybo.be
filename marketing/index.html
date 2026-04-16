@@ -1,29 +1,71 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Marketing & UX — Zybo</title>
+  <title data-i18n-title="page_title">Visibilité digitale | Zybo</title>
+  <meta name="description" data-i18n-meta="meta_description" content="Travaillez votre visibilité digitale avec Zybo : structure de contenu, clarté de l'offre, SEO local et image de marque.">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
-<body>
-<div class="container">
-  <div class="nav">
-      <a href="/">Accueil</a>
-      <a href="/projects.html">Projets</a>
-      <a href="/lab/">Lab Réseau</a>
-      <a href="/devops/">DevOps</a>
-      <a href="/security/">Sécurité</a>
-      <a href="/marketing/">Marketing</a>
-      <a href="/legal/">Legal/RGPD</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/server-status.html">Status</a>
+<body data-page="visibility">
+  <div class="site-shell">
+    <div class="container">
+      <header class="topbar">
+        <a class="brand" href="/">
+          <div class="brand-mark">
+            <img src="/assets/logo-zybo.png" alt="Logo Zybo">
+          </div>
+          <div class="brand-copy">
+            <strong>Zybo</strong>
+            <span data-i18n="brand_tagline">Informatique, web et visibilité</span>
+          </div>
+        </a>
+        <div class="topbar-actions">
+          <nav class="nav" aria-label="Navigation principale">
+            <a href="/" data-i18n="nav_home">Accueil</a>
+            <a href="/projects.html" data-i18n="nav_solutions">Solutions</a>
+            <a href="/devops/" data-i18n="nav_web">Sites web</a>
+            <a class="is-active" href="/marketing/" data-i18n="nav_visibility">Visibilité</a>
+            <a href="/legal/" data-i18n="nav_realestate">Immobilier</a>
+            <a href="/contact.html" data-i18n="nav_contact">Contact</a>
+          </nav>
+          <div class="lang-switcher" aria-label="Language switcher">
+            <button type="button" data-lang="fr">FR</button>
+            <button type="button" data-lang="nl">NL</button>
+            <button type="button" data-lang="en">ENG</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-panel page-hero">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Visibilité digitale</p>
+          <h1 data-i18n="hero_title">Être présent en ligne, oui. Être compris et choisi, encore mieux.</h1>
+          <p data-i18n="hero_text">Zybo aide à structurer le message, l'image et le parcours pour que ton activité inspire davantage confiance et ressorte mieux sur le web.</p>
+        </section>
+
+        <section class="grid grid-3">
+          <article class="card">
+            <h2>Clarté de l'offre</h2>
+            <p>On retravaille les titres, les promesses et les textes pour que les visiteurs comprennent vite ce que tu proposes.</p>
+          </article>
+          <article class="card">
+            <h2>Visibilité locale</h2>
+            <p>Une structure plus propre aide pour le référencement local, les recherches liées à ton activité et la crédibilité globale.</p>
+          </article>
+          <article class="card">
+            <h2>Image cohérente</h2>
+            <p>Couleurs, rythme visuel, contenus et ton de marque sont alignés pour donner une impression plus sérieuse et plus premium.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span data-i18n="footer_left"><strong>Zybo</strong> | Stratégie de visibilité</span>
+        <span data-i18n="footer_right">Présence digitale claire et convaincante</span>
+      </footer>
     </div>
-  <h1>Marketing & UX</h1>
-  <div class="card">
-    <p>Tests A/B, SEO de base, tracking (Matomo/GA4), études de cas.</p>
   </div>
-</div>
+  <script src="/assets/i18n.js"></script>
 </body>
 </html>

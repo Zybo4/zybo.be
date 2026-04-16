@@ -3,77 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sécurité — Zybo</title>
+  <title>Solutions informatiques | Zybo</title>
+  <meta name="description" content="Zybo propose un accompagnement informatique simple et utile pour rendre votre activité plus fluide et plus crédible en ligne.">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-<div class="container">
-  <div class="nav">
-      <a href="/">Accueil</a>
-      <a href="/projects.html">Projets</a>
-      <a href="/lab/">Lab Réseau</a>
-      <a href="/devops/">DevOps</a>
-      <a href="/security/">Sécurité</a>
-      <a href="/marketing/">Marketing</a>
-      <a href="/legal/">Legal/RGPD</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/server-status.html">Status</a>
+  <div class="site-shell">
+    <div class="container">
+      <header class="topbar">
+        <a class="brand" href="/">
+          <div class="brand-mark">ZB</div>
+          <div class="brand-copy">
+            <strong>Zybo</strong>
+            <span>Informatique, web et visibilité</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="/">Accueil</a>
+          <a href="/projects.html">Solutions</a>
+          <a href="/devops/">Sites web</a>
+          <a href="/marketing/">Visibilité</a>
+          <a href="/legal/">Immobilier</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero-panel page-hero">
+          <p class="eyebrow">Informatique et support digital</p>
+          <h1>Des solutions simples pour professionnaliser ta présence.</h1>
+          <p>Au-delà du design, Zybo peut t'aider à structurer des outils, des pages et des usages digitaux plus clairs pour mieux piloter ton activité.</p>
+        </section>
+
+        <section class="grid grid-3">
+          <article class="card">
+            <h2>Organisation</h2>
+            <p>Mise en place d'une structure web propre et facile à faire évoluer.</p>
+          </article>
+          <article class="card">
+            <h2>Fiabilité</h2>
+            <p>Des pages lisibles, rapides et cohérentes pour une image plus sérieuse.</p>
+          </article>
+          <article class="card">
+            <h2>Accompagnement</h2>
+            <p>Un support clair pour t'aider à choisir et utiliser des solutions adaptées.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span><strong>Zybo</strong> | Solutions informatiques</span>
+        <span>Accompagnement digital utile et accessible</span>
+      </footer>
     </div>
-
-  <h1>🛡️ Sécurité</h1>
-
-  <div class="card">
-    <p>
-      Dans cette section, je documente mes travaux de cybersécurité : 
-      <strong>durcissement de serveurs</strong>, démonstrations de vulnérabilités contrôlées,
-      bonnes pratiques et conformité.
-    </p>
   </div>
-
-  <!-- Projet : SSH Hardening -->
-  <div class="card">
-    <h2>🔐 Durcissement SSH</h2>
-    <p>
-      Exemple pratique de sécurisation d’un serveur Linux via la configuration SSH.
-      On compare la situation <strong>avant</strong> (non sécurisé) et <strong>après</strong> (durci).
-    </p>
-
-    <h3>Avant (configuration par défaut, risquée) ❌</h3>
-    <pre><code># /etc/ssh/sshd_config
-PermitRootLogin yes
-PasswordAuthentication yes
-PubkeyAuthentication yes
-Port 22</code></pre>
-
-    <p>Problèmes :</p>
-    <ul>
-      <li>Connexion root autorisée → risque d’attaque par force brute.</li>
-      <li>Authentification par mot de passe → vulnérable aux attaques dictionnaires.</li>
-      <li>Port standard 22 → facilement ciblé par les bots.</li>
-    </ul>
-
-    <h3>Après (durcissement appliqué) ✅</h3>
-    <pre><code># /etc/ssh/sshd_config
-PermitRootLogin no
-PasswordAuthentication no
-PubkeyAuthentication yes
-Port 2222
-
-# Installation et activation de fail2ban
-sudo apt install fail2ban -y
-systemctl enable fail2ban --now</code></pre>
-
-    <p>Améliorations :</p>
-    <ul>
-      <li><strong>Root interdit</strong> → les attaquants doivent deviner un utilisateur normal.</li>
-      <li><strong>Clés SSH obligatoires</strong> → bien plus sécurisé que les mots de passe.</li>
-      <li><strong>Port personnalisé (2222)</strong> → réduit le bruit des scans automatiques.</li>
-      <li><strong>fail2ban</strong> → bloque automatiquement les IP après plusieurs tentatives.</li>
-    </ul>
-
-    <p><span class="tag">Linux</span> <span class="tag">SSH</span> <span class="tag">Cybersécurité</span></p>
-  </div>
-
-</div>
 </body>
 </html>

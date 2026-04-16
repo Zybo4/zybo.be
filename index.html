@@ -1,59 +1,247 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Zybo — Portfolio IT</title>
-  <meta name="description" content="Portfolio & lab de Redouane — System Administrator • Cybersecurity & Network • Digital Consultant">
+  <title data-i18n-title="page_title">Zybo | Solutions digitales, sites web et visibilité</title>
+  <meta name="description" data-i18n-meta="meta_description" content="Zybo accompagne les indépendants, PME et porteurs de projets avec des solutions informatiques, la création de sites web, la visibilité digitale et l'aide à la valorisation immobilière.">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-  <div class="container">
-    <div class="nav">
-      <a href="/">Accueil</a>
-      <a href="/projects.html">Projets</a>
-      <a href="/lab/">Lab Réseau</a>
-      <a href="/devops/">DevOps</a>
-      <a href="/security/">Sécurité</a>
-      <a href="/marketing/">Marketing</a>
-      <a href="/legal/">Legal/RGPD</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/server-status.html">Status</a>
-    </div>
+<body data-page="home">
+  <div class="site-shell">
+    <div class="container">
+      <header class="topbar">
+        <a class="brand" href="/">
+          <div class="brand-mark">
+            <img src="/assets/logo-zybo.png" alt="Logo Zybo">
+          </div>
+          <div class="brand-copy">
+            <strong>Zybo</strong>
+            <span data-i18n="brand_tagline">Informatique, web et visibilité</span>
+          </div>
+        </a>
+        <div class="topbar-actions">
+          <nav class="nav" aria-label="Navigation principale">
+            <a class="is-active" href="/" data-i18n="nav_home">Accueil</a>
+            <a href="/projects.html" data-i18n="nav_solutions">Solutions</a>
+            <a href="/devops/" data-i18n="nav_web">Sites web</a>
+            <a href="/marketing/" data-i18n="nav_visibility">Visibilité</a>
+            <a href="/legal/" data-i18n="nav_realestate">Immobilier</a>
+            <a href="/contact.html" data-i18n="nav_contact">Contact</a>
+          </nav>
+          <div class="lang-switcher" aria-label="Language switcher">
+            <button type="button" data-lang="fr">FR</button>
+            <button type="button" data-lang="nl">NL</button>
+            <button type="button" data-lang="en">ENG</button>
+          </div>
+        </div>
+      </header>
 
-    <div class="card">
-      <span class="badge">Zybo.be</span>
-      <h1>Redouane — Admin Systèmes & Réseau • Cyber • Digital</h1>
-      <p>✅ Déploiement CI/CD fonctionne en direct !</p>
-      <p>Site et labo 100% gratuit hébergé sur GitHub Pages. Ce portfolio regroupe mes projets d'études : DevOps, réseaux sécurisés, automatisation, UX/Marketing et aspects juridiques ICT.</p>
-      <p><a class="btn" href="/projects.html">Voir les projets</a></p>
-    </div>
+      <main>
+        <section class="hero">
+          <div class="hero-panel">
+            <span class="eyebrow" data-i18n="hero_eyebrow">Agence digitale de proximité</span>
+            <h1 data-i18n="hero_title">Un site moderne pour vendre, convaincre et être visible.</h1>
+            <p class="lead" data-i18n="hero_lead">
+              Zybo aide les indépendants, commerces, agences et petites entreprises à construire une présence en ligne forte.
+              Nous créons des sites web élégants, des supports visuels professionnels, des solutions digitales utiles et un accompagnement orienté résultats.
+            </p>
+            <div class="cta-row">
+              <a class="btn" href="/contact.html" data-i18n="hero_cta_primary">Demander un devis</a>
+              <a class="btn-secondary" href="/projects.html" data-i18n="hero_cta_secondary">Découvrir les offres</a>
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <strong>Web</strong>
+                <span>Création de sites vitrines, pages de vente et interfaces professionnelles.</span>
+              </div>
+              <div class="stat">
+                <strong>Digital</strong>
+                <span>Stratégie de visibilité, contenu, image de marque et optimisation locale.</span>
+              </div>
+              <div class="stat">
+                <strong>Impact</strong>
+                <span>Des solutions pensées pour générer plus de contacts et plus de confiance.</span>
+              </div>
+            </div>
+          </div>
 
-    <div class="grid">
-      <div class="card">
-        <h2>🖧 Lab Réseau</h2>
-        <p>Configs Cisco, schémas, notes CCNA, scripts SSH/SCP, pare-feu. Démonstrations reproductibles.</p>
-        <a href="/lab/">Accéder →</a>
-      </div>
-      <div class="card">
-        <h2>⚙️ DevOps</h2>
-        <p>CI/CD GitHub Actions, conteneurisation, déploiement statique, bonnes pratiques .</p>
-        <a href="/devops/">Accéder →</a>
-      </div>
-      <div class="card">
-        <h2>🛡️ Sécurité</h2>
-        <p>Durcissement SSH, analyse de trafic, notes de conformité et correctifs avant/après.</p>
-        <a href="/security/">Accéder →</a>
-      </div>
-    </div>
+          <div class="hero-visual hero-panel">
+            <div class="hero-visual-card card-top-right">
+              <strong>Image professionnelle</strong>
+              <span>Design premium et identité claire</span>
+            </div>
+            <div class="hero-visual-card card-bottom-left">
+              <strong>Orientation business</strong>
+              <span>Plus de visibilité, plus de demandes</span>
+            </div>
+            <div class="hero-figure">
+              <img src="/assets/hero-digital.svg" alt="Illustration de solutions digitales, création web et accompagnement professionnel">
+            </div>
+          </div>
+        </section>
 
-    <div class="card">
-      <h2>🎯 Objectif</h2>
-      <p>Montrer des compétences pratiques alignées avec mes cours : Service Management, DevOps, Réseaux programmables, ICT Legal, UX & Marketing.</p>
-    </div>
+        <section>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Nos expertises</p>
+              <h2 class="section-title">Des services pensés pour faire avancer ton activité</h2>
+            </div>
+            <p>Chaque prestation est conçue pour renforcer ta crédibilité, clarifier ton offre et transformer les visiteurs en prospects.</p>
+          </div>
 
-    <div class="footer">© 2025 Redouane Boufdan — zybo.be</div>
+          <div class="grid grid-3">
+            <article class="card">
+              <div class="icon-circle">
+                <img src="/assets/icon-web.svg" alt="Icône création de site web">
+              </div>
+              <h3>Création de site web</h3>
+              <p>Sites vitrines, landing pages, pages de services et interfaces propres, rapides et adaptées au mobile.</p>
+              <div class="tag-row">
+                <span class="tag">Design moderne</span>
+                <span class="tag">Responsive</span>
+                <span class="tag">Conversion</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="icon-circle">
+                <img src="/assets/icon-visibility.svg" alt="Icône stratégie de visibilité digitale">
+              </div>
+              <h3>Visibilité digitale</h3>
+              <p>Positionnement, clarté du message, optimisation locale, structure SEO et accompagnement sur ton image en ligne.</p>
+              <div class="tag-row">
+                <span class="tag">SEO local</span>
+                <span class="tag">Contenu</span>
+                <span class="tag">Stratégie</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="icon-circle">
+                <img src="/assets/icon-it.svg" alt="Icône solutions informatiques">
+              </div>
+              <h3>Solutions informatiques</h3>
+              <p>Accompagnement digital, organisation des outils, présence professionnelle et solutions web utiles au quotidien.</p>
+              <div class="tag-row">
+                <span class="tag">Support</span>
+                <span class="tag">Fiabilité</span>
+                <span class="tag">Automatisation</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <div class="highlight-band">
+            <p>
+              Tu veux vendre un service, valoriser un bien immobilier ou rendre ton activité plus crédible sur internet ?
+              Nous travaillons la forme, le fond et la stratégie pour que ton site ne soit pas juste beau, mais utile commercialement.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Accompagnement immobilier</p>
+              <h2 class="section-title">Une présence digitale qui aide aussi à mieux présenter un bien</h2>
+            </div>
+            <p>Pour les propriétaires, indépendants ou partenaires immobiliers, nous pouvons créer une présentation plus claire, plus premium et plus rassurante.</p>
+          </div>
+
+          <div class="grid grid-2">
+            <article class="card">
+              <div class="icon-circle">
+                <img src="/assets/icon-home.svg" alt="Icône immobilier">
+              </div>
+              <h3>Valorisation et visibilité</h3>
+              <p>Pages dédiées, mise en avant des points forts, présentation claire des services ou des biens, et meilleure lisibilité des informations importantes.</p>
+              <ul class="check-list">
+                <li>Pages de présentation élégantes</li>
+                <li>Contenus qui rassurent les acheteurs ou locataires</li>
+                <li>Image plus premium pour les annonces et mandats</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Pour qui ?</h3>
+              <p>Entrepreneurs, agences, indépendants, artisans, consultants et personnes qui veulent vendre ou mettre en valeur leur activité ou leurs biens avec une meilleure image digitale.</p>
+              <ul class="check-list">
+                <li>Création d'une identité visuelle claire</li>
+                <li>Pages de services et formulaires de contact efficaces</li>
+                <li>Accompagnement simple, humain et orienté résultats</li>
+              </ul>
+              <div class="button-row">
+                <a class="btn-secondary" href="/legal/">Voir l'offre immobilier</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Méthode</p>
+              <h2 class="section-title">Une collaboration simple, rapide et claire</h2>
+            </div>
+            <p>Le but est de te faire gagner du temps avec un processus fluide, sans jargon inutile.</p>
+          </div>
+
+          <div class="process">
+            <article class="process-step">
+              <span>1</span>
+              <h3>Échange</h3>
+              <p>On définit ton activité, tes objectifs, ton style et le résultat attendu.</p>
+            </article>
+            <article class="process-step">
+              <span>2</span>
+              <h3>Création</h3>
+              <p>Je construis une interface élégante, claire et adaptée à ton image.</p>
+            </article>
+            <article class="process-step">
+              <span>3</span>
+              <h3>Optimisation</h3>
+              <p>Le message, les sections et les appels à l'action sont retravaillés pour convertir.</p>
+            </article>
+            <article class="process-step">
+              <span>4</span>
+              <h3>Mise en ligne</h3>
+              <p>Le site est prêt à être partagé, présenté et utilisé pour développer ton activité.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <div class="quote-box">
+            <blockquote>
+              "Un bon site ne se contente pas d'exister. Il donne confiance, explique clairement ton offre et donne envie de te contacter."
+            </blockquote>
+            <cite>Zybo, solutions digitales et image de marque</cite>
+          </div>
+        </section>
+
+        <section>
+          <div class="contact-strip">
+            <div>
+              <p class="eyebrow">Projet en tête ?</p>
+              <h2 class="section-title">Créons un site bleu et blanc qui donne une image forte de ton activité</h2>
+              <p>Si tu veux une refonte, un nouveau site, une stratégie de visibilité ou une présentation plus professionnelle de tes services, la page contact est prête.</p>
+            </div>
+            <div class="button-row">
+              <a class="btn" href="/contact.html">Lancer mon projet</a>
+              <a class="btn-secondary" href="/marketing/">Voir la visibilité digitale</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span data-i18n="footer_left"><strong>Zybo</strong> | Informatique, création web et solutions digitales</span>
+        <span data-i18n="footer_right">Site vitrine professionnel en bleu et blanc</span>
+      </footer>
+    </div>
   </div>
+  <script src="/assets/i18n.js"></script>
 </body>
 </html>

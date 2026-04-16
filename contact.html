@@ -3,93 +3,142 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Contact — Zybo</title>
+  <title data-i18n-title="page_title">Contact | Zybo</title>
+  <meta name="description" data-i18n-meta="meta_description" content="Contactez Zybo pour un site web, une solution digitale, une stratégie de visibilité ou un accompagnement immobilier.">
   <link rel="stylesheet" href="assets/style.css">
-  <style>
-    #status {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-    #status.success {
-      color: #4CAF50;
-    }
-    #status.error {
-      color: #E53935;
-    }
-  </style>
 </head>
-<body>
-<div class="container">
-  <div class="nav">
-      <a href="/">Accueil</a>
-      <a href="/projects.html">Projets</a>
-      <a href="/lab/">Lab Réseau</a>
-      <a href="/devops/">DevOps</a>
-      <a href="/security/">Sécurité</a>
-      <a href="/marketing/">Marketing</a>
-      <a href="/legal/">Legal/RGPD</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/server-status.html">Status</a>
+<body data-page="contact">
+  <div class="site-shell">
+    <div class="container">
+      <header class="topbar">
+        <a class="brand" href="/">
+          <div class="brand-mark">
+            <img src="/assets/logo-zybo.png" alt="Logo Zybo">
+          </div>
+          <div class="brand-copy">
+            <strong>Zybo</strong>
+            <span data-i18n="brand_tagline">Informatique, web et visibilité</span>
+          </div>
+        </a>
+        <div class="topbar-actions">
+          <nav class="nav" aria-label="Navigation principale">
+            <a href="/" data-i18n="nav_home">Accueil</a>
+            <a href="/projects.html" data-i18n="nav_solutions">Solutions</a>
+            <a href="/devops/" data-i18n="nav_web">Sites web</a>
+            <a href="/marketing/" data-i18n="nav_visibility">Visibilité</a>
+            <a href="/legal/" data-i18n="nav_realestate">Immobilier</a>
+            <a class="is-active" href="/contact.html" data-i18n="nav_contact">Contact</a>
+          </nav>
+          <div class="lang-switcher" aria-label="Language switcher">
+            <button type="button" data-lang="fr">FR</button>
+            <button type="button" data-lang="nl">NL</button>
+            <button type="button" data-lang="en">ENG</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-panel page-hero">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Contact</p>
+          <h1 data-i18n="hero_title">Parlons de ton projet digital.</h1>
+          <p data-i18n="hero_text">
+            Tu peux utiliser ce formulaire pour demander une création de site web, une refonte, un accompagnement en visibilité digitale
+            ou une aide pour mieux présenter une activité ou un projet immobilier.
+          </p>
+        </section>
+
+        <section class="page-grid">
+          <article class="card">
+            <h2 data-i18n="form_title">Dis-moi ce dont tu as besoin</h2>
+            <p data-i18n="form_text">Plus ton message est précis, plus la réponse sera utile et rapide. Tu peux parler de ton activité, de ton objectif et du style souhaité.</p>
+
+            <form id="contact-form">
+              <div class="row">
+                <div>
+                  <label for="name" data-i18n="label_name">Nom</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                  <label for="email" data-i18n="label_email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+              </div>
+
+              <div>
+                <label for="subject" data-i18n="label_subject">Sujet</label>
+                <input type="text" id="subject" name="subject" data-i18n-placeholder="placeholder_subject" placeholder="Exemple : site vitrine pour mon activité" required>
+              </div>
+
+              <div>
+                <label for="message" data-i18n="label_message">Message</label>
+                <textarea id="message" name="message" data-i18n-placeholder="placeholder_message" placeholder="Présente ton activité, tes besoins, ton délai et le style que tu souhaites." required></textarea>
+              </div>
+
+              <div class="button-row">
+                <button class="btn" type="submit" data-i18n="submit_button">Envoyer le message</button>
+              </div>
+            </form>
+
+            <div id="status" class="status" aria-live="polite"></div>
+          </article>
+
+          <aside class="card">
+            <h2 data-i18n="aside_title">Projets possibles</h2>
+            <ul class="check-list">
+              <li>Création de site web bleu et blanc au style premium</li>
+              <li>Refonte d'un site existant pour mieux vendre</li>
+              <li>Structuration d'une offre digitale ou informatique</li>
+              <li>Accompagnement sur la visibilité et l'image en ligne</li>
+              <li>Présentation plus attractive pour un projet immobilier</li>
+            </ul>
+
+            <div class="tag-row">
+              <span class="tag">Site vitrine</span>
+              <span class="tag">Image pro</span>
+              <span class="tag">Visibilité locale</span>
+              <span class="tag">Immobilier</span>
+            </div>
+          </aside>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span data-i18n="footer_left"><strong>Zybo</strong> | Contact projet</span>
+        <span data-i18n="footer_right">Réponse via le formulaire de contact</span>
+      </footer>
+    </div>
   </div>
 
-  <h1>Contact</h1>
-  <div class="card">
-    <p>Utilisez ce formulaire pour m’envoyer un message. Les mails arrivent directement dans ma boîte Outlook 📩.</p>
+  <script>
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("status");
 
-    <form id="contact-form">
-      <div class="row">
-        <div>
-          <label for="name">Nom</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-      </div>
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
 
-      <label for="subject">Sujet</label>
-      <input type="text" id="subject" name="subject" placeholder="Sujet du message" required>
+      const data = new FormData(form);
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
+      try {
+        const response = await fetch("https://formspree.io/f/xblzdnaj", {
+          method: "POST",
+          body: data,
+          headers: { "Accept": "application/json" }
+        });
 
-      <p><button class="btn" type="submit">Envoyer</button></p>
-    </form>
-
-    <div id="status"></div>
-  </div>
-</div>
-
-<script>
-const form = document.getElementById("contact-form");
-const status = document.getElementById("status");
-
-form.addEventListener("submit", async function(event) {
-  event.preventDefault(); // empêche le rechargement de la page
-
-  const data = new FormData(form);
-
-  try {
-    const response = await fetch("https://formspree.io/f/xblzdnaj", {
-      method: "POST",
-      body: data,
-      headers: { "Accept": "application/json" }
+        if (response.ok) {
+          status.textContent = window.ZYBO_I18N.t("contact_success");
+          status.className = "status success";
+          form.reset();
+        } else {
+          status.textContent = window.ZYBO_I18N.t("contact_error");
+          status.className = "status error";
+        }
+      } catch (error) {
+        status.textContent = window.ZYBO_I18N.t("contact_network");
+        status.className = "status error";
+      }
     });
-
-    if (response.ok) {
-      status.textContent = "✅ Message envoyé avec succès !";
-      status.className = "success";
-      form.reset(); // vide les champs
-    } else {
-      status.textContent = "❌ Erreur lors de l’envoi. Réessayez.";
-      status.className = "error";
-    }
-  } catch (error) {
-    status.textContent = "❌ Impossible de contacter le serveur.";
-    status.className = "error";
-  }
-});
-</script>
+  </script>
+  <script src="/assets/i18n.js"></script>
 </body>
 </html>

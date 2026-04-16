@@ -3,94 +3,155 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Projets — Zybo</title>
+  <title data-i18n-title="page_title">Solutions | Zybo</title>
+  <meta name="description" data-i18n-meta="meta_description" content="Découvrez les solutions digitales proposées par Zybo : création de site web, accompagnement informatique, visibilité digitale et valorisation immobilière.">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-<div class="container">
-  <div class="nav">
-      <a href="/">Accueil</a>
-      <a href="/projects.html">Projets</a>
-      <a href="/lab/">Lab Réseau</a>
-      <a href="/devops/">DevOps</a>
-      <a href="/security/">Sécurité</a>
-      <a href="/marketing/">Marketing</a>
-      <a href="/legal/">Legal/RGPD</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/server-status.html">Status</a>
+<body data-page="solutions">
+  <div class="site-shell">
+    <div class="container">
+      <header class="topbar">
+        <a class="brand" href="/">
+          <div class="brand-mark">
+            <img src="/assets/logo-zybo.png" alt="Logo Zybo">
+          </div>
+          <div class="brand-copy">
+            <strong>Zybo</strong>
+            <span data-i18n="brand_tagline">Informatique, web et visibilité</span>
+          </div>
+        </a>
+        <div class="topbar-actions">
+          <nav class="nav" aria-label="Navigation principale">
+            <a href="/" data-i18n="nav_home">Accueil</a>
+            <a class="is-active" href="/projects.html" data-i18n="nav_solutions">Solutions</a>
+            <a href="/devops/" data-i18n="nav_web">Sites web</a>
+            <a href="/marketing/" data-i18n="nav_visibility">Visibilité</a>
+            <a href="/legal/" data-i18n="nav_realestate">Immobilier</a>
+            <a href="/contact.html" data-i18n="nav_contact">Contact</a>
+          </nav>
+          <div class="lang-switcher" aria-label="Language switcher">
+            <button type="button" data-lang="fr">FR</button>
+            <button type="button" data-lang="nl">NL</button>
+            <button type="button" data-lang="en">ENG</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-panel page-hero">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Offres et accompagnement</p>
+          <h1 data-i18n="hero_title">Des solutions digitales claires pour développer ton activité.</h1>
+          <p data-i18n="hero_text">
+            Le site, la visibilité et l'image doivent travailler ensemble. Cette page résume les axes sur lesquels Zybo peut t'accompagner pour créer une présence en ligne plus sérieuse, plus visible et plus rentable.
+          </p>
+        </section>
+
+        <section>
+          <div class="grid grid-2">
+            <article class="card">
+              <div class="icon-circle">
+                <img src="/assets/icon-web.svg" alt="Icône site web">
+              </div>
+              <h2>Site vitrine professionnel</h2>
+              <p>Création ou refonte d'un site moderne avec une structure claire, une mise en page premium et des sections qui donnent confiance.</p>
+              <ul class="check-list">
+                <li>Accueil impactant avec offre claire</li>
+                <li>Pages services adaptées à ton activité</li>
+                <li>Version mobile soignée et rapide</li>
+                <li>Formulaire de contact prêt à l'emploi</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="icon-circle">
+                <img src="/assets/icon-it.svg" alt="Icône solutions digitales">
+              </div>
+              <h2>Solutions digitales et informatique</h2>
+              <p>Organisation de ta présence digitale, choix des outils utiles, simplification des parcours clients et accompagnement sur la partie technique.</p>
+              <ul class="check-list">
+                <li>Conseil sur les outils et workflows</li>
+                <li>Support pour moderniser ta présence en ligne</li>
+                <li>Pages et contenus pensés pour être compris rapidement</li>
+                <li>Approche simple, humaine et orientée business</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="icon-circle">
+                <img src="/assets/icon-visibility.svg" alt="Icône visibilité digitale">
+              </div>
+              <h2>Stratégie de visibilité</h2>
+              <p>Un beau site ne suffit pas. Nous travaillons aussi le message, la hiérarchie des informations et les leviers de présence locale et digitale.</p>
+              <ul class="check-list">
+                <li>Structure SEO de base</li>
+                <li>Positionnement plus clair</li>
+                <li>Textes plus convaincants</li>
+                <li>Image de marque plus crédible</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="icon-circle">
+                <img src="/assets/icon-home.svg" alt="Icône immobilier">
+              </div>
+              <h2>Aide immobilière et mise en valeur</h2>
+              <p>Présenter un bien ou un service immobilier avec plus de clarté, plus de style et plus d'impact visuel.</p>
+              <ul class="check-list">
+                <li>Pages de présentation premium</li>
+                <li>Mise en avant des points forts</li>
+                <li>Présentation lisible des informations clés</li>
+                <li>Support pour rassurer et mieux vendre</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Ce que tu gagnes</p>
+              <h2 class="section-title">Plus qu'un design : une présence en ligne qui travaille pour toi</h2>
+            </div>
+            <p>La priorité est de te donner un support commercial crédible, agréable à consulter et facile à partager.</p>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card">
+              <h3>Image professionnelle</h3>
+              <p>Le bleu et le blanc renforcent la confiance, la clarté et la sensation de sérieux. Le design sert ton positionnement.</p>
+            </article>
+            <article class="card">
+              <h3>Message plus lisible</h3>
+              <p>On simplifie ton offre pour que les visiteurs comprennent rapidement ce que tu fais et pourquoi ils doivent te contacter.</p>
+            </article>
+            <article class="card">
+              <h3>Parcours plus efficace</h3>
+              <p>Les sections, boutons et formulaires sont pensés pour amener naturellement vers la prise de contact.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <div class="contact-strip">
+            <div>
+              <p class="eyebrow">Passons à l'action</p>
+              <h2 class="section-title">Tu veux un site sur mesure pour ton activité ?</h2>
+              <p>Dis-moi si tu veux cibler l'informatique, la vente de services digitaux, l'immobilier ou un mélange des trois. La base du site est prête pour ça.</p>
+            </div>
+            <div class="button-row">
+              <a class="btn" href="/contact.html" data-i18n="cta_primary">Prendre contact</a>
+              <a class="btn-secondary" href="/devops/" data-i18n="cta_secondary">Voir l'offre site web</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span data-i18n="footer_left"><strong>Zybo</strong> | Solutions digitales sur mesure</span>
+        <span data-i18n="footer_right">Création web, visibilité et accompagnement</span>
+      </footer>
     </div>
-  <h1>Projets</h1>
-  <div class="grid">
-    
-    <!-- Projet CI/CD -->
-    <div class="card">
-      <h2>🚀 CI/CD GitHub Pages</h2>
-      <p>
-        Mise en place d’un pipeline <strong>CI/CD</strong> avec <strong>GitHub Actions</strong>. 
-        Chaque fois que je fais un <em>push</em> sur la branche <code>main</code>, 
-        le site est automatiquement déployé sur <strong>zybo.be</strong>.
-      </p>
-      <p><span class="tag">DevOps</span> <span class="tag">CI/CD</span> <span class="tag">GitHub Actions</span></p>
-      <h3>Workflow YAML</h3>
-      <pre><code>name: Deploy website
-
-on:
-  push:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4</code></pre>
-    </div>
-
-    <!-- Projet SSH -->
-    <div class="card">
-      <h2>🛡️ Durcissement SSH</h2>
-      <p>
-        Exemple de configuration sécurisée sur un serveur Linux : 
-        désactiver root, forcer les clés, changer le port, activer fail2ban.
-      </p>
-      <p><span class="tag">Sécurité</span></p>
-      <pre><code>PermitRootLogin no
-PasswordAuthentication no
-PubkeyAuthentication yes
-Port 2222</code></pre>
-    </div>
-    
-    <!-- Projet Monitoring -->
-    <div class="card">
-      <h2>📊 Monitoring gratuit</h2>
-      <p>Mise en place d’un dashboard Grafana Cloud (gratuit) alimenté par <code>node_exporter</code>
-        sur une VM Ubuntu pour visualiser CPU/RAM/Disque.</p>
-      <p><span class="tag">Sysadmin</span> <span class="tag">Grafana</span> <span class="tag">Observability</span></p>
-      <a href="/lab/monitoring.html">Voir le tuto détaillé →</a>
-    </div>
-
   </div>
-</div>
+  <script src="/assets/i18n.js"></script>
 </body>
 </html>
