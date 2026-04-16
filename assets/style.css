@@ -677,30 +677,83 @@ textarea {
 }
 
 @media (max-width: 760px) {
+  .container {
+    width: min(var(--container), calc(100% - 20px));
+  }
+
   .site-shell {
-    padding-top: 18px;
+    padding: 12px 0 40px;
   }
 
   .topbar {
-    flex-direction: column;
-    align-items: stretch;
-    border-radius: 28px;
-    padding: 18px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .brand-copy strong {
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+
+  .brand-copy span {
+    font-size: 0.74rem;
+    line-height: 1.2;
   }
 
   .nav {
     justify-content: flex-start;
+    gap: 6px;
+  }
+
+  .nav a {
+    padding: 6px 10px;
+    font-size: 0.82rem;
   }
 
   .topbar-actions {
     width: 100%;
-    flex-direction: column;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
     margin-left: 0;
   }
 
   .lang-switcher {
-    justify-content: space-between;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    justify-content: flex-end;
+    gap: 4px;
+    padding: 3px;
+    margin-left: 8px;
+  }
+
+  .lang-switcher button {
+    min-width: 34px;
+    flex: 0 0 auto;
+    padding: 5px 8px;
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+
+  .hero {
+    gap: 18px;
+    padding: 8px 0 14px;
   }
 
   .hero-panel,
@@ -708,11 +761,137 @@ textarea {
   .quote-box,
   .contact-strip,
   .page-hero {
-    padding: 24px;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 10vw, 2.6rem);
+    line-height: 1.05;
+    margin: 14px 0 12px;
+  }
+
+  .lead,
+  .page-hero p,
+  .card p,
+  .card li,
+  .highlight-band p,
+  .contact-strip p,
+  .section-heading p {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .section-title {
+    font-size: 1.45rem;
+  }
+
+  .section-heading {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  section {
+    margin-top: 28px;
+  }
+
+  .eyebrow {
+    padding: 7px 12px;
+    font-size: 0.73rem;
   }
 
   .hero-figure {
-    min-height: 380px;
+    min-height: 250px;
+    border-radius: 22px;
+  }
+
+  .hero-visual {
+    padding: 14px;
+  }
+
+  .hero-visual-card {
+    position: static;
+    margin-bottom: 12px;
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .stats {
+    margin-top: 18px;
+    gap: 12px;
+  }
+
+  .stat {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .stat strong {
+    font-size: 1.35rem;
+  }
+
+  .icon-circle {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    margin-bottom: 14px;
+  }
+
+  .icon-circle img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .tag-row {
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .tag {
+    padding: 7px 10px;
+    font-size: 0.78rem;
+  }
+
+  .highlight-band {
+    padding: 18px 20px;
+  }
+
+  .process-step {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .process-step span {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 12px;
+  }
+
+  .quote-box blockquote {
+    font-size: 1.02rem;
+    line-height: 1.6;
+  }
+
+  .contact-strip {
+    gap: 14px;
+  }
+
+  .btn,
+  .btn-secondary {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 18px;
+    font-size: 0.95rem;
+  }
+
+  .cta-row,
+  .button-row {
+    gap: 10px;
+    margin-top: 20px;
   }
 
   .stats,
@@ -721,5 +900,110 @@ textarea {
   .process,
   form .row {
     grid-template-columns: 1fr;
+  }
+
+  .nav {
+    grid-column: 1;
+    grid-row: 1;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 2px;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  input,
+  textarea {
+    padding: 13px 14px;
+    border-radius: 14px;
+  }
+
+  .footer {
+    margin-top: 34px;
+    padding-top: 14px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(var(--container), calc(100% - 16px));
+  }
+
+  .topbar {
+    padding: 9px 10px;
+    border-radius: 18px;
+  }
+
+  .topbar-actions {
+    gap: 6px;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-copy strong {
+    font-size: 0.84rem;
+  }
+
+  .brand-copy span {
+    font-size: 0.7rem;
+  }
+
+  h1 {
+    font-size: clamp(1.7rem, 9vw, 2.2rem);
+  }
+
+  .hero-panel,
+  .card,
+  .quote-box,
+  .contact-strip,
+  .page-hero {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .hero-figure {
+    min-height: 210px;
+  }
+
+  .nav a {
+    font-size: 0.76rem;
+    padding: 6px 8px;
+  }
+
+  .lang-switcher {
+    padding: 2px;
+    gap: 2px;
+    margin-left: 6px;
+  }
+
+  .lang-switcher button {
+    min-width: 30px;
+    padding: 5px 6px;
+    font-size: 0.66rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .lead,
+  .page-hero p,
+  .card p,
+  .card li,
+  .highlight-band p,
+  .contact-strip p,
+  .section-heading p {
+    font-size: 0.92rem;
   }
 }
