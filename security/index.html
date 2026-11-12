@@ -2,60 +2,96 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Solutions informatiques | Zybo</title>
-  <meta name="description" content="Zybo propose un accompagnement informatique simple et utile pour rendre votre activité plus fluide et plus crédible en ligne.">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d20">
+  <title>Solutions informatiques · Zybo</title>
+  <meta name="description" content="Conseil et support pour organiser vos outils et simplifier vos parcours clients.">
+  <link rel="canonical" href="https://zybo.be/security/">
+  <link rel="icon" href="../assets/logo-zybo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/site.js" defer></script>
 </head>
-<body>
-  <div class="site-shell">
-    <div class="container">
-      <header class="topbar">
-        <a class="brand" href="/">
-          <div class="brand-mark">ZB</div>
-          <div class="brand-copy">
-            <strong>Zybo</strong>
-            <span>Informatique, web et visibilité</span>
+<body data-page="it">
+  <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navigation principale">
+        <a href="../projects.html" aria-current="true"><span data-copy="nav.expertise">Expertises</span></a>
+        <a href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+        <a class="mobile-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+      </nav>
+      <div class="nav-actions">
+        <details class="languages">
+          <summary aria-label="Langue / Taal / Language"><span data-current-lang>FR</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" fill-rule="evenodd"/></svg></summary>
+          <div class="language-list">
+            <button type="button" data-language="fr" lang="fr" aria-pressed="true">Français</button>
+            <button type="button" data-language="nl" lang="nl" aria-pressed="false">Nederlands</button>
+            <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
           </div>
-        </a>
-        <nav class="nav" aria-label="Navigation principale">
-          <a href="/">Accueil</a>
-          <a href="/projects.html">Solutions</a>
-          <a href="/devops/">Sites web</a>
-          <a href="/marketing/">Visibilité</a>
-          <a href="/legal/">Immobilier</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </header>
-
-      <main>
-        <section class="hero-panel page-hero">
-          <p class="eyebrow">Informatique et support digital</p>
-          <h1>Des solutions simples pour professionnaliser ta présence.</h1>
-          <p>Au-delà du design, Zybo peut t'aider à structurer des outils, des pages et des usages digitaux plus clairs pour mieux piloter ton activité.</p>
-        </section>
-
-        <section class="grid grid-3">
-          <article class="card">
-            <h2>Organisation</h2>
-            <p>Mise en place d'une structure web propre et facile à faire évoluer.</p>
-          </article>
-          <article class="card">
-            <h2>Fiabilité</h2>
-            <p>Des pages lisibles, rapides et cohérentes pour une image plus sérieuse.</p>
-          </article>
-          <article class="card">
-            <h2>Accompagnement</h2>
-            <p>Un support clair pour t'aider à choisir et utiliser des solutions adaptées.</p>
-          </article>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <span><strong>Zybo</strong> | Solutions informatiques</span>
-        <span>Accompagnement digital utile et accessible</span>
-      </footer>
+        </details>
+        <a class="nav-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
     </div>
+  </header>
+  <main id="main" tabindex="-1"><section class="page-hero">
+    <div class="wrap page-hero-inner split-hero">
+      <div class="page-hero-copy">
+        <p data-copy="page.label" class="eyebrow">Solutions informatiques</p>
+        <h1 data-copy="page.headline">Des outils digitaux plus simples au quotidien.</h1>
+        <p data-copy="page.intro" class="page-intro">Zybo vous accompagne dans le choix de vos outils, l’organisation de votre présence en ligne et la mise en place de solutions adaptées à votre activité.</p>
+        <a class="button button-primary" href="../contact.html?service=it"><span data-copy="service.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
+      <div class="service-art art-it" aria-hidden="true"><div class="chip-art"><div class="chip-board"><i></i><i></i><i></i><i></i><div class="chip-core"></div></div></div></div>
+    </div>
+  </section>
+      <section class="section feature-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="feature.heading">Ce que nous pouvons faire pour vous</h2></div>
+        <div class="features-grid">
+    <article class="feature" data-reveal>
+      <h3 data-copy="feature.0">Organisation des outils</h3><p data-copy="feature.body.0">Clarifiez les rôles de vos outils et repérez les étapes que vous pouvez simplifier.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.1">Structure fiable</h3><p data-copy="feature.body.1">Des pages et des interfaces lisibles, faciles à utiliser et à faire évoluer.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.2">Accompagnement technique</h3><p data-copy="feature.body.2">Un appui pour choisir vos solutions, organiser vos processus et prendre vos outils en main.</p>
+    </article>
   </div>
+        <a class="text-link" href="../projects.html"><span data-copy="service.all">Toutes les expertises</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div></section><section class="section contact-section"><div class="wrap">
+    <div class="contact-band">
+      <div><h2 data-copy="cta.title">Votre projet commence ici.</h2><p data-copy="cta.lead">Présentez-nous votre activité et ce que vous souhaitez améliorer.</p></div>
+      <a class="button button-white" href="../contact.html?service=it"><span data-copy="cta.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+    </div>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+          <p data-copy="footer.about">Création web et solutions digitales.</p></div>
+        <div class="footer-links">
+          <a class="" href="../devops/index.html"><span data-copy="service.web">Création web</span></a>
+<a class="" href="../marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="../security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
+<a class="" href="../legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
+        </div>
+        <div class="footer-links">
+          <a class="" href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+          <a class="" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+          <a class="" href="../lab/monitoring.html"><span data-copy="nav.monitor">Monitoring</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© Zybo</span><a class="" href="../server-status.html"><span data-copy="nav.status">État des services</span></a></div>
+    </div>
+  </footer>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"service.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"page.label":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"page.headline":{"fr":"Des outils digitaux plus simples au quotidien.","nl":"Eenvoudigere digitale tools voor elke dag.","en":"Simpler digital tools for everyday work."},"page.intro":{"fr":"Zybo vous accompagne dans le choix de vos outils, l’organisation de votre présence en ligne et la mise en place de solutions adaptées à votre activité.","nl":"Zybo helpt u tools te kiezen, uw online aanwezigheid te organiseren en oplossingen voor uw activiteit op te zetten.","en":"Zybo helps you choose tools, organise your online presence and put solutions in place that fit your business."},"feature.heading":{"fr":"Ce que nous pouvons faire pour vous","nl":"Wat we voor u kunnen doen","en":"What we can do for you"},"feature.0":{"fr":"Organisation des outils","nl":"Tools organiseren","en":"Tool organisation"},"feature.body.0":{"fr":"Clarifiez les rôles de vos outils et repérez les étapes que vous pouvez simplifier.","nl":"Maak duidelijk waarvoor uw tools dienen en ontdek welke stappen eenvoudiger kunnen.","en":"Clarify what each tool does and identify steps you can simplify."},"feature.1":{"fr":"Structure fiable","nl":"Een betrouwbare structuur","en":"A reliable structure"},"feature.body.1":{"fr":"Des pages et des interfaces lisibles, faciles à utiliser et à faire évoluer.","nl":"Leesbare pagina’s en interfaces die makkelijk te gebruiken en uit te breiden zijn.","en":"Readable pages and interfaces that are easy to use and evolve."},"feature.2":{"fr":"Accompagnement technique","nl":"Technische begeleiding","en":"Technical guidance"},"feature.body.2":{"fr":"Un appui pour choisir vos solutions, organiser vos processus et prendre vos outils en main.","nl":"Ondersteuning bij het kiezen van oplossingen, het organiseren van processen en het gebruik van uw tools.","en":"Support in choosing solutions, organising workflows and getting comfortable with your tools."},"service.all":{"fr":"Toutes les expertises","nl":"Alle diensten","en":"All services"},"cta.title":{"fr":"Votre projet commence ici.","nl":"Uw project begint hier.","en":"Your project starts here."},"cta.lead":{"fr":"Présentez-nous votre activité et ce que vous souhaitez améliorer.","nl":"Vertel ons over uw activiteit en wat u wilt verbeteren.","en":"Tell us about your business and what you would like to improve."},"cta.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"meta.title":{"fr":"Solutions informatiques · Zybo","nl":"IT-oplossingen · Zybo","en":"IT solutions · Zybo"},"meta.description":{"fr":"Conseil et support pour organiser vos outils et simplifier vos parcours clients.","nl":"Advies en ondersteuning om uw tools en klanttrajecten te vereenvoudigen.","en":"Advice and support to organise your tools and simplify customer journeys."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>

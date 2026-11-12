@@ -2,60 +2,91 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Suivi et monitoring | Zybo</title>
-  <meta name="description" content="Exemple de page Zybo dédiée au suivi, monitoring et pilotage d'outils ou d'infrastructures.">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d20">
+  <title>Monitoring · Zybo</title>
+  <meta name="description" content="Découvrez comment suivre la disponibilité et les temps de réponse de pages, d’API et de services digitaux.">
+  <link rel="canonical" href="https://zybo.be/lab/monitoring.html">
+  <link rel="icon" href="../assets/logo-zybo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/site.js" defer></script>
 </head>
-<body>
-  <div class="site-shell">
-    <div class="container">
-      <header class="topbar">
-        <a class="brand" href="/">
-          <div class="brand-mark">ZB</div>
-          <div class="brand-copy">
-            <strong>Zybo</strong>
-            <span>Informatique, web et visibilité</span>
+<body data-page="monitoring">
+  <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navigation principale">
+        <a href="../projects.html"><span data-copy="nav.expertise">Expertises</span></a>
+        <a href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+        <a class="mobile-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+      </nav>
+      <div class="nav-actions">
+        <details class="languages">
+          <summary aria-label="Langue / Taal / Language"><span data-current-lang>FR</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" fill-rule="evenodd"/></svg></summary>
+          <div class="language-list">
+            <button type="button" data-language="fr" lang="fr" aria-pressed="true">Français</button>
+            <button type="button" data-language="nl" lang="nl" aria-pressed="false">Nederlands</button>
+            <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
           </div>
-        </a>
-        <nav class="nav" aria-label="Navigation principale">
-          <a href="/">Accueil</a>
-          <a href="/projects.html">Solutions</a>
-          <a href="/devops/">Sites web</a>
-          <a href="/marketing/">Visibilité</a>
-          <a href="/legal/">Immobilier</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </header>
-
-      <main>
-        <section class="hero-panel page-hero">
-          <p class="eyebrow">Pilotage et suivi</p>
-          <h1>Exemple de page de monitoring et d'analyse.</h1>
-          <p>Cette page montre qu'un service digital peut aussi intégrer un volet de suivi, d'indicateurs ou de contrôle pour garder une vision claire de la performance.</p>
-        </section>
-
-        <section class="grid grid-2">
-          <article class="card">
-            <h2>Pourquoi intégrer du suivi ?</h2>
-            <ul class="check-list">
-              <li>Identifier plus vite les lenteurs ou erreurs</li>
-              <li>Garder un œil sur les performances clés</li>
-              <li>Montrer une approche sérieuse et structurée</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h2>Cas d'usage</h2>
-            <p>Tableaux de bord internes, suivi de pages stratégiques, contrôle de disponibilité, supervision légère ou reporting pour clients et partenaires.</p>
-          </article>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <span><strong>Zybo</strong> | Monitoring et pilotage</span>
-        <span>Pages techniques avec la même identité visuelle</span>
-      </footer>
+        </details>
+        <a class="nav-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
     </div>
-  </div>
+  </header>
+  <main id="main" tabindex="-1"><section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <div class="page-hero-copy">
+        <p data-copy="page.label" class="eyebrow">Monitoring</p>
+        <h1 data-copy="page.headline">Suivez vos services web.</h1>
+        <p data-copy="page.intro" class="page-intro">Découvrez comment suivre la disponibilité et les temps de réponse de pages, d’API et de services digitaux.</p>
+        <a class="button button-primary" href="../server-status.html"><span data-copy="monitor.status">État des services</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
+    </div>
+  </section>
+      <section class="section feature-section"><div class="wrap"><div class="features-grid">
+    <article class="feature" data-reveal>
+      <h3 data-copy="feature.0">Disponibilité</h3><p data-copy="feature.body.0">Vérifiez si vos pages et services répondent.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.1">Performances</h3><p data-copy="feature.body.1">Repérez les lenteurs et les réponses inattendues.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.2">Cas d’usage</h3><p data-copy="feature.body.2">Tableaux de bord internes, suivi de pages stratégiques et reporting.</p>
+    </article>
+  </div></div></section><section class="section contact-section"><div class="wrap">
+    <div class="contact-band">
+      <div><h2 data-copy="cta.title">Votre projet commence ici.</h2><p data-copy="cta.lead">Présentez-nous votre activité et ce que vous souhaitez améliorer.</p></div>
+      <a class="button button-white" href="../contact.html"><span data-copy="cta.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+    </div>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+          <p data-copy="footer.about">Création web et solutions digitales.</p></div>
+        <div class="footer-links">
+          <a class="" href="../devops/index.html"><span data-copy="service.web">Création web</span></a>
+<a class="" href="../marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="../security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
+<a class="" href="../legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
+        </div>
+        <div class="footer-links">
+          <a class="" href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+          <a class="" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+          <a class="" href="../lab/monitoring.html"><span data-copy="nav.monitor">Monitoring</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© Zybo</span><a class="" href="../server-status.html"><span data-copy="nav.status">État des services</span></a></div>
+    </div>
+  </footer>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"monitor.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.label":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"page.headline":{"fr":"Suivez vos services web.","nl":"Volg uw webdiensten op.","en":"Monitor your web services."},"page.intro":{"fr":"Découvrez comment suivre la disponibilité et les temps de réponse de pages, d’API et de services digitaux.","nl":"Ontdek hoe u de beschikbaarheid en responstijd van pagina’s, API’s en digitale diensten volgt.","en":"See how to track the availability and response times of pages, APIs and digital services."},"feature.0":{"fr":"Disponibilité","nl":"Beschikbaarheid","en":"Availability"},"feature.body.0":{"fr":"Vérifiez si vos pages et services répondent.","nl":"Controleer of uw pagina’s en diensten antwoorden.","en":"Check whether your pages and services respond."},"feature.1":{"fr":"Performances","nl":"Prestaties","en":"Performance"},"feature.body.1":{"fr":"Repérez les lenteurs et les réponses inattendues.","nl":"Merk trage en onverwachte antwoorden op.","en":"Spot slow and unexpected responses."},"feature.2":{"fr":"Cas d’usage","nl":"Toepassingen","en":"Use cases"},"feature.body.2":{"fr":"Tableaux de bord internes, suivi de pages stratégiques et reporting.","nl":"Interne dashboards, opvolging van belangrijke pagina’s en rapportage.","en":"Internal dashboards, monitoring key pages and reporting."},"cta.title":{"fr":"Votre projet commence ici.","nl":"Uw project begint hier.","en":"Your project starts here."},"cta.lead":{"fr":"Présentez-nous votre activité et ce que vous souhaitez améliorer.","nl":"Vertel ons over uw activiteit en wat u wilt verbeteren.","en":"Tell us about your business and what you would like to improve."},"cta.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"meta.title":{"fr":"Monitoring · Zybo","nl":"Monitoring · Zybo","en":"Monitoring · Zybo"},"meta.description":{"fr":"Découvrez comment suivre la disponibilité et les temps de réponse de pages, d’API et de services digitaux.","nl":"Ontdek hoe u de beschikbaarheid en responstijd van pagina’s, API’s en digitale diensten volgt.","en":"See how to track the availability and response times of pages, APIs and digital services."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>

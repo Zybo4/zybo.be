@@ -2,156 +2,121 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title data-i18n-title="page_title">Solutions | Zybo</title>
-  <meta name="description" data-i18n-meta="meta_description" content="Découvrez les solutions digitales proposées par Zybo : création de site web, accompagnement informatique, visibilité digitale et valorisation immobilière.">
-  <link rel="stylesheet" href="assets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d20">
+  <title>Expertises · Zybo</title>
+  <meta name="description" content="Explorez les services de Zybo en création web, visibilité digitale, informatique et présentation immobilière.">
+  <link rel="canonical" href="https://zybo.be/projects.html">
+  <link rel="icon" href="./assets/logo-zybo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="./assets/site.js" defer></script>
 </head>
 <body data-page="solutions">
-  <div class="site-shell">
-    <div class="container">
-      <header class="topbar">
-        <a class="brand" href="/">
-          <div class="brand-mark">
-            <img src="/assets/logo-zybo.png" alt="Logo Zybo">
+  <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="./index.html" aria-label="Zybo"><img src="./assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navigation principale">
+        <a href="./projects.html" aria-current="page"><span data-copy="nav.expertise">Expertises</span></a>
+        <a href="./lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+        <a class="mobile-contact" href="./contact.html"><span data-copy="nav.contact">Contact</span></a>
+      </nav>
+      <div class="nav-actions">
+        <details class="languages">
+          <summary aria-label="Langue / Taal / Language"><span data-current-lang>FR</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" fill-rule="evenodd"/></svg></summary>
+          <div class="language-list">
+            <button type="button" data-language="fr" lang="fr" aria-pressed="true">Français</button>
+            <button type="button" data-language="nl" lang="nl" aria-pressed="false">Nederlands</button>
+            <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
           </div>
-          <div class="brand-copy">
-            <strong>Zybo</strong>
-            <span data-i18n="brand_tagline">Informatique, web et visibilité</span>
-          </div>
-        </a>
-        <div class="topbar-actions">
-          <nav class="nav" aria-label="Navigation principale">
-            <a href="/" data-i18n="nav_home">Accueil</a>
-            <a class="is-active" href="/projects.html" data-i18n="nav_solutions">Solutions</a>
-            <a href="/devops/" data-i18n="nav_web">Sites web</a>
-            <a href="/marketing/" data-i18n="nav_visibility">Visibilité</a>
-            <a href="/legal/" data-i18n="nav_realestate">Immobilier</a>
-            <a href="/contact.html" data-i18n="nav_contact">Contact</a>
-          </nav>
-          <div class="lang-switcher" aria-label="Language switcher">
-            <button type="button" data-lang="fr">FR</button>
-            <button type="button" data-lang="nl">NL</button>
-            <button type="button" data-lang="en">ENG</button>
-          </div>
-        </div>
-      </header>
-
-      <main>
-        <section class="hero-panel page-hero">
-          <p class="eyebrow" data-i18n="hero_eyebrow">Offres et accompagnement</p>
-          <h1 data-i18n="hero_title">Des solutions digitales claires pour développer ton activité.</h1>
-          <p data-i18n="hero_text">
-            Le site, la visibilité et l'image doivent travailler ensemble. Cette page résume les axes sur lesquels Zybo peut t'accompagner pour créer une présence en ligne plus sérieuse, plus visible et plus rentable.
-          </p>
-        </section>
-
-        <section>
-          <div class="grid grid-2">
-            <article class="card">
-              <div class="icon-circle">
-                <img src="/assets/icon-web.svg" alt="Icône site web">
-              </div>
-              <h2>Site vitrine professionnel</h2>
-              <p>Création ou refonte d'un site moderne avec une structure claire, une mise en page premium et des sections qui donnent confiance.</p>
-              <ul class="check-list">
-                <li>Accueil impactant avec offre claire</li>
-                <li>Pages services adaptées à ton activité</li>
-                <li>Version mobile soignée et rapide</li>
-                <li>Formulaire de contact prêt à l'emploi</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <div class="icon-circle">
-                <img src="/assets/icon-it.svg" alt="Icône solutions digitales">
-              </div>
-              <h2>Solutions digitales et informatique</h2>
-              <p>Organisation de ta présence digitale, choix des outils utiles, simplification des parcours clients et accompagnement sur la partie technique.</p>
-              <ul class="check-list">
-                <li>Conseil sur les outils et workflows</li>
-                <li>Support pour moderniser ta présence en ligne</li>
-                <li>Pages et contenus pensés pour être compris rapidement</li>
-                <li>Approche simple, humaine et orientée business</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <div class="icon-circle">
-                <img src="/assets/icon-visibility.svg" alt="Icône visibilité digitale">
-              </div>
-              <h2>Stratégie de visibilité</h2>
-              <p>Un beau site ne suffit pas. Nous travaillons aussi le message, la hiérarchie des informations et les leviers de présence locale et digitale.</p>
-              <ul class="check-list">
-                <li>Structure SEO de base</li>
-                <li>Positionnement plus clair</li>
-                <li>Textes plus convaincants</li>
-                <li>Image de marque plus crédible</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <div class="icon-circle">
-                <img src="/assets/icon-home.svg" alt="Icône immobilier">
-              </div>
-              <h2>Aide immobilière et mise en valeur</h2>
-              <p>Présenter un bien ou un service immobilier avec plus de clarté, plus de style et plus d'impact visuel.</p>
-              <ul class="check-list">
-                <li>Pages de présentation premium</li>
-                <li>Mise en avant des points forts</li>
-                <li>Présentation lisible des informations clés</li>
-                <li>Support pour rassurer et mieux vendre</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section>
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Ce que tu gagnes</p>
-              <h2 class="section-title">Plus qu'un design : une présence en ligne qui travaille pour toi</h2>
-            </div>
-            <p>La priorité est de te donner un support commercial crédible, agréable à consulter et facile à partager.</p>
-          </div>
-
-          <div class="grid grid-3">
-            <article class="card">
-              <h3>Image professionnelle</h3>
-              <p>Le bleu et le blanc renforcent la confiance, la clarté et la sensation de sérieux. Le design sert ton positionnement.</p>
-            </article>
-            <article class="card">
-              <h3>Message plus lisible</h3>
-              <p>On simplifie ton offre pour que les visiteurs comprennent rapidement ce que tu fais et pourquoi ils doivent te contacter.</p>
-            </article>
-            <article class="card">
-              <h3>Parcours plus efficace</h3>
-              <p>Les sections, boutons et formulaires sont pensés pour amener naturellement vers la prise de contact.</p>
-            </article>
-          </div>
-        </section>
-
-        <section>
-          <div class="contact-strip">
-            <div>
-              <p class="eyebrow">Passons à l'action</p>
-              <h2 class="section-title">Tu veux un site sur mesure pour ton activité ?</h2>
-              <p>Dis-moi si tu veux cibler l'informatique, la vente de services digitaux, l'immobilier ou un mélange des trois. La base du site est prête pour ça.</p>
-            </div>
-            <div class="button-row">
-              <a class="btn" href="/contact.html" data-i18n="cta_primary">Prendre contact</a>
-              <a class="btn-secondary" href="/devops/" data-i18n="cta_secondary">Voir l'offre site web</a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <span data-i18n="footer_left"><strong>Zybo</strong> | Solutions digitales sur mesure</span>
-        <span data-i18n="footer_right">Création web, visibilité et accompagnement</span>
-      </footer>
+        </details>
+        <a class="nav-contact" href="./contact.html"><span data-copy="nav.contact">Contact</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
     </div>
-  </div>
-  <script src="/assets/i18n.js"></script>
+  </header>
+  <main id="main" tabindex="-1"><section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <div class="page-hero-copy">
+        <p data-copy="page.label" class="eyebrow">Expertises</p>
+        <h1 data-copy="page.headline">Des solutions digitales pour votre activité.</h1>
+        <p data-copy="page.intro" class="page-intro">Explorez les services de Zybo en création web, visibilité digitale, informatique et présentation immobilière.</p>
+      </div>
+    </div>
+  </section>
+      <section class="section expertise-section"><div class="wrap"><div class="service-grid">
+    <article class="service-card" data-reveal>
+      <a href="./devops/index.html" class="service-link">
+        <div class="service-art art-web" aria-hidden="true"><div class="browser-art"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-inner"><div class="browser-copy"><i></i><i></i><i></i><i></i></div><div class="browser-shape"></div></div><div class="browser-foot"><i></i><i></i><i></i></div></div></div>
+        <div class="service-info">
+          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5V5h14v-.5A1.5 1.5 0 0 0 13.5 3zM15 6H1v5.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5zM0 4.5A2.5 2.5 0 0 1 2.5 2h11A2.5 2.5 0 0 1 16 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 11.5z" fill-rule="evenodd"/></svg></div>
+          <div><h3 data-copy="service.web">Création web</h3><p data-copy="short.web">Sites vitrines, refontes et pages de vente conçus autour de votre offre.</p></div>
+          <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+        </div>
+      </a>
+    </article>
+<article class="service-card" data-reveal>
+      <a href="./marketing/index.html" class="service-link">
+        <div class="service-art art-visibility" aria-hidden="true"><div class="graph-art"><i></i><i></i><i></i><i></i><i></i><i></i><span></span></div></div>
+        <div class="service-info">
+          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M0 0h1v14h15v1H0zm3 8h2v4H3zm4-3h2v7H7zm4-4h2v11h-2z" fill-rule="evenodd"/></svg></div>
+          <div><h3 data-copy="service.visibility">Visibilité digitale</h3><p data-copy="short.visibility">Référencement local, contenus et image de marque pour vous rendre plus facile à trouver.</p></div>
+          <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+        </div>
+      </a>
+    </article>
+<article class="service-card" data-reveal>
+      <a href="./security/index.html" class="service-link">
+        <div class="service-art art-it" aria-hidden="true"><div class="chip-art"><div class="chip-board"><i></i><i></i><i></i><i></i><div class="chip-core"></div></div></div></div>
+        <div class="service-info">
+          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 0h1v2h1.5V0h1v2H10V0h1v2h1a2 2 0 0 1 2 2v1h2v1h-2v1.5h2v1h-2V10h2v1h-2v1a2 2 0 0 1-2 2h-1v2h-1v-2H8.5v2h-1v-2H6v2H5v-2H4a2 2 0 0 1-2-2v-1H0v-1h2V8.5H0v-1h2V6H0V5h2V4a2 2 0 0 1 2-2h1zM4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm1 2h6v6H5zm1 1v4h4V6z" fill-rule="evenodd"/></svg></div>
+          <div><h3 data-copy="service.it">Solutions informatiques</h3><p data-copy="short.it">Conseil et support pour organiser vos outils et simplifier vos parcours clients.</p></div>
+          <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+        </div>
+      </a>
+    </article>
+<article class="service-card" data-reveal>
+      <a href="./legal/index.html" class="service-link">
+        <div class="service-art art-estate" aria-hidden="true"><img src="./assets/media/immobilier.jpg" alt="" width="1000" height="667" loading="lazy"></div>
+        <div class="service-info">
+          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 2h8v4h6v9H1zm1 1v11h3v-3h2v3h1V3zm7 4v7h5V7zM3 4h1v2H3zm3 0h1v2H6zM3 7h1v2H3zm3 0h1v2H6zm4 1h1v2h-1zm2 0h1v2h-1z" fill-rule="evenodd"/></svg></div>
+          <div><h3 data-copy="service.estate">Présentation immobilière</h3><p data-copy="short.estate">Pages dédiées pour présenter un bien, ses atouts et ses informations clés.</p></div>
+          <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+        </div>
+      </a>
+    </article>
+  </div></div></section><section class="section contact-section"><div class="wrap">
+    <div class="contact-band">
+      <div><h2 data-copy="cta.title">Votre projet commence ici.</h2><p data-copy="cta.lead">Présentez-nous votre activité et ce que vous souhaitez améliorer.</p></div>
+      <a class="button button-white" href="./contact.html"><span data-copy="cta.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+    </div>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="./index.html" aria-label="Zybo"><img src="./assets/logo-zybo.png" alt="" width="500" height="500"></a>
+          <p data-copy="footer.about">Création web et solutions digitales.</p></div>
+        <div class="footer-links">
+          <a class="" href="./devops/index.html"><span data-copy="service.web">Création web</span></a>
+<a class="" href="./marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="./security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
+<a class="" href="./legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
+        </div>
+        <div class="footer-links">
+          <a class="" href="./lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+          <a class="" href="./contact.html"><span data-copy="nav.contact">Contact</span></a>
+          <a class="" href="./lab/monitoring.html"><span data-copy="nav.monitor">Monitoring</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© Zybo</span><a class="" href="./server-status.html"><span data-copy="nav.status">État des services</span></a></div>
+    </div>
+  </footer>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.label":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"page.headline":{"fr":"Des solutions digitales pour votre activité.","nl":"Digitale oplossingen voor uw activiteit.","en":"Digital solutions for your business."},"page.intro":{"fr":"Explorez les services de Zybo en création web, visibilité digitale, informatique et présentation immobilière.","nl":"Ontdek Zybo’s diensten voor webdesign, digitale zichtbaarheid, IT en vastgoedpresentatie.","en":"Explore Zybo’s web design, digital visibility, IT and property presentation services."},"short.web":{"fr":"Sites vitrines, refontes et pages de vente conçus autour de votre offre.","nl":"Bedrijfswebsites, redesigns en landingspagina’s rond uw aanbod.","en":"Business websites, redesigns and landing pages built around your offer."},"short.visibility":{"fr":"Référencement local, contenus et image de marque pour vous rendre plus facile à trouver.","nl":"Lokale SEO, content en merkidentiteit om beter vindbaar te worden.","en":"Local SEO, content and branding to make your business easier to find."},"short.it":{"fr":"Conseil et support pour organiser vos outils et simplifier vos parcours clients.","nl":"Advies en ondersteuning om uw tools en klanttrajecten te vereenvoudigen.","en":"Advice and support to organise your tools and simplify customer journeys."},"short.estate":{"fr":"Pages dédiées pour présenter un bien, ses atouts et ses informations clés.","nl":"Aparte pagina’s voor een pand, met de troeven en de belangrijkste informatie.","en":"Dedicated pages for properties, their strengths and key details."},"cta.title":{"fr":"Votre projet commence ici.","nl":"Uw project begint hier.","en":"Your project starts here."},"cta.lead":{"fr":"Présentez-nous votre activité et ce que vous souhaitez améliorer.","nl":"Vertel ons over uw activiteit en wat u wilt verbeteren.","en":"Tell us about your business and what you would like to improve."},"cta.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"meta.title":{"fr":"Expertises · Zybo","nl":"Expertise · Zybo","en":"Expertise · Zybo"},"meta.description":{"fr":"Explorez les services de Zybo en création web, visibilité digitale, informatique et présentation immobilière.","nl":"Ontdek Zybo’s diensten voor webdesign, digitale zichtbaarheid, IT en vastgoedpresentatie.","en":"Explore Zybo’s web design, digital visibility, IT and property presentation services."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>

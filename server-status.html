@@ -2,166 +2,84 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Disponibilité web | Zybo</title>
-  <meta name="description" content="Mini tableau de bord Zybo pour suivre la disponibilité de quelques services web.">
-  <link rel="stylesheet" href="/assets/style.css">
-  <style>
-    .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
-    .chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; font-weight: 800; font-size: 0.84rem; }
-    .ok { color: #0d8f49; background: rgba(13, 143, 73, 0.12); }
-    .bad { color: #cf2345; background: rgba(207, 35, 69, 0.12); }
-    .warn { color: #a06b00; background: rgba(245, 177, 22, 0.2); }
-    .small { font-size: 0.9rem; color: var(--muted); }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-    .stack { display: flex; flex-direction: column; gap: 10px; }
-    .row-inline { display: flex; justify-content: space-between; gap: 14px; align-items: center; }
-    .skeleton { height: 12px; border-radius: 999px; background: linear-gradient(90deg, #e6f1ff 25%, #cfe5ff 50%, #e6f1ff 75%); background-size: 200% 100%; animation: pulse 1.2s linear infinite; }
-    @keyframes pulse { from { background-position: 200% 0; } to { background-position: -200% 0; } }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d20">
+  <title>État des services · Zybo</title>
+  <meta name="description" content="Démonstration de suivi de la disponibilité et de la latence de pages Zybo et de l’API publique de GitHub.">
+  <link rel="canonical" href="https://zybo.be/server-status.html">
+  <link rel="icon" href="./assets/logo-zybo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="./assets/site.js" defer></script>
 </head>
-<body>
-  <div class="site-shell">
-    <div class="container">
-      <header class="topbar">
-        <a class="brand" href="/">
-          <div class="brand-mark">ZB</div>
-          <div class="brand-copy">
-            <strong>Zybo</strong>
-            <span>Informatique, web et visibilité</span>
+<body data-page="status">
+  <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="./index.html" aria-label="Zybo"><img src="./assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navigation principale">
+        <a href="./projects.html"><span data-copy="nav.expertise">Expertises</span></a>
+        <a href="./lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+        <a class="mobile-contact" href="./contact.html"><span data-copy="nav.contact">Contact</span></a>
+      </nav>
+      <div class="nav-actions">
+        <details class="languages">
+          <summary aria-label="Langue / Taal / Language"><span data-current-lang>FR</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" fill-rule="evenodd"/></svg></summary>
+          <div class="language-list">
+            <button type="button" data-language="fr" lang="fr" aria-pressed="true">Français</button>
+            <button type="button" data-language="nl" lang="nl" aria-pressed="false">Nederlands</button>
+            <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
           </div>
-        </a>
-        <nav class="nav" aria-label="Navigation principale">
-          <a href="/">Accueil</a>
-          <a href="/projects.html">Solutions</a>
-          <a href="/devops/">Sites web</a>
-          <a href="/marketing/">Visibilité</a>
-          <a href="/legal/">Immobilier</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </header>
-
-      <main>
-        <section class="hero-panel page-hero">
-          <p class="eyebrow">Suivi technique</p>
-          <h1>Mini tableau de disponibilité web.</h1>
-          <p>Cette page sert de démonstration légère pour vérifier quelques endpoints publics. Elle peut être adaptée pour des pages, API ou services métiers.</p>
-        </section>
-
-        <section class="card">
-          <div class="row-inline">
-            <div>
-              <h2>Services surveillés</h2>
-              <p class="small">Rafraîchissement automatique toutes les 10 secondes.</p>
-            </div>
-            <button class="btn" id="refreshBtn" type="button">Actualiser</button>
-          </div>
-          <div class="status-grid" id="cards"></div>
-          <p class="small">Dernier contrôle : <span id="lastCheck">-</span></p>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <span><strong>Zybo</strong> | Démonstration de suivi</span>
-        <span>Disponibilité et latence</span>
-      </footer>
+        </details>
+        <a class="nav-contact" href="./contact.html"><span data-copy="nav.contact">Contact</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
     </div>
-  </div>
-
-  <script>
-    const targets = [
-      { id: "site", name: "Accueil Zybo", url: "/", expects: 200 },
-      { id: "contact", name: "Page contact", url: "/contact.html", expects: 200 },
-      { id: "github_api", name: "GitHub API", url: "https://api.github.com/", expects: 200 }
-    ];
-
-    const cards = document.getElementById("cards");
-    const lastCheck = document.getElementById("lastCheck");
-    const refreshBtn = document.getElementById("refreshBtn");
-
-    function formatDate(value) {
-      return new Date(value).toLocaleString("fr-BE", { hour12: false });
-    }
-
-    function formatMs(value) {
-      return typeof value === "number" ? value.toFixed(0) + " ms" : "-";
-    }
-
-    function badge(status) {
-      if (status === "UP") return '<span class="chip ok">UP</span>';
-      if (status === "WARN") return '<span class="chip warn">Attention</span>';
-      return '<span class="chip bad">Indisponible</span>';
-    }
-
-    function renderSkeletons() {
-      cards.innerHTML = targets.map(function(target) {
-        return `
-          <article class="card" id="card-${target.id}">
-            <div class="row-inline">
-              <h3>${target.name}</h3>
-              <span class="chip warn">Analyse</span>
-            </div>
-            <div class="stack">
-              <div class="skeleton"></div>
-              <div class="skeleton" style="width: 80%"></div>
-              <div class="skeleton" style="width: 65%"></div>
-            </div>
-          </article>
-        `;
-      }).join("");
-    }
-
-    async function checkTarget(target) {
-      const start = performance.now();
-      let status = "DOWN";
-      let latency = null;
-      let http = "-";
-      let note = "";
-
-      try {
-        const controller = new AbortController();
-        const timeout = setTimeout(function() { controller.abort(); }, 8000);
-        const response = await fetch(target.url, { method: "GET", cache: "no-store", signal: controller.signal });
-        clearTimeout(timeout);
-        latency = performance.now() - start;
-        http = response.status;
-        status = response.ok && response.status === target.expects ? "UP" : "WARN";
-        note = response.ok ? "Réponse reçue" : "Réponse non valide";
-      } catch (error) {
-        note = "Service bloqué, timeout ou inaccessible";
-      }
-
-      return { id: target.id, name: target.name, url: target.url, status, latency, http, note };
-    }
-
-    function renderResult(result) {
-      const card = document.getElementById("card-" + result.id);
-      if (!card) return;
-
-      card.innerHTML = `
-        <div class="row-inline">
-          <h3>${result.name}</h3>
-          ${badge(result.status)}
+  </header>
+  <main id="main" tabindex="-1"><section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <div class="page-hero-copy">
+        <p data-copy="page.label" class="eyebrow">État des services</p>
+        <h1 data-copy="page.headline">Disponibilité des services web.</h1>
+        <p data-copy="page.intro" class="page-intro">Démonstration de suivi de la disponibilité et de la latence de pages Zybo et de l’API publique de GitHub.</p>
+      </div>
+    </div>
+  </section>
+      <section class="section status-section" data-status data-home="./index.html" data-contact="./contact.html"><div class="wrap">
+        <div class="section-head">
+          <div><h2 data-copy="status.heading">Services surveillés</h2>
+            <p data-copy="status.interval">Vérification automatique toutes les 10 secondes.</p></div>
+          <button type="button" class="button button-dark" data-refresh><span data-copy="status.check">Actualiser</span></button>
         </div>
-        <div class="stack mono small">
-          <div class="row-inline"><span>Latence</span><span>${formatMs(result.latency)}</span></div>
-          <div class="row-inline"><span>HTTP</span><span>${result.http}</span></div>
-          <div class="row-inline"><span>URL</span><span>${result.url}</span></div>
-          <div class="row-inline"><span>Note</span><span>${result.note}</span></div>
+        <div class="status-grid" data-status-cards></div>
+        <p class="last-check"><span data-copy="status.last">Dernière vérification</span> <time data-last-check aria-live="polite">—</time></p>
+        <noscript>Activez JavaScript pour lancer les vérifications.</noscript>
+      </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="./index.html" aria-label="Zybo"><img src="./assets/logo-zybo.png" alt="" width="500" height="500"></a>
+          <p data-copy="footer.about">Création web et solutions digitales.</p></div>
+        <div class="footer-links">
+          <a class="" href="./devops/index.html"><span data-copy="service.web">Création web</span></a>
+<a class="" href="./marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="./security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
+<a class="" href="./legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
         </div>
-      `;
-    }
-
-    async function runAll() {
-      renderSkeletons();
-      const results = await Promise.all(targets.map(checkTarget));
-      results.forEach(renderResult);
-      lastCheck.textContent = formatDate(Date.now());
-    }
-
-    refreshBtn.addEventListener("click", runAll);
-    runAll();
-    setInterval(runAll, 10000);
-  </script>
+        <div class="footer-links">
+          <a class="" href="./lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+          <a class="" href="./contact.html"><span data-copy="nav.contact">Contact</span></a>
+          <a class="" href="./lab/monitoring.html"><span data-copy="nav.monitor">Monitoring</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© Zybo</span><a class="" href="./server-status.html"><span data-copy="nav.status">État des services</span></a></div>
+    </div>
+  </footer>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.label":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.headline":{"fr":"Disponibilité des services web.","nl":"Beschikbaarheid van webdiensten.","en":"Web service availability."},"page.intro":{"fr":"Démonstration de suivi de la disponibilité et de la latence de pages Zybo et de l’API publique de GitHub.","nl":"Demo voor de beschikbaarheid en responstijd van Zybo-pagina’s en de publieke GitHub-API.","en":"A demonstration of availability and latency checks for Zybo pages and the public GitHub API."},"status.heading":{"fr":"Services surveillés","nl":"Gecontroleerde diensten","en":"Monitored services"},"status.interval":{"fr":"Vérification automatique toutes les 10 secondes.","nl":"Automatische controle om de 10 seconden.","en":"Checks run automatically every 10 seconds."},"status.check":{"fr":"Actualiser","nl":"Vernieuwen","en":"Refresh"},"status.last":{"fr":"Dernière vérification","nl":"Laatste controle","en":"Last check"},"status.checking":{"fr":"Vérification en cours","nl":"Controle bezig","en":"Checking"},"status.up":{"fr":"Disponible","nl":"Beschikbaar","en":"Available"},"status.warn":{"fr":"Réponse inattendue","nl":"Onverwacht antwoord","en":"Unexpected response"},"status.down":{"fr":"Inaccessible depuis ce navigateur","nl":"Onbereikbaar vanuit deze browser","en":"Unreachable from this browser"},"status.home":{"fr":"Accueil Zybo","nl":"Zybo-homepage","en":"Zybo homepage"},"status.contact":{"fr":"Page contact","nl":"Contactpagina","en":"Contact page"},"status.latency":{"fr":"Latence","nl":"Latentie","en":"Latency"},"meta.title":{"fr":"État des services · Zybo","nl":"Servicestatus · Zybo","en":"Service status · Zybo"},"meta.description":{"fr":"Démonstration de suivi de la disponibilité et de la latence de pages Zybo et de l’API publique de GitHub.","nl":"Demo voor de beschikbaarheid en responstijd van Zybo-pagina’s en de publieke GitHub-API.","en":"A demonstration of availability and latency checks for Zybo pages and the public GitHub API."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>

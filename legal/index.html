@@ -2,76 +2,96 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title data-i18n-title="page_title">Immobilier et valorisation | Zybo</title>
-  <meta name="description" data-i18n-meta="meta_description" content="Zybo aide à valoriser des biens et services immobiliers grâce à une présentation digitale plus claire, plus premium et plus rassurante.">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d20">
+  <title>Présentation immobilière · Zybo</title>
+  <meta name="description" content="Pages dédiées pour présenter un bien, ses atouts et ses informations clés.">
+  <link rel="canonical" href="https://zybo.be/legal/">
+  <link rel="icon" href="../assets/logo-zybo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/site.js" defer></script>
 </head>
-<body data-page="realestate">
-  <div class="site-shell">
-    <div class="container">
-      <header class="topbar">
-        <a class="brand" href="/">
-          <div class="brand-mark">
-            <img src="/assets/logo-zybo.png" alt="Logo Zybo">
+<body data-page="estate">
+  <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navigation principale">
+        <a href="../projects.html" aria-current="true"><span data-copy="nav.expertise">Expertises</span></a>
+        <a href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+        <a class="mobile-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+      </nav>
+      <div class="nav-actions">
+        <details class="languages">
+          <summary aria-label="Langue / Taal / Language"><span data-current-lang>FR</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" fill-rule="evenodd"/></svg></summary>
+          <div class="language-list">
+            <button type="button" data-language="fr" lang="fr" aria-pressed="true">Français</button>
+            <button type="button" data-language="nl" lang="nl" aria-pressed="false">Nederlands</button>
+            <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
           </div>
-          <div class="brand-copy">
-            <strong>Zybo</strong>
-            <span data-i18n="brand_tagline">Informatique, web et visibilité</span>
-          </div>
-        </a>
-        <div class="topbar-actions">
-          <nav class="nav" aria-label="Navigation principale">
-            <a href="/" data-i18n="nav_home">Accueil</a>
-            <a href="/projects.html" data-i18n="nav_solutions">Solutions</a>
-            <a href="/devops/" data-i18n="nav_web">Sites web</a>
-            <a href="/marketing/" data-i18n="nav_visibility">Visibilité</a>
-            <a class="is-active" href="/legal/" data-i18n="nav_realestate">Immobilier</a>
-            <a href="/contact.html" data-i18n="nav_contact">Contact</a>
-          </nav>
-          <div class="lang-switcher" aria-label="Language switcher">
-            <button type="button" data-lang="fr">FR</button>
-            <button type="button" data-lang="nl">NL</button>
-            <button type="button" data-lang="en">ENG</button>
-          </div>
-        </div>
-      </header>
-
-      <main>
-        <section class="hero-panel page-hero">
-          <p class="eyebrow" data-i18n="hero_eyebrow">Accompagnement immobilier</p>
-          <h1 data-i18n="hero_title">Mieux présenter un bien, un service ou une offre immobilière.</h1>
-          <p data-i18n="hero_text">Une bonne présentation digitale peut rassurer plus vite, clarifier les points forts d'un bien et donner une image plus haut de gamme à ton activité immobilière.</p>
-        </section>
-
-        <section class="grid grid-2">
-          <article class="card">
-            <h2>Ce que nous pouvons faire</h2>
-            <ul class="check-list">
-              <li>Créer une page dédiée à un bien ou à une activité immobilière</li>
-              <li>Mettre en avant les informations essentielles avec plus de lisibilité</li>
-              <li>Renforcer l'image de sérieux et de confiance</li>
-              <li>Structurer une présentation plus premium pour la vente</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h2>Pourquoi c'est utile</h2>
-            <p>Dans l'immobilier, la première impression compte énormément. Une présentation claire, élégante et cohérente augmente la qualité perçue et peut aider à mieux convaincre.</p>
-            <div class="tag-row">
-              <span class="tag">Valorisation</span>
-              <span class="tag">Confiance</span>
-              <span class="tag">Présentation premium</span>
-            </div>
-          </article>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <span data-i18n="footer_left"><strong>Zybo</strong> | Immobilier et image digitale</span>
-        <span data-i18n="footer_right">Pages premium pour mieux présenter</span>
-      </footer>
+        </details>
+        <a class="nav-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
     </div>
+  </header>
+  <main id="main" tabindex="-1"><section class="page-hero">
+    <div class="wrap page-hero-inner split-hero">
+      <div class="page-hero-copy">
+        <p data-copy="page.label" class="eyebrow">Présentation immobilière</p>
+        <h1 data-copy="page.headline">Mettez un bien en valeur dès la première visite en ligne.</h1>
+        <p data-copy="page.intro" class="page-intro">Pour les propriétaires et les professionnels de l’immobilier, Zybo crée des présentations digitales qui rendent les atouts d’un bien faciles à découvrir.</p>
+        <a class="button button-primary" href="../contact.html?service=estate"><span data-copy="service.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
+      <div class="service-art art-estate" aria-hidden="true"><img src="../assets/media/immobilier.jpg" alt="" width="1000" height="667" loading="lazy"></div>
+    </div>
+  </section>
+      <section class="section feature-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="feature.heading">Ce que nous pouvons faire pour vous</h2></div>
+        <div class="features-grid">
+    <article class="feature" data-reveal>
+      <h3 data-copy="feature.0">Une page dédiée</h3><p data-copy="feature.body.0">Présentez un bien, une offre ou votre activité immobilière avec une mise en page adaptée.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.1">Des points forts visibles</h3><p data-copy="feature.body.1">Donnez une place claire aux visuels, aux caractéristiques et aux informations essentielles.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.2">Un contact facile à trouver</h3><p data-copy="feature.body.2">Aidez les acheteurs ou locataires à retrouver les informations utiles et à vous joindre.</p>
+    </article>
   </div>
-  <script src="/assets/i18n.js"></script>
+        <a class="text-link" href="../projects.html"><span data-copy="service.all">Toutes les expertises</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div></section><section class="section contact-section"><div class="wrap">
+    <div class="contact-band">
+      <div><h2 data-copy="cta.title">Votre projet commence ici.</h2><p data-copy="cta.lead">Présentez-nous votre activité et ce que vous souhaitez améliorer.</p></div>
+      <a class="button button-white" href="../contact.html?service=estate"><span data-copy="cta.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+    </div>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+          <p data-copy="footer.about">Création web et solutions digitales.</p></div>
+        <div class="footer-links">
+          <a class="" href="../devops/index.html"><span data-copy="service.web">Création web</span></a>
+<a class="" href="../marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="../security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
+<a class="" href="../legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
+        </div>
+        <div class="footer-links">
+          <a class="" href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+          <a class="" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+          <a class="" href="../lab/monitoring.html"><span data-copy="nav.monitor">Monitoring</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© Zybo</span><a class="" href="../server-status.html"><span data-copy="nav.status">État des services</span></a></div>
+    </div>
+  </footer>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"service.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"page.label":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"page.headline":{"fr":"Mettez un bien en valeur dès la première visite en ligne.","nl":"Laat een pand opvallen vanaf het eerste online bezoek.","en":"Show a property at its best from the first online visit."},"page.intro":{"fr":"Pour les propriétaires et les professionnels de l’immobilier, Zybo crée des présentations digitales qui rendent les atouts d’un bien faciles à découvrir.","nl":"Voor eigenaars en vastgoedprofessionals maakt Zybo digitale presentaties die de troeven van een pand zichtbaar maken.","en":"For owners and property professionals, Zybo creates digital presentations that make a property’s strengths easy to discover."},"feature.heading":{"fr":"Ce que nous pouvons faire pour vous","nl":"Wat we voor u kunnen doen","en":"What we can do for you"},"feature.0":{"fr":"Une page dédiée","nl":"Een aparte pagina","en":"A dedicated page"},"feature.body.0":{"fr":"Présentez un bien, une offre ou votre activité immobilière avec une mise en page adaptée.","nl":"Presenteer een pand, een aanbod of uw vastgoedactiviteit met een passende lay-out.","en":"Present a property, an offer or your property business with a layout suited to the subject."},"feature.1":{"fr":"Des points forts visibles","nl":"Zichtbare troeven","en":"Visible selling points"},"feature.body.1":{"fr":"Donnez une place claire aux visuels, aux caractéristiques et aux informations essentielles.","nl":"Geef beelden, kenmerken en essentiële informatie een duidelijke plaats.","en":"Give images, features and essential information a clear place on the page."},"feature.2":{"fr":"Un contact facile à trouver","nl":"Makkelijk contact opnemen","en":"Easy-to-find contact details"},"feature.body.2":{"fr":"Aidez les acheteurs ou locataires à retrouver les informations utiles et à vous joindre.","nl":"Help kopers of huurders belangrijke informatie te vinden en u te bereiken.","en":"Help buyers or tenants find useful information and get in touch."},"service.all":{"fr":"Toutes les expertises","nl":"Alle diensten","en":"All services"},"cta.title":{"fr":"Votre projet commence ici.","nl":"Uw project begint hier.","en":"Your project starts here."},"cta.lead":{"fr":"Présentez-nous votre activité et ce que vous souhaitez améliorer.","nl":"Vertel ons over uw activiteit en wat u wilt verbeteren.","en":"Tell us about your business and what you would like to improve."},"cta.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"meta.title":{"fr":"Présentation immobilière · Zybo","nl":"Vastgoedpresentatie · Zybo","en":"Property presentation · Zybo"},"meta.description":{"fr":"Pages dédiées pour présenter un bien, ses atouts et ses informations clés.","nl":"Aparte pagina’s voor een pand, met de troeven en de belangrijkste informatie.","en":"Dedicated pages for properties, their strengths and key details."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>

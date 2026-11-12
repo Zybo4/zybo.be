@@ -2,68 +2,97 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Méthode de travail | Zybo</title>
-  <meta name="description" content="Découvrez la méthode de travail Zybo pour la création de sites web et solutions digitales.">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d20">
+  <title>Notre méthode · Zybo</title>
+  <meta name="description" content="Découvrez comment Zybo définit, crée, optimise et prépare votre projet pour la mise en ligne.">
+  <link rel="canonical" href="https://zybo.be/lab/">
+  <link rel="icon" href="../assets/logo-zybo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/site.js" defer></script>
 </head>
-<body>
-  <div class="site-shell">
-    <div class="container">
-      <header class="topbar">
-        <a class="brand" href="/">
-          <div class="brand-mark">ZB</div>
-          <div class="brand-copy">
-            <strong>Zybo</strong>
-            <span>Informatique, web et visibilité</span>
+<body data-page="method">
+  <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navigation principale">
+        <a href="../projects.html"><span data-copy="nav.expertise">Expertises</span></a>
+        <a href="../lab/index.html" aria-current="page"><span data-copy="nav.method">Méthode</span></a>
+        <a class="mobile-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+      </nav>
+      <div class="nav-actions">
+        <details class="languages">
+          <summary aria-label="Langue / Taal / Language"><span data-current-lang>FR</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" fill-rule="evenodd"/></svg></summary>
+          <div class="language-list">
+            <button type="button" data-language="fr" lang="fr" aria-pressed="true">Français</button>
+            <button type="button" data-language="nl" lang="nl" aria-pressed="false">Nederlands</button>
+            <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
           </div>
-        </a>
-        <nav class="nav" aria-label="Navigation principale">
-          <a href="/">Accueil</a>
-          <a href="/projects.html">Solutions</a>
-          <a href="/devops/">Sites web</a>
-          <a href="/marketing/">Visibilité</a>
-          <a href="/legal/">Immobilier</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </header>
-
-      <main>
-        <section class="hero-panel page-hero">
-          <p class="eyebrow">Méthode</p>
-          <h1>Une façon de travailler simple et orientée résultats.</h1>
-          <p>Chaque projet suit une logique claire : comprendre l'objectif, construire un site cohérent, améliorer la lisibilité et livrer une présence digitale prête à être utilisée.</p>
-        </section>
-
-        <section class="process">
-          <article class="process-step">
-            <span>1</span>
-            <h3>Analyse</h3>
-            <p>Comprendre l'activité, la cible et le ton à adopter.</p>
-          </article>
-          <article class="process-step">
-            <span>2</span>
-            <h3>Maquette</h3>
-            <p>Créer une structure visuelle moderne et crédible.</p>
-          </article>
-          <article class="process-step">
-            <span>3</span>
-            <h3>Optimisation</h3>
-            <p>Clarifier le message et améliorer la conversion.</p>
-          </article>
-          <article class="process-step">
-            <span>4</span>
-            <h3>Livraison</h3>
-            <p>Mettre en ligne un site prêt à représenter l'activité.</p>
-          </article>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <span><strong>Zybo</strong> | Méthode de travail</span>
-        <span>Processus simple, rapide et professionnel</span>
-      </footer>
+        </details>
+        <a class="nav-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
     </div>
-  </div>
+  </header>
+  <main id="main" tabindex="-1"><section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <div class="page-hero-copy">
+        <p data-copy="page.label" class="eyebrow">Méthode</p>
+        <h1 data-copy="page.headline">Du premier échange à la mise en ligne.</h1>
+        <p data-copy="page.intro" class="page-intro">Découvrez comment Zybo définit, crée, optimise et prépare votre projet pour la mise en ligne.</p>
+      </div>
+    </div>
+  </section>
+      <section class="section method-section"><div class="wrap"><ol class="process-grid">
+    <li data-reveal><span class="step-index" aria-hidden="true">01</span>
+      <h3 data-copy="step.0">Échange</h3>
+      <p data-copy="step.body.0">On définit votre activité, votre public et l’objectif du projet.</p>
+    </li>
+<li data-reveal><span class="step-index" aria-hidden="true">02</span>
+      <h3 data-copy="step.1">Création</h3>
+      <p data-copy="step.body.1">On construit la structure et la direction visuelle de votre site.</p>
+    </li>
+<li data-reveal><span class="step-index" aria-hidden="true">03</span>
+      <h3 data-copy="step.2">Optimisation</h3>
+      <p data-copy="step.body.2">On affine les textes, le parcours et l’affichage sur mobile.</p>
+    </li>
+<li data-reveal><span class="step-index" aria-hidden="true">04</span>
+      <h3 data-copy="step.3">Mise en ligne</h3>
+      <p data-copy="step.body.3">Votre site est prêt à être publié et partagé.</p>
+    </li>
+  </ol></div></section><section class="section contact-section"><div class="wrap">
+    <div class="contact-band">
+      <div><h2 data-copy="cta.title">Votre projet commence ici.</h2><p data-copy="cta.lead">Présentez-nous votre activité et ce que vous souhaitez améliorer.</p></div>
+      <a class="button button-white" href="../contact.html"><span data-copy="cta.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+    </div>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+          <p data-copy="footer.about">Création web et solutions digitales.</p></div>
+        <div class="footer-links">
+          <a class="" href="../devops/index.html"><span data-copy="service.web">Création web</span></a>
+<a class="" href="../marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="../security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
+<a class="" href="../legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
+        </div>
+        <div class="footer-links">
+          <a class="" href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+          <a class="" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+          <a class="" href="../lab/monitoring.html"><span data-copy="nav.monitor">Monitoring</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© Zybo</span><a class="" href="../server-status.html"><span data-copy="nav.status">État des services</span></a></div>
+    </div>
+  </footer>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.label":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"page.headline":{"fr":"Du premier échange à la mise en ligne.","nl":"Van kennismaking tot publicatie.","en":"From the first conversation to launch."},"page.intro":{"fr":"Découvrez comment Zybo définit, crée, optimise et prépare votre projet pour la mise en ligne.","nl":"Ontdek hoe Zybo uw project uitwerkt, optimaliseert en klaarmaakt voor publicatie.","en":"See how Zybo defines, designs, refines and prepares your project for launch."},"step.0":{"fr":"Échange","nl":"Kennismaking","en":"Discovery"},"step.body.0":{"fr":"On définit votre activité, votre public et l’objectif du projet.","nl":"We bepalen uw activiteit, doelgroep en projectdoel.","en":"We define your business, audience and project goal."},"step.1":{"fr":"Création","nl":"Ontwerp","en":"Design"},"step.body.1":{"fr":"On construit la structure et la direction visuelle de votre site.","nl":"We werken de structuur en visuele richting van uw site uit.","en":"We build the structure and visual direction of your site."},"step.2":{"fr":"Optimisation","nl":"Optimalisatie","en":"Refinement"},"step.body.2":{"fr":"On affine les textes, le parcours et l’affichage sur mobile.","nl":"We verfijnen de teksten, het klanttraject en de mobiele weergave.","en":"We refine the copy, visitor journey and mobile layout."},"step.3":{"fr":"Mise en ligne","nl":"Publicatie","en":"Launch"},"step.body.3":{"fr":"Votre site est prêt à être publié et partagé.","nl":"Uw website is klaar om te publiceren en te delen.","en":"Your site is ready to publish and share."},"cta.title":{"fr":"Votre projet commence ici.","nl":"Uw project begint hier.","en":"Your project starts here."},"cta.lead":{"fr":"Présentez-nous votre activité et ce que vous souhaitez améliorer.","nl":"Vertel ons over uw activiteit en wat u wilt verbeteren.","en":"Tell us about your business and what you would like to improve."},"cta.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"meta.title":{"fr":"Notre méthode · Zybo","nl":"Onze werkwijze · Zybo","en":"Our process · Zybo"},"meta.description":{"fr":"Découvrez comment Zybo définit, crée, optimise et prépare votre projet pour la mise en ligne.","nl":"Ontdek hoe Zybo uw project uitwerkt, optimaliseert en klaarmaakt voor publicatie.","en":"See how Zybo defines, designs, refines and prepares your project for launch."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>
