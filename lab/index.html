@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080d20">
+  <meta name="theme-color" content="#101329">
   <title>Notre méthode · Zybo</title>
-  <meta name="description" content="Découvrez comment Zybo définit, crée, optimise et prépare votre projet pour la mise en ligne.">
+  <meta name="description" content="Voyez ce que nous préparons ensemble, ce que vous pouvez valider et ce que nous vérifions avant la publication.">
   <link rel="canonical" href="https://zybo.be/lab/">
   <link rel="icon" href="../assets/logo-zybo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +13,23 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/studio.css">
+  <link rel="stylesheet" href="../assets/pages.css">
   <script src="../assets/site.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/experience.js" defer></script>
 </head>
 <body data-page="method">
   <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
   <header class="site-header">
     <div class="wrap nav-shell">
-      <a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
       <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
         <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
       </button>
@@ -45,44 +55,94 @@
     <div class="wrap page-hero-inner">
       <div class="page-hero-copy">
         <p data-copy="page.label" class="eyebrow">Méthode</p>
-        <h1 data-copy="page.headline">Du premier échange à la mise en ligne.</h1>
-        <p data-copy="page.intro" class="page-intro">Découvrez comment Zybo définit, crée, optimise et prépare votre projet pour la mise en ligne.</p>
+        <h1 data-copy="page.headline" data-scan>Du premier échange à la mise en ligne.</h1>
+        <p data-copy="page.intro" class="page-intro">Voyez ce que nous préparons ensemble, ce que vous pouvez valider et ce que nous vérifions avant la publication.</p>
+        <a class="button button-outline" href="#etapes"><span data-copy="method.jump">Voir les étapes</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.646 13.854a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0-.708-.708L8.5 12.293V2.5a.5.5 0 0 0-1 0v9.793L4.354 9.146a.5.5 0 1 0-.708.708z" fill-rule="evenodd"/></svg></a>
       </div>
     </div>
   </section>
-      <section class="section method-section"><div class="wrap"><ol class="process-grid">
-    <li data-reveal><span class="step-index" aria-hidden="true">01</span>
-      <h3 data-copy="step.0">Échange</h3>
-      <p data-copy="step.body.0">On définit votre activité, votre public et l’objectif du projet.</p>
+      <section id="etapes" class="section method-section home-method"><div class="wrap">
+        <div class="section-head"><h2 data-copy="method.steps" data-scan>Quatre étapes, de l’idée au site.</h2></div>
+        <div class="process-track" data-process>
+    <div class="process-line" aria-hidden="true"><span class="process-packet"></span></div>
+    <ol class="process-grid">
+    <li><span class="step-index" aria-hidden="true">01</span>
+      <h3 data-copy="step.0">Cadrage</h3>
+      <p data-copy="step.body.0">Nous précisons vos services, vos visiteurs et ce que le site doit leur permettre de faire.</p>
     </li>
-<li data-reveal><span class="step-index" aria-hidden="true">02</span>
+<li><span class="step-index" aria-hidden="true">02</span>
       <h3 data-copy="step.1">Création</h3>
-      <p data-copy="step.body.1">On construit la structure et la direction visuelle de votre site.</p>
+      <p data-copy="step.body.1">Nous vous présentons la structure des pages et une première version à parcourir.</p>
     </li>
-<li data-reveal><span class="step-index" aria-hidden="true">03</span>
-      <h3 data-copy="step.2">Optimisation</h3>
-      <p data-copy="step.body.2">On affine les textes, le parcours et l’affichage sur mobile.</p>
+<li><span class="step-index" aria-hidden="true">03</span>
+      <h3 data-copy="step.2">Vérifications</h3>
+      <p data-copy="step.body.2">Nous vérifions l’affichage sur mobile, les liens, les formulaires et le poids des images.</p>
     </li>
-<li data-reveal><span class="step-index" aria-hidden="true">04</span>
+<li><span class="step-index" aria-hidden="true">04</span>
       <h3 data-copy="step.3">Mise en ligne</h3>
-      <p data-copy="step.body.3">Votre site est prêt à être publié et partagé.</p>
+      <p data-copy="step.body.3">Nous préparons le domaine et l’hébergement, puis vérifions l’accès au site publié.</p>
     </li>
-  </ol></div></section><section class="section contact-section"><div class="wrap">
-    <div class="contact-band">
-      <div><h2 data-copy="cta.title">Votre projet commence ici.</h2><p data-copy="cta.lead">Présentez-nous votre activité et ce que vous souhaitez améliorer.</p></div>
-      <a class="button button-white" href="../contact.html"><span data-copy="cta.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
-    </div>
+    </ol>
+  </div>
+      </div></section>
+      <section class="section detail-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="method.details" data-scan>Ce que vous pouvez valider.</h2></div>
+        <ol class="detail-rows">
+    <li data-reveal>
+      <span class="detail-index" aria-hidden="true">01</span>
+      <h3 data-copy="method.check.0">Un périmètre clair</h3>
+      <p data-copy="method.check.body.0">Rassemblez les services à présenter, les coordonnées et les contenus déjà disponibles. Nous déterminons ensemble les pages prioritaires.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">02</span>
+      <h3 data-copy="method.check.1">Une version à parcourir</h3>
+      <p data-copy="method.check.body.1">Vous pouvez parcourir la première version et signaler les changements utiles avant les derniers ajustements.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">03</span>
+      <h3 data-copy="method.check.2">Une vérification avant publication</h3>
+      <p data-copy="method.check.body.2">On teste les liens, l’envoi du formulaire, la navigation au clavier et l’affichage aux tailles d’écran courantes.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">04</span>
+      <h3 data-copy="method.check.3">Les accès pour la suite</h3>
+      <p data-copy="method.check.body.3">Nous faisons le point sur le domaine, l’hébergement et les accès dont vous aurez besoin pour suivre le site.</p>
+    </li>
+  </ol>
+      </div></section>
+      <section class="section faq-section"><div class="wrap faq-layout">
+    <h2 data-copy="faq.title" data-scan>Questions fréquentes</h2>
+    <div class="faq-list"><details>
+      <summary><span data-copy="faq.q.0">Que préparer avant de commencer ?</span><span aria-hidden="true">+</span></summary>
+      <p data-copy="faq.a.0">Une liste de vos services, vos coordonnées et, si vous en avez, votre logo, vos photos et l’adresse du site actuel.</p>
+    </details><details>
+      <summary><span data-copy="faq.q.1">Le domaine et l’hébergement doivent-ils être chez le même fournisseur ?</span><span aria-hidden="true">+</span></summary>
+      <p data-copy="faq.a.1">Vous pouvez garder le domaine chez un fournisseur et héberger le site ailleurs. Les réglages DNS relient les deux.</p>
+    </details></div>
+  </div></section>
+      <div class="wrap related-links"><a class="text-link" href="../index.html#trajet-web"><span data-copy="method.route">Comprendre le domaine et l’hébergement</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a></div><section class="contact-section contact-close"><div class="wrap">
+    <a class="contact-row" href="../contact.html#contact-form">
+      <div class="contact-row-copy">
+        <h2 data-copy="cta.title" data-scan>Écrire à Zybo</h2>
+        <span data-copy="cta.lead">Une demande, un site à revoir ou une question technique.</span>
+      </div>
+      <span class="contact-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+    </a>
   </div></section></main>
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-main">
-        <div><a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+        <div><a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
           <p data-copy="footer.about">Création web et solutions digitales.</p></div>
         <div class="footer-links">
           <a class="" href="../devops/index.html"><span data-copy="service.web">Création web</span></a>
-<a class="" href="../marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="../applications/index.html"><span data-copy="service.apps">Applications</span></a>
+<a class="" href="../automatisation/index.html"><span data-copy="service.automation">Automatisation</span></a>
 <a class="" href="../security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
-<a class="" href="../legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
+<a class="" href="../confidentialite/index.html"><span data-copy="service.privacy">Confidentialité et stockage</span></a>
+<a class="" href="../gestion-personnelle/index.html"><span data-copy="service.management">Gestion personnelle</span></a>
         </div>
         <div class="footer-links">
           <a class="" href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
@@ -93,6 +153,6 @@
       <div class="footer-bottom"><span>© Zybo</span><a class="" href="../server-status.html"><span data-copy="nav.status">État des services</span></a></div>
     </div>
   </footer>
-  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.label":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"page.headline":{"fr":"Du premier échange à la mise en ligne.","nl":"Van kennismaking tot publicatie.","en":"From the first conversation to launch."},"page.intro":{"fr":"Découvrez comment Zybo définit, crée, optimise et prépare votre projet pour la mise en ligne.","nl":"Ontdek hoe Zybo uw project uitwerkt, optimaliseert en klaarmaakt voor publicatie.","en":"See how Zybo defines, designs, refines and prepares your project for launch."},"step.0":{"fr":"Échange","nl":"Kennismaking","en":"Discovery"},"step.body.0":{"fr":"On définit votre activité, votre public et l’objectif du projet.","nl":"We bepalen uw activiteit, doelgroep en projectdoel.","en":"We define your business, audience and project goal."},"step.1":{"fr":"Création","nl":"Ontwerp","en":"Design"},"step.body.1":{"fr":"On construit la structure et la direction visuelle de votre site.","nl":"We werken de structuur en visuele richting van uw site uit.","en":"We build the structure and visual direction of your site."},"step.2":{"fr":"Optimisation","nl":"Optimalisatie","en":"Refinement"},"step.body.2":{"fr":"On affine les textes, le parcours et l’affichage sur mobile.","nl":"We verfijnen de teksten, het klanttraject en de mobiele weergave.","en":"We refine the copy, visitor journey and mobile layout."},"step.3":{"fr":"Mise en ligne","nl":"Publicatie","en":"Launch"},"step.body.3":{"fr":"Votre site est prêt à être publié et partagé.","nl":"Uw website is klaar om te publiceren en te delen.","en":"Your site is ready to publish and share."},"cta.title":{"fr":"Votre projet commence ici.","nl":"Uw project begint hier.","en":"Your project starts here."},"cta.lead":{"fr":"Présentez-nous votre activité et ce que vous souhaitez améliorer.","nl":"Vertel ons over uw activiteit en wat u wilt verbeteren.","en":"Tell us about your business and what you would like to improve."},"cta.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"meta.title":{"fr":"Notre méthode · Zybo","nl":"Onze werkwijze · Zybo","en":"Our process · Zybo"},"meta.description":{"fr":"Découvrez comment Zybo définit, crée, optimise et prépare votre projet pour la mise en ligne.","nl":"Ontdek hoe Zybo uw project uitwerkt, optimaliseert en klaarmaakt voor publicatie.","en":"See how Zybo defines, designs, refines and prepares your project for launch."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.apps":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"service.automation":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.privacy":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"service.management":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"method.jump":{"fr":"Voir les étapes","nl":"Bekijk de stappen","en":"See the steps"},"page.label":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"page.headline":{"fr":"Du premier échange à la mise en ligne.","nl":"Van kennismaking tot publicatie.","en":"From the first conversation to launch."},"page.intro":{"fr":"Voyez ce que nous préparons ensemble, ce que vous pouvez valider et ce que nous vérifions avant la publication.","nl":"Bekijk wat we samen voorbereiden, wat u kunt goedkeuren en wat we vóór publicatie controleren.","en":"See what we prepare together, what you can review and what we check before launch."},"method.steps":{"fr":"Quatre étapes, de l’idée au site.","nl":"Vier stappen van idee naar website.","en":"Four steps from idea to website."},"step.0":{"fr":"Cadrage","nl":"Kennismaking","en":"Discovery"},"step.body.0":{"fr":"Nous précisons vos services, vos visiteurs et ce que le site doit leur permettre de faire.","nl":"We brengen uw diensten, bezoekers en de belangrijkste acties in kaart.","en":"We identify your services, your visitors and what they should be able to do."},"step.1":{"fr":"Création","nl":"Ontwerp","en":"Design"},"step.body.1":{"fr":"Nous vous présentons la structure des pages et une première version à parcourir.","nl":"We tonen de paginastructuur en een eerste versie die u kunt bekijken.","en":"We share the page structure and a first version you can browse."},"step.2":{"fr":"Vérifications","nl":"Controles","en":"Checks"},"step.body.2":{"fr":"Nous vérifions l’affichage sur mobile, les liens, les formulaires et le poids des images.","nl":"We controleren de mobiele weergave, links, formulieren en afbeeldingsgrootte.","en":"We check the mobile layout, links, forms and image sizes."},"step.3":{"fr":"Mise en ligne","nl":"Publicatie","en":"Launch"},"step.body.3":{"fr":"Nous préparons le domaine et l’hébergement, puis vérifions l’accès au site publié.","nl":"We bereiden domein en hosting voor en testen de gepubliceerde site.","en":"We prepare the domain and hosting, then check the published site."},"method.details":{"fr":"Ce que vous pouvez valider.","nl":"Wat u kunt goedkeuren.","en":"What you can review."},"method.check.0":{"fr":"Un périmètre clair","nl":"Een duidelijke scope","en":"A clear scope"},"method.check.body.0":{"fr":"Rassemblez les services à présenter, les coordonnées et les contenus déjà disponibles. Nous déterminons ensemble les pages prioritaires.","nl":"Verzamel diensten, contactgegevens en bestaande inhoud. Samen bepalen we welke pagina’s prioriteit krijgen.","en":"Gather the services, contact details and existing content. Together we decide which pages come first."},"method.check.1":{"fr":"Une version à parcourir","nl":"Een versie om te bekijken","en":"A version you can browse"},"method.check.body.1":{"fr":"Vous pouvez parcourir la première version et signaler les changements utiles avant les derniers ajustements.","nl":"U kunt de eerste versie bekijken en nuttige wijzigingen doorgeven vóór de afwerking.","en":"Browse the first version and flag any changes before the finishing touches."},"method.check.2":{"fr":"Une vérification avant publication","nl":"Een controle vóór publicatie","en":"A pre-launch check"},"method.check.body.2":{"fr":"On teste les liens, l’envoi du formulaire, la navigation au clavier et l’affichage aux tailles d’écran courantes.","nl":"We testen links, het formulier, toetsenbordnavigatie en de weergave op gangbare schermformaten.","en":"We test links, the form, keyboard navigation and the layout at common screen sizes."},"method.check.3":{"fr":"Les accès pour la suite","nl":"Toegang voor later","en":"Access for what comes next"},"method.check.body.3":{"fr":"Nous faisons le point sur le domaine, l’hébergement et les accès dont vous aurez besoin pour suivre le site.","nl":"We overlopen domein, hosting en de toegang die u nodig hebt om de site op te volgen.","en":"We review the domain, hosting and access you’ll need to look after the site."},"faq.title":{"fr":"Questions fréquentes","nl":"Veelgestelde vragen","en":"Frequently asked questions"},"faq.q.0":{"fr":"Que préparer avant de commencer ?","nl":"Wat bereid ik vooraf voor?","en":"What should I prepare?"},"faq.a.0":{"fr":"Une liste de vos services, vos coordonnées et, si vous en avez, votre logo, vos photos et l’adresse du site actuel.","nl":"Een lijst van uw diensten, uw contactgegevens en eventueel uw logo, foto’s en huidige webadres.","en":"A list of your services and contact details, plus your logo, photos and current website address if you have them."},"faq.q.1":{"fr":"Le domaine et l’hébergement doivent-ils être chez le même fournisseur ?","nl":"Moeten domein en hosting bij dezelfde provider zitten?","en":"Do my domain and hosting need the same provider?"},"faq.a.1":{"fr":"Vous pouvez garder le domaine chez un fournisseur et héberger le site ailleurs. Les réglages DNS relient les deux.","nl":"U kunt uw domein bij één provider houden en uw site elders hosten. DNS koppelt beide.","en":"You can keep the domain with one provider and host the site elsewhere. DNS connects the two."},"method.route":{"fr":"Comprendre le domaine et l’hébergement","nl":"Domein en hosting begrijpen","en":"Understand domains and hosting"},"cta.title":{"fr":"Écrire à Zybo","nl":"Schrijf Zybo","en":"Write to Zybo"},"cta.lead":{"fr":"Une demande, un site à revoir ou une question technique.","nl":"Een aanvraag, een website om te vernieuwen of een technische vraag.","en":"An enquiry, a site to update or a technical question."},"meta.title":{"fr":"Notre méthode · Zybo","nl":"Onze werkwijze · Zybo","en":"Our process · Zybo"},"meta.description":{"fr":"Voyez ce que nous préparons ensemble, ce que vous pouvez valider et ce que nous vérifions avant la publication.","nl":"Bekijk wat we samen voorbereiden, wat u kunt goedkeuren en wat we vóór publicatie controleren.","en":"See what we prepare together, what you can review and what we check before launch."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>

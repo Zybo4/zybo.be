@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080d20">
+  <meta name="theme-color" content="#101329">
   <title>Zybo · Studio digital et création web</title>
-  <meta name="description" content="Zybo accompagne les indépendants et les PME en création web, visibilité digitale, solutions informatiques et présentation immobilière.">
+  <meta name="description" content="Sites web, applications, automatisation, solutions informatiques, confidentialité et stockage, gestion personnelle.">
   <link rel="canonical" href="https://zybo.be/">
   <link rel="icon" href="./assets/logo-zybo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +13,26 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/studio.css">
+  <link rel="stylesheet" href="./assets/pages.css">
+  <link rel="stylesheet" href="./assets/network-lab.css">
   <script src="./assets/site.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="./assets/experience.js" defer></script>
+  <script src="./assets/globe.js" defer></script>
+  <script src="./assets/network-lab.js" defer></script>
 </head>
 <body data-page="home">
   <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
   <header class="site-header">
     <div class="wrap nav-shell">
-      <a class="brand" href="./index.html" aria-label="Zybo"><img src="./assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <a class="brand" href="./index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="./assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="./assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
       <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
         <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
       </button>
@@ -41,117 +54,412 @@
       </div>
     </div>
   </header>
-  <main id="main" tabindex="-1"><section class="hero">
-      <div class="hero-scene" aria-hidden="true" data-scene>
-        <img class="hero-poster" src="./assets/media/zybo-sculpture.jpg" width="1280" height="853" alt="" fetchpriority="high">
-        <div class="hero-canvas" data-canvas></div>
+  <main id="main" tabindex="-1"><section class="hero" data-pointer-area>
+      <div class="hero-atmosphere" aria-hidden="true">
+        <div class="atmosphere-grid"></div>
+        <div class="atmosphere-stars"></div>
+        <div class="atmosphere-orbits"><i></i><i></i><i></i></div>
       </div>
-      <button type="button" class="scene-toggle" data-scene-toggle aria-pressed="false" hidden><span data-copy="hero.scene">Vue 3D</span></button>
+      <div class="hero-art" aria-hidden="true">
+    <div class="hero-art-image" data-globe>
+      <img class="hero-poster" src="./assets/media/zybo-globe.webp" width="900" height="790" alt="" fetchpriority="high">
+      <img class="moon-texture" src="./assets/media/zybo-moon.webp" width="256" height="256" alt="" decoding="async" fetchpriority="low" hidden>
+      <canvas class="hero-globe"></canvas>
+    </div>
+  </div>
       <div class="wrap hero-inner">
         <div class="hero-copy">
-          <p data-copy="hero.label" class="eyebrow">Studio digital</p>
-          <h1><span data-copy="hero.title">Faites grandir votre présence</span>
-            <span data-copy="hero.accent" class="hero-accent">en ligne.</span></h1>
-          <p data-copy="hero.lead" class="hero-lead">Zybo crée des sites web, améliore votre visibilité et simplifie vos outils digitaux. Pour les indépendants, les PME et les porteurs de projets.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./contact.html"><span data-copy="hero.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
-            <a class="button button-outline" href="#expertises"><span data-copy="hero.more">Découvrir les expertises</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.646 13.854a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0-.708-.708L8.5 12.293V2.5a.5.5 0 0 0-1 0v9.793L4.354 9.146a.5.5 0 1 0-.708.708z" fill-rule="evenodd"/></svg></a>
+          <p data-copy="hero.label" class="eyebrow" data-intro>Sites web, applications et automatisation</p>
+          <h1 class="hero-title">
+            <span class="hero-line"><span data-copy="hero.title" data-intro>Votre activité</span></span>
+            <span class="hero-line"><span data-copy="hero.accent" class="hero-accent" data-intro data-pointer-text>prend place.</span></span>
+          </h1>
+          <p data-copy="hero.lead" class="hero-lead" data-intro>Zybo aide les indépendants et les PME à présenter leurs services, automatiser les tâches répétitives et organiser leurs outils et leurs fichiers.</p>
+          <div class="hero-actions" data-intro>
+            <a class="button button-primary magnetic" href="./contact.html"><span data-copy="hero.start">Nous contacter</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+            <a class="text-link hero-more" href="#expertises"><span data-copy="hero.more">Voir nos services</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.646 13.854a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0-.708-.708L8.5 12.293V2.5a.5.5 0 0 0-1 0v9.793L4.354 9.146a.5.5 0 1 0-.708.708z" fill-rule="evenodd"/></svg></a>
           </div>
         </div>
       </div>
     </section>
     <section class="section expertise-section" id="expertises">
       <div class="wrap">
-        <div class="section-head">
-          <h2 data-copy="expertise.title">Comment Zybo peut vous aider</h2>
-          <p data-copy="expertise.lead">Choisissez le service qui répond à votre besoin, de la création d’un site à la mise en valeur d’un bien.</p>
+        <div class="section-head" data-reveal>
+          <h2 data-copy="expertise.title" data-scan>Nos expertises.</h2>
+          <p data-copy="expertise.lead">Créez votre présence en ligne, simplifiez vos tâches et organisez vos données.</p>
         </div>
-        <div class="service-grid">
-    <article class="service-card" data-reveal>
-      <a href="./devops/index.html" class="service-link">
-        <div class="service-art art-web" aria-hidden="true"><div class="browser-art"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-inner"><div class="browser-copy"><i></i><i></i><i></i><i></i></div><div class="browser-shape"></div></div><div class="browser-foot"><i></i><i></i><i></i></div></div></div>
-        <div class="service-info">
-          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5V5h14v-.5A1.5 1.5 0 0 0 13.5 3zM15 6H1v5.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5zM0 4.5A2.5 2.5 0 0 1 2.5 2h11A2.5 2.5 0 0 1 16 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 11.5z" fill-rule="evenodd"/></svg></div>
+        <div class="service-browser" data-service-browser>
+    <div class="service-rows">
+      <article class="service-card">
+        <a href="./devops/index.html" class="service-link" data-service="web">
+          <span class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5V5h14v-.5A1.5 1.5 0 0 0 13.5 3zM15 6H1v5.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5zM0 4.5A2.5 2.5 0 0 1 2.5 2h11A2.5 2.5 0 0 1 16 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 11.5z" fill-rule="evenodd"/></svg></span>
           <div><h3 data-copy="service.web">Création web</h3><p data-copy="short.web">Sites vitrines, refontes et pages de vente conçus autour de votre offre.</p></div>
           <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
-        </div>
-      </a>
-    </article>
-<article class="service-card" data-reveal>
-      <a href="./marketing/index.html" class="service-link">
-        <div class="service-art art-visibility" aria-hidden="true"><div class="graph-art"><i></i><i></i><i></i><i></i><i></i><i></i><span></span></div></div>
-        <div class="service-info">
-          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M0 0h1v14h15v1H0zm3 8h2v4H3zm4-3h2v7H7zm4-4h2v11h-2z" fill-rule="evenodd"/></svg></div>
-          <div><h3 data-copy="service.visibility">Visibilité digitale</h3><p data-copy="short.visibility">Référencement local, contenus et image de marque pour vous rendre plus facile à trouver.</p></div>
+        </a>
+      </article>
+<article class="service-card">
+        <a href="./applications/index.html" class="service-link" data-service="apps">
+          <span class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2 1h4v6H2zm1 1v4h2V2zm5-1h6v4H8zm1 1v2h4V2zm-1 5h6v8H8zm1 1v6h4V8zM2 9h4v6H2zm1 1v4h2v-4z" fill-rule="evenodd"/></svg></span>
+          <div><h3 data-copy="service.apps">Applications</h3><p data-copy="short.apps">Outils sur mesure, tableaux de bord et espaces clients.</p></div>
           <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
-        </div>
-      </a>
-    </article>
-<article class="service-card" data-reveal>
-      <a href="./security/index.html" class="service-link">
-        <div class="service-art art-it" aria-hidden="true"><div class="chip-art"><div class="chip-board"><i></i><i></i><i></i><i></i><div class="chip-core"></div></div></div></div>
-        <div class="service-info">
-          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 0h1v2h1.5V0h1v2H10V0h1v2h1a2 2 0 0 1 2 2v1h2v1h-2v1.5h2v1h-2V10h2v1h-2v1a2 2 0 0 1-2 2h-1v2h-1v-2H8.5v2h-1v-2H6v2H5v-2H4a2 2 0 0 1-2-2v-1H0v-1h2V8.5H0v-1h2V6H0V5h2V4a2 2 0 0 1 2-2h1zM4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm1 2h6v6H5zm1 1v4h4V6z" fill-rule="evenodd"/></svg></div>
-          <div><h3 data-copy="service.it">Solutions informatiques</h3><p data-copy="short.it">Conseil et support pour organiser vos outils et simplifier vos parcours clients.</p></div>
+        </a>
+      </article>
+<article class="service-card">
+        <a href="./automatisation/index.html" class="service-link" data-service="automation">
+          <span class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 1h5v4H4v2.5h8V10h-1V8.5H4V11h2v4H1v-4h2V5H1zm1 1v2h3V2zm0 10v2h3v-2zm8-1h5v4h-5zm1 1v2h3v-2z" fill-rule="evenodd"/></svg></span>
+          <div><h3 data-copy="service.automation">Automatisation</h3><p data-copy="short.automation">Outils connectés, relances et transferts de données automatisés.</p></div>
           <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
-        </div>
-      </a>
-    </article>
-<article class="service-card" data-reveal>
-      <a href="./legal/index.html" class="service-link">
-        <div class="service-art art-estate" aria-hidden="true"><img src="./assets/media/immobilier.jpg" alt="" width="1000" height="667" loading="lazy"></div>
-        <div class="service-info">
-          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 2h8v4h6v9H1zm1 1v11h3v-3h2v3h1V3zm7 4v7h5V7zM3 4h1v2H3zm3 0h1v2H6zM3 7h1v2H3zm3 0h1v2H6zm4 1h1v2h-1zm2 0h1v2h-1z" fill-rule="evenodd"/></svg></div>
-          <div><h3 data-copy="service.estate">Présentation immobilière</h3><p data-copy="short.estate">Pages dédiées pour présenter un bien, ses atouts et ses informations clés.</p></div>
+        </a>
+      </article>
+<article class="service-card">
+        <a href="./security/index.html" class="service-link" data-service="it">
+          <span class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 2h14v1H1zm0 5h14v1H1zm0 5h14v1H1zM4 1h2v3H4zm6 5h2v3h-2zm-5 5h2v3H5z" fill-rule="evenodd"/></svg></span>
+          <div><h3 data-copy="service.it">Solutions informatiques</h3><p data-copy="short.it">Configuration web et accompagnement pour les outils de votre activité.</p></div>
           <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+        </a>
+      </article>
+<article class="service-card">
+        <a href="./confidentialite/index.html" class="service-link" data-service="privacy">
+          <span class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 6V4a3 3 0 1 1 6 0v2h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1 0h4V4a2 2 0 0 0-4 0zM4 7v7h8V7zm3.5 2h1v3h-1z" fill-rule="evenodd"/></svg></span>
+          <div><h3 data-copy="service.privacy">Confidentialité et stockage</h3><p data-copy="short.privacy">Organisation du stockage, du partage et des sauvegardes.</p></div>
+          <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+        </a>
+      </article>
+<article class="service-card">
+        <a href="./gestion-personnelle/index.html" class="service-link" data-service="management">
+          <span class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 1h14v14H1zm1 1v12h12V2zm1 4 .7-.7.8.8 1.8-2 .7.7-2.5 2.8zM8 5h4v1H8zm-5 6 .7-.7.8.8 1.8-2 .7.7-2.5 2.8zM8 10h4v1H8z" fill-rule="evenodd"/></svg></span>
+          <div><h3 data-copy="service.management">Gestion personnelle</h3><p data-copy="short.management">Des outils pour organiser vos tâches, agendas et documents.</p></div>
+          <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+        </a>
+      </article>
+    </div>
+    <div class="service-preview" aria-hidden="true" data-service-preview data-active="web">
+      <div class="preview-panel is-active" data-preview="web">
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5V5h14v-.5A1.5 1.5 0 0 0 13.5 3zM15 6H1v5.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5zM0 4.5A2.5 2.5 0 0 1 2.5 2h11A2.5 2.5 0 0 1 16 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 11.5z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.web.title">Site d’un électricien</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.web.name.0">Prestations</dt>
+          <dd data-copy="example.web.details.0">Dépannage, installation et entretien</dd>
         </div>
-      </a>
-    </article>
+        <div>
+          <dt data-copy="example.web.name.1">Zone d’intervention</dt>
+          <dd data-copy="example.web.details.1">Les communes où l’électricien se déplace</dd>
+        </div>
+        <div>
+          <dt data-copy="example.web.name.2">Demande de devis</dt>
+          <dd data-copy="example.web.details.2">Un formulaire pour décrire les travaux</dd>
+        </div>
+      </dl>
+    </figure>
+      </div>
+<div class="preview-panel" data-preview="apps">
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2 1h4v6H2zm1 1v4h2V2zm5-1h6v4H8zm1 1v2h4V2zm-1 5h6v8H8zm1 1v6h4V8zM2 9h4v6H2zm1 1v4h2v-4z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.apps.title">Suivi des interventions</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.apps.name.0">Nouvelle demande</dt>
+          <dd data-copy="example.apps.details.0">Le client décrit la panne</dd>
+        </div>
+        <div>
+          <dt data-copy="example.apps.name.1">Intervention planifiée</dt>
+          <dd data-copy="example.apps.details.1">L’équipe assigne un technicien</dd>
+        </div>
+        <div>
+          <dt data-copy="example.apps.name.2">Intervention terminée</dt>
+          <dd data-copy="example.apps.details.2">Le compte rendu est ajouté au dossier</dd>
+        </div>
+      </dl>
+    </figure>
+      </div>
+<div class="preview-panel" data-preview="automation">
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 1h5v4H4v2.5h8V10h-1V8.5H4V11h2v4H1v-4h2V5H1zm1 1v2h3V2zm0 10v2h3v-2zm8-1h5v4h-5zm1 1v2h3v-2z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.automation.title">Du formulaire au suivi client</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.automation.name.0">Déclencheur</dt>
+          <dd data-copy="example.automation.details.0">Un client envoie une demande</dd>
+        </div>
+        <div>
+          <dt data-copy="example.automation.name.1">Action automatique</dt>
+          <dd data-copy="example.automation.details.1">Une fiche est créée et l’équipe est avertie</dd>
+        </div>
+        <div>
+          <dt data-copy="example.automation.name.2">Validation</dt>
+          <dd data-copy="example.automation.details.2">Vous relisez le devis avant l’envoi</dd>
+        </div>
+      </dl>
+    </figure>
+      </div>
+<div class="preview-panel" data-preview="it">
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 2h14v1H1zm0 5h14v1H1zm0 5h14v1H1zM4 1h2v3H4zm6 5h2v3h-2zm-5 5h2v3H5z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.it.title">Mise en service d’un site</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.it.name.0">Domaine</dt>
+          <dd data-copy="example.it.details.0">Relier l’adresse à l’hébergement</dd>
+        </div>
+        <div>
+          <dt data-copy="example.it.name.1">Accès</dt>
+          <dd data-copy="example.it.details.1">Identifier les comptes et leurs responsables</dd>
+        </div>
+        <div>
+          <dt data-copy="example.it.name.2">Formulaire</dt>
+          <dd data-copy="example.it.details.2">Vérifier où arrivent les demandes</dd>
+        </div>
+      </dl>
+    </figure>
+      </div>
+<div class="preview-panel" data-preview="privacy">
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 6V4a3 3 0 1 1 6 0v2h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1 0h4V4a2 2 0 0 0-4 0zM4 7v7h8V7zm3.5 2h1v3h-1z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.privacy.title">Dossiers partagés avec des clients</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.privacy.name.0">Dossier interne</dt>
+          <dd data-copy="example.privacy.details.0">Accès réservé à l’équipe</dd>
+        </div>
+        <div>
+          <dt data-copy="example.privacy.name.1">Dossier client</dt>
+          <dd data-copy="example.privacy.details.1">Les fichiers que le client peut consulter</dd>
+        </div>
+        <div>
+          <dt data-copy="example.privacy.name.2">Sauvegarde</dt>
+          <dd data-copy="example.privacy.details.2">Une copie et une méthode pour la restaurer</dd>
+        </div>
+      </dl>
+    </figure>
+      </div>
+<div class="preview-panel" data-preview="management">
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 1h14v14H1zm1 1v12h12V2zm1 4 .7-.7.8.8 1.8-2 .7.7-2.5 2.8zM8 5h4v1H8zm-5 6 .7-.7.8.8 1.8-2 .7.7-2.5 2.8zM8 10h4v1H8z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.management.title">Organisation d’un indépendant</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.management.name.0">Aujourd’hui</dt>
+          <dd data-copy="example.management.details.0">Préparer les devis à envoyer</dd>
+        </div>
+        <div>
+          <dt data-copy="example.management.name.1">Cette semaine</dt>
+          <dd data-copy="example.management.details.1">Voir les rendez-vous et échéances</dd>
+        </div>
+        <div>
+          <dt data-copy="example.management.name.2">Par projet</dt>
+          <dd data-copy="example.management.details.2">Retrouver les notes et les documents</dd>
+        </div>
+      </dl>
+    </figure>
+      </div>
+    </div>
   </div>
       </div>
     </section>
-    <section class="section method-section">
+    <section class="section method-section home-method">
       <div class="wrap">
-        <div class="section-head">
-          <h2 data-copy="method.title">Du premier échange à la mise en ligne.</h2>
+        <div class="section-head" data-reveal>
+          <h2 data-copy="method.title" data-scan>Du premier échange à la mise en ligne.</h2>
           <a class="text-link" href="./lab/index.html"><span data-copy="method.link">Voir notre méthode</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
         </div>
-        <ol class="process-grid">
-    <li data-reveal><span class="step-index" aria-hidden="true">01</span>
-      <h3 data-copy="step.0">Échange</h3>
-      <p data-copy="step.body.0">On définit votre activité, votre public et l’objectif du projet.</p>
+        <div class="process-track" data-process>
+    <div class="process-line" aria-hidden="true"><span class="process-packet"></span></div>
+    <ol class="process-grid">
+    <li><span class="step-index" aria-hidden="true">01</span>
+      <h3 data-copy="step.0">Cadrage</h3>
+      <p data-copy="step.body.0">Nous précisons vos services, vos visiteurs et ce que le site doit leur permettre de faire.</p>
     </li>
-<li data-reveal><span class="step-index" aria-hidden="true">02</span>
+<li><span class="step-index" aria-hidden="true">02</span>
       <h3 data-copy="step.1">Création</h3>
-      <p data-copy="step.body.1">On construit la structure et la direction visuelle de votre site.</p>
+      <p data-copy="step.body.1">Nous vous présentons la structure des pages et une première version à parcourir.</p>
     </li>
-<li data-reveal><span class="step-index" aria-hidden="true">03</span>
-      <h3 data-copy="step.2">Optimisation</h3>
-      <p data-copy="step.body.2">On affine les textes, le parcours et l’affichage sur mobile.</p>
+<li><span class="step-index" aria-hidden="true">03</span>
+      <h3 data-copy="step.2">Vérifications</h3>
+      <p data-copy="step.body.2">Nous vérifions l’affichage sur mobile, les liens, les formulaires et le poids des images.</p>
     </li>
-<li data-reveal><span class="step-index" aria-hidden="true">04</span>
+<li><span class="step-index" aria-hidden="true">04</span>
       <h3 data-copy="step.3">Mise en ligne</h3>
-      <p data-copy="step.body.3">Votre site est prêt à être publié et partagé.</p>
+      <p data-copy="step.body.3">Nous préparons le domaine et l’hébergement, puis vérifions l’accès au site publié.</p>
     </li>
-  </ol>
+    </ol>
+  </div>
       </div>
     </section>
-    <section class="section contact-section"><div class="wrap">
-    <div class="contact-band">
-      <div><h2 data-copy="cta.title">Votre projet commence ici.</h2><p data-copy="cta.lead">Présentez-nous votre activité et ce que vous souhaitez améliorer.</p></div>
-      <a class="button button-white" href="./contact.html"><span data-copy="cta.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+    <section id="demo" class="section network-lab" aria-labelledby="network-lab-title" data-lab>
+    <div class="wrap">
+      <div class="section-head lab-heading">
+        <h2 data-copy="lab.title" id="network-lab-title" data-scan>Du réseau à l&#39;écran.</h2>
+        <p data-copy="lab.intro">Suivez le trajet d’une page web, du réseau jusqu’à son affichage sur votre écran.</p>
+      </div>
+      <div class="lab-grid">
+        <section class="lab-card network-card" aria-labelledby="lab-topology-title">
+          <h3 data-copy="lab.topology" id="lab-topology-title">Réseau local</h3>
+          <div class="screen-switch lab-modes" role="group" aria-labelledby="lab-topology-title" hidden>
+            <button type="button" data-network-mode="local" aria-pressed="true"><span data-copy="lab.mode.local">Serveur local</span></button>
+            <button type="button" data-network-mode="internet" aria-pressed="false"><span data-copy="lab.mode.internet">Vers Internet</span></button>
+          </div>
+          <div class="lab-topology" data-topology data-mode="local" data-direction="request" data-client="pc01">
+            <svg class="lab-cables" viewBox="0 0 520 260" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path class="cable" d="M260 67 V104 M328 130 H426 V67 M426 16 V6 H94 V16 M260 155 V173 H94 V194 M260 173 V194 M260 173 H426 V194"/>
+              <path class="cable-signal" data-local="pc01" pathLength="100" d="M94 194 V173 H260 V67"/>
+              <path class="cable-signal" data-internet="pc01" pathLength="100" d="M94 194 V173 H260 V130 H426 V6 H94 V16"/>
+              <path class="cable-signal" data-local="pc02" pathLength="100" d="M260 194 V173 V67"/>
+              <path class="cable-signal" data-internet="pc02" pathLength="100" d="M260 194 V173 V130 H426 V6 H94 V16"/>
+              <path class="cable-signal" data-local="pc03" pathLength="100" d="M426 194 V173 H260 V67"/>
+              <path class="cable-signal" data-internet="pc03" pathLength="100" d="M426 194 V173 H260 V130 H426 V6 H94 V16"/>
+            </svg>
+            <div class="lab-node lab-internet" data-node="internet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM2 12h20M12 2c-5 5-5 15 0 20m0-20c5 5 5 15 0 20"/></svg><span>Internet</span></div>
+            <div class="lab-node lab-server" data-node="server"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm0 8a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zM7 8v.01M7 16v.01"/></svg><span><span data-copy="lab.server">Serveur web</span></span></div>
+            <div class="lab-node lab-switch" data-node="switch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 8h18v8H3zM7 12h1m3 0h1m3 0h1m3 0h1"/></svg><span>Switch</span></div>
+            <div class="lab-node lab-router" data-node="router"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 15a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm14 2v.01M13 17v.01M15 13v-2m-3.25-2.25a4 4 0 0 1 6.5 0M8.5 6.5a8 8 0 0 1 13 0"/></svg><span><span data-copy="lab.router">Routeur</span></span></div>
+            <div class="lab-node lab-pc01" data-node="pc01"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zm4 17h10m-5-4v4"/></svg><span>PC-01</span></div>
+            <div class="lab-node lab-pc02" data-node="pc02"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zm4 17h10m-5-4v4"/></svg><span>PC-02</span></div>
+            <div class="lab-node lab-pc03" data-node="pc03"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zm4 17h10m-5-4v4"/></svg><span>PC-03</span></div>
+          </div>
+          <div class="lab-terminal">
+            <div class="terminal-top"><span aria-hidden="true">&gt;_</span> <span data-copy="lab.terminal">Terminal · simulation</span></div>
+            <div class="terminal-lines">
+              <p><span class="terminal-prompt" data-prompt>pc-01 $</span> <code data-command>curl -I http://192.168.1.10</code></p>
+              <p><code data-result>HTTP/1.1 200 OK<br>content-type: text/html</code><span class="terminal-caret" aria-hidden="true"></span></p>
+            </div>
+          </div>
+          <div class="lan-notes" data-network-notes data-mode="local">
+            <p data-copy="lab.local-detail" class="lan-note lan-local">Sur le même sous-réseau, le switch relie les postes au serveur local. Le routeur reste en attente.</p>
+            <p data-copy="lab.internet-detail" class="lan-note lan-internet">Pour joindre une adresse extérieure, le poste passe par le switch puis par le routeur, sa passerelle vers Internet.</p>
+          </div>
+        </section>
+        <section class="lab-card screen-card" aria-labelledby="lab-screen-title">
+          <h3 data-copy="lab.screen" id="lab-screen-title">La même page, trois écrans.</h3>
+          <div class="screen-switch" role="group" aria-labelledby="lab-screen-title">
+            <button type="button" data-viewport="mobile" data-width="390" aria-controls="responsive-example" aria-pressed="false"><span data-copy="lab.mobile">Mobile</span></button><button type="button" data-viewport="tablet" data-width="768" aria-controls="responsive-example" aria-pressed="false"><span data-copy="lab.tablet">Tablette</span></button><button type="button" data-viewport="desktop" data-width="1440" aria-controls="responsive-example" aria-pressed="true"><span data-copy="lab.desktop">Bureau</span></button>
+          </div>
+          <div class="device-stage" aria-hidden="true">
+            <div id="responsive-example" class="device-preview" data-device="desktop">
+              <div class="demo-toolbar">
+                <div class="demo-brand"><i></i><i></i></div>
+                <div class="demo-nav"><i></i><i></i><i></i></div>
+              </div>
+              <div class="demo-page">
+                <div class="demo-copy"><b></b><b></b><i></i><i></i><em></em></div>
+                <div class="demo-media"><i></i><i></i><i></i></div>
+              </div>
+              <div class="demo-cards"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <p class="screen-width"><output data-screen-width>1440 px</output> <span data-copy="lab.width">de large</span></p>
+          <ul class="performance-list">
+            <li><span data-copy="lab.fast">Des pages plus rapides à charger</span>
+              <small><span data-copy="lab.fast-detail">Des images légères, comme le visuel du globe.</span></small>
+              <span class="asset-size"><span>WEBP</span> <span data-copy="lab.asset-weight">87 ko</span></span>
+            </li>
+            <li><span data-copy="lab.adaptive">Mise en page responsive</span> <small><span data-copy="lab.adaptive-detail">Colonnes, images et boutons s’adaptent à la largeur.</span></small></li>
+            <li><span data-copy="lab.clear">Lecture plus claire</span> <small><span data-copy="lab.clear-detail">Titres lisibles et contenu organisé par priorité.</span></small></li>
+          </ul>
+        </section>
+      </div>
+      <div class="route-panel" id="trajet-web" data-web-route data-phase="dns">
+    <div class="route-heading">
+      <h3 data-copy="route.title" id="route-title" data-scan>Le trajet d’un site public.</h3>
+      <div>
+        <p data-copy="route.intro">Suivez les échanges déclenchés quand vous ouvrez example.com, avec une adresse IP de démonstration.</p>
+        <button class="route-play" type="button" data-route-play hidden><span aria-hidden="true">↻</span> <span data-copy="route.play">Rejouer le trajet</span></button>
+      </div>
     </div>
+    <div class="route-map" aria-hidden="true">
+      <svg class="route-wires" viewBox="0 0 600 180" preserveAspectRatio="none" fill="none">
+        <path class="route-wire route-dns" data-path="dns-out" d="M88 132 V52 Q88 35 105 35 H300"/>
+        <path class="route-wire route-dns route-return" data-path="dns-in" d="M300 52 H121 Q105 52 105 68 V132"/>
+        <path class="route-wire route-web" data-path="web-out" d="M94 121 H506"/>
+        <path class="route-wire route-web route-return" data-path="web-in" d="M506 144 H94"/>
+        <path class="route-trail"/>
+        <circle class="route-head" r="4"/>
+      </svg>
+      <span class="route-node route-resolver"><span data-copy="route.resolver">Résolveur DNS</span></span>
+      <span class="route-node route-browser"><span data-copy="route.browser">Navigateur</span></span>
+      <span class="route-internet">Internet</span>
+      <span class="route-node route-host"><span data-copy="route.host">Hébergement</span></span>
+    </div>
+    <div class="route-readout" aria-hidden="true">
+      <div data-route-log="dns"><code class="route-out">↗ A example.com</code><code class="route-in">↙ 192.0.2.42</code></div><div data-route-log="tls"><code class="route-out">↗ TLS · ClientHello</code><code class="route-in">↙ TLS · ServerHello</code></div><div data-route-log="http"><code class="route-out">↗ GET /</code><code class="route-in">↙ 200 OK · text/html</code></div>
+    </div>
+    <ol class="route-steps">
+      <li data-route-step="dns">
+        <button type="button" data-phase-button="dns" aria-pressed="true"><span aria-hidden="true">01</span><span data-copy="route.dns">Résoudre le domaine</span></button>
+        <div class="route-step-copy"><p data-copy="route.dns.detail">Le résolveur DNS renvoie une adresse IP. Le résultat peut déjà être en cache.</p><code>A example.com → 192.0.2.42</code></div>
+      </li><li data-route-step="tls">
+        <button type="button" data-phase-button="tls" aria-pressed="false"><span aria-hidden="true">02</span><span data-copy="route.tls">Établir HTTPS</span></button>
+        <div class="route-step-copy"><p data-copy="route.tls.detail">Le navigateur et le serveur négocient une connexion chiffrée. Le navigateur vérifie le certificat du domaine.</p><code>TLS · ClientHello → TLS · ServerHello</code></div>
+      </li><li data-route-step="http">
+        <button type="button" data-phase-button="http" aria-pressed="false"><span aria-hidden="true">03</span><span data-copy="route.http">Charger la page</span></button>
+        <div class="route-step-copy"><p data-copy="route.http.detail">Sur la connexion HTTPS, le navigateur demande la page. Le serveur renvoie le HTML, puis le navigateur demande les styles, scripts et images nécessaires.</p><code>GET / → 200 OK · text/html</code></div>
+      </li>
+    </ol>
+    <dl class="route-terms">
+      <div><dt><span data-copy="route.domain">Nom de domaine</span></dt><dd><span data-copy="route.domain.detail">L’adresse que vous enregistrez et renouvelez chez un bureau d’enregistrement.</span></dd></div>
+      <div><dt>DNS</dt><dd><span data-copy="route.records">Un enregistrement A ou AAAA pointe vers une IP. Un CNAME sert d’alias vers un autre nom.</span></dd></div>
+      <div><dt><span data-copy="route.hosting">Hébergement</span></dt><dd><span data-copy="route.hosting.detail">Le service qui publie les fichiers du site et les envoie au navigateur.</span></dd></div>
+    </dl>
+  </div>
+    </div>
+  </section>
+    <section class="contact-section contact-close"><div class="wrap">
+    <a class="contact-row" href="./contact.html#contact-form">
+      <div class="contact-row-copy">
+        <h2 data-copy="cta.title" data-scan>Écrire à Zybo</h2>
+        <span data-copy="cta.lead">Une demande, un site à revoir ou une question technique.</span>
+      </div>
+      <span class="contact-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+    </a>
   </div></section></main>
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-main">
-        <div><a class="brand" href="./index.html" aria-label="Zybo"><img src="./assets/logo-zybo.png" alt="" width="500" height="500"></a>
+        <div><a class="brand" href="./index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="./assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="./assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
           <p data-copy="footer.about">Création web et solutions digitales.</p></div>
         <div class="footer-links">
           <a class="" href="./devops/index.html"><span data-copy="service.web">Création web</span></a>
-<a class="" href="./marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="./applications/index.html"><span data-copy="service.apps">Applications</span></a>
+<a class="" href="./automatisation/index.html"><span data-copy="service.automation">Automatisation</span></a>
 <a class="" href="./security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
-<a class="" href="./legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
+<a class="" href="./confidentialite/index.html"><span data-copy="service.privacy">Confidentialité et stockage</span></a>
+<a class="" href="./gestion-personnelle/index.html"><span data-copy="service.management">Gestion personnelle</span></a>
         </div>
         <div class="footer-links">
           <a class="" href="./lab/index.html"><span data-copy="nav.method">Méthode</span></a>
@@ -162,6 +470,6 @@
       <div class="footer-bottom"><span>© Zybo</span><a class="" href="./server-status.html"><span data-copy="nav.status">État des services</span></a></div>
     </div>
   </footer>
-  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"hero.scene":{"fr":"Vue 3D","nl":"3D-weergave","en":"3D view"},"hero.label":{"fr":"Studio digital","nl":"Digitale studio","en":"Digital studio"},"hero.title":{"fr":"Faites grandir votre présence","nl":"Laat uw aanwezigheid","en":"Grow your presence"},"hero.accent":{"fr":"en ligne.","nl":"online groeien.","en":"online."},"hero.lead":{"fr":"Zybo crée des sites web, améliore votre visibilité et simplifie vos outils digitaux. Pour les indépendants, les PME et les porteurs de projets.","nl":"Zybo bouwt websites, vergroot uw zichtbaarheid en vereenvoudigt uw digitale tools. Voor zelfstandigen, kmo’s en iedereen met een project.","en":"Zybo builds websites, improves your visibility and simplifies your digital tools. For independent businesses, SMEs and new ventures."},"hero.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"hero.more":{"fr":"Découvrir les expertises","nl":"Ontdek onze expertise","en":"Explore our expertise"},"expertise.title":{"fr":"Comment Zybo peut vous aider","nl":"Hoe Zybo u kan helpen","en":"How Zybo can help"},"expertise.lead":{"fr":"Choisissez le service qui répond à votre besoin, de la création d’un site à la mise en valeur d’un bien.","nl":"Kies de dienst die bij uw vraag past, van een nieuwe website tot de presentatie van een pand.","en":"Find the right service for your needs, from building a website to showcasing a property."},"short.web":{"fr":"Sites vitrines, refontes et pages de vente conçus autour de votre offre.","nl":"Bedrijfswebsites, redesigns en landingspagina’s rond uw aanbod.","en":"Business websites, redesigns and landing pages built around your offer."},"short.visibility":{"fr":"Référencement local, contenus et image de marque pour vous rendre plus facile à trouver.","nl":"Lokale SEO, content en merkidentiteit om beter vindbaar te worden.","en":"Local SEO, content and branding to make your business easier to find."},"short.it":{"fr":"Conseil et support pour organiser vos outils et simplifier vos parcours clients.","nl":"Advies en ondersteuning om uw tools en klanttrajecten te vereenvoudigen.","en":"Advice and support to organise your tools and simplify customer journeys."},"short.estate":{"fr":"Pages dédiées pour présenter un bien, ses atouts et ses informations clés.","nl":"Aparte pagina’s voor een pand, met de troeven en de belangrijkste informatie.","en":"Dedicated pages for properties, their strengths and key details."},"method.title":{"fr":"Du premier échange à la mise en ligne.","nl":"Van kennismaking tot publicatie.","en":"From the first conversation to launch."},"method.link":{"fr":"Voir notre méthode","nl":"Bekijk onze werkwijze","en":"See our process"},"step.0":{"fr":"Échange","nl":"Kennismaking","en":"Discovery"},"step.body.0":{"fr":"On définit votre activité, votre public et l’objectif du projet.","nl":"We bepalen uw activiteit, doelgroep en projectdoel.","en":"We define your business, audience and project goal."},"step.1":{"fr":"Création","nl":"Ontwerp","en":"Design"},"step.body.1":{"fr":"On construit la structure et la direction visuelle de votre site.","nl":"We werken de structuur en visuele richting van uw site uit.","en":"We build the structure and visual direction of your site."},"step.2":{"fr":"Optimisation","nl":"Optimalisatie","en":"Refinement"},"step.body.2":{"fr":"On affine les textes, le parcours et l’affichage sur mobile.","nl":"We verfijnen de teksten, het klanttraject en de mobiele weergave.","en":"We refine the copy, visitor journey and mobile layout."},"step.3":{"fr":"Mise en ligne","nl":"Publicatie","en":"Launch"},"step.body.3":{"fr":"Votre site est prêt à être publié et partagé.","nl":"Uw website is klaar om te publiceren en te delen.","en":"Your site is ready to publish and share."},"cta.title":{"fr":"Votre projet commence ici.","nl":"Uw project begint hier.","en":"Your project starts here."},"cta.lead":{"fr":"Présentez-nous votre activité et ce que vous souhaitez améliorer.","nl":"Vertel ons over uw activiteit en wat u wilt verbeteren.","en":"Tell us about your business and what you would like to improve."},"cta.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"meta.title":{"fr":"Zybo · Studio digital et création web","nl":"Zybo · Digitale studio en webdesign","en":"Zybo · Digital studio and web design"},"meta.description":{"fr":"Zybo accompagne les indépendants et les PME en création web, visibilité digitale, solutions informatiques et présentation immobilière.","nl":"Zybo helpt zelfstandigen en kmo’s met webdesign, digitale zichtbaarheid, IT-oplossingen en vastgoedpresentatie.","en":"Zybo helps independent businesses and SMEs with web design, digital visibility, IT solutions and property presentation."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.apps":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"service.automation":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.privacy":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"service.management":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"hero.label":{"fr":"Sites web, applications et automatisation","nl":"Websites, apps en automatisering","en":"Websites, apps and automation"},"hero.title":{"fr":"Votre activité","nl":"Uw bedrijf","en":"Your business"},"hero.accent":{"fr":"prend place.","nl":"valt op.","en":"stands out."},"hero.lead":{"fr":"Zybo aide les indépendants et les PME à présenter leurs services, automatiser les tâches répétitives et organiser leurs outils et leurs fichiers.","nl":"Zybo helpt zelfstandigen en kmo’s hun diensten te tonen, terugkerende taken te automatiseren en tools en bestanden te organiseren.","en":"Zybo helps independent businesses and SMEs showcase their services, automate repetitive work and organise tools and files."},"hero.start":{"fr":"Nous contacter","nl":"Neem contact op","en":"Get in touch"},"hero.more":{"fr":"Voir nos services","nl":"Bekijk onze diensten","en":"See our services"},"expertise.title":{"fr":"Nos expertises.","nl":"Onze expertise.","en":"Our expertise."},"expertise.lead":{"fr":"Créez votre présence en ligne, simplifiez vos tâches et organisez vos données.","nl":"Bouw uw online aanwezigheid op, vereenvoudig taken en organiseer uw gegevens.","en":"Build your online presence, simplify tasks and organise your data."},"short.web":{"fr":"Sites vitrines, refontes et pages de vente conçus autour de votre offre.","nl":"Bedrijfswebsites, redesigns en landingspagina’s rond uw aanbod.","en":"Business websites, redesigns and landing pages built around your offer."},"short.apps":{"fr":"Outils sur mesure, tableaux de bord et espaces clients.","nl":"Maatwerktools, dashboards en klantportalen.","en":"Custom tools, dashboards and client portals."},"short.automation":{"fr":"Outils connectés, relances et transferts de données automatisés.","nl":"Gekoppelde tools, automatische opvolging en gegevensoverdracht.","en":"Connected tools, follow-ups and automated data transfers."},"short.it":{"fr":"Configuration web et accompagnement pour les outils de votre activité.","nl":"Webconfiguratie en ondersteuning voor uw bedrijfstools.","en":"Web configuration and support for your business tools."},"short.privacy":{"fr":"Organisation du stockage, du partage et des sauvegardes.","nl":"Organisatie van opslag, delen en back-ups.","en":"Organisation of storage, sharing and backups."},"short.management":{"fr":"Des outils pour organiser vos tâches, agendas et documents.","nl":"Tools voor uw taken, agenda’s en documenten.","en":"Tools for organising tasks, calendars and documents."},"example.label":{"fr":"Exemple d’usage","nl":"Praktijkvoorbeeld","en":"Example use case"},"example.web.title":{"fr":"Site d’un électricien","nl":"Website van een elektricien","en":"An electrician’s website"},"example.web.name.0":{"fr":"Prestations","nl":"Diensten","en":"Services"},"example.web.details.0":{"fr":"Dépannage, installation et entretien","nl":"Herstellingen, installatie en onderhoud","en":"Repairs, installation and maintenance"},"example.web.name.1":{"fr":"Zone d’intervention","nl":"Werkgebied","en":"Service area"},"example.web.details.1":{"fr":"Les communes où l’électricien se déplace","nl":"De gemeenten waar de elektricien werkt","en":"The areas the electrician covers"},"example.web.name.2":{"fr":"Demande de devis","nl":"Offerte aanvragen","en":"Request a quote"},"example.web.details.2":{"fr":"Un formulaire pour décrire les travaux","nl":"Een formulier om de werken te beschrijven","en":"A form to describe the job"},"example.apps.title":{"fr":"Suivi des interventions","nl":"Interventies opvolgen","en":"Job tracker"},"example.apps.name.0":{"fr":"Nouvelle demande","nl":"Nieuwe aanvraag","en":"New request"},"example.apps.details.0":{"fr":"Le client décrit la panne","nl":"De klant beschrijft de storing","en":"The customer describes the fault"},"example.apps.name.1":{"fr":"Intervention planifiée","nl":"Interventie gepland","en":"Job scheduled"},"example.apps.details.1":{"fr":"L’équipe assigne un technicien","nl":"Het team wijst een technicus toe","en":"The team assigns a technician"},"example.apps.name.2":{"fr":"Intervention terminée","nl":"Interventie afgerond","en":"Job complete"},"example.apps.details.2":{"fr":"Le compte rendu est ajouté au dossier","nl":"Het verslag komt in het dossier","en":"The report is added to the record"},"example.automation.title":{"fr":"Du formulaire au suivi client","nl":"Van formulier naar klantopvolging","en":"From form to customer follow-up"},"example.automation.name.0":{"fr":"Déclencheur","nl":"Trigger","en":"Trigger"},"example.automation.details.0":{"fr":"Un client envoie une demande","nl":"Een klant verstuurt een aanvraag","en":"A customer submits a request"},"example.automation.name.1":{"fr":"Action automatique","nl":"Automatische actie","en":"Automated action"},"example.automation.details.1":{"fr":"Une fiche est créée et l’équipe est avertie","nl":"De tool maakt een fiche en meldt dit aan het team","en":"The tool creates a record and alerts the team"},"example.automation.name.2":{"fr":"Validation","nl":"Goedkeuring","en":"Approval"},"example.automation.details.2":{"fr":"Vous relisez le devis avant l’envoi","nl":"U kijkt de offerte na vóór verzending","en":"You review the quote before sending it"},"example.it.title":{"fr":"Mise en service d’un site","nl":"Een website in gebruik nemen","en":"Getting a website online"},"example.it.name.0":{"fr":"Domaine","nl":"Domein","en":"Domain"},"example.it.details.0":{"fr":"Relier l’adresse à l’hébergement","nl":"Het adres koppelen aan de hosting","en":"Connect the address to the hosting service"},"example.it.name.1":{"fr":"Accès","nl":"Toegang","en":"Access"},"example.it.details.1":{"fr":"Identifier les comptes et leurs responsables","nl":"De accounts en hun beheerders vastleggen","en":"Identify the accounts and who manages them"},"example.it.name.2":{"fr":"Formulaire","nl":"Formulier","en":"Form"},"example.it.details.2":{"fr":"Vérifier où arrivent les demandes","nl":"Controleren waar aanvragen aankomen","en":"Check where enquiries are delivered"},"example.privacy.title":{"fr":"Dossiers partagés avec des clients","nl":"Mappen delen met klanten","en":"Folders shared with clients"},"example.privacy.name.0":{"fr":"Dossier interne","nl":"Interne map","en":"Internal folder"},"example.privacy.details.0":{"fr":"Accès réservé à l’équipe","nl":"Alleen toegankelijk voor het team","en":"Access for the team only"},"example.privacy.name.1":{"fr":"Dossier client","nl":"Klantmap","en":"Client folder"},"example.privacy.details.1":{"fr":"Les fichiers que le client peut consulter","nl":"De bestanden die de klant kan bekijken","en":"Files the client can view"},"example.privacy.name.2":{"fr":"Sauvegarde","nl":"Back-up","en":"Backup"},"example.privacy.details.2":{"fr":"Une copie et une méthode pour la restaurer","nl":"Een kopie en een manier om die terug te zetten","en":"A copy and a way to restore it"},"example.management.title":{"fr":"Organisation d’un indépendant","nl":"Planning voor een zelfstandige","en":"A freelancer’s workspace"},"example.management.name.0":{"fr":"Aujourd’hui","nl":"Vandaag","en":"Today"},"example.management.details.0":{"fr":"Préparer les devis à envoyer","nl":"Te versturen offertes voorbereiden","en":"Prepare the quotes to send"},"example.management.name.1":{"fr":"Cette semaine","nl":"Deze week","en":"This week"},"example.management.details.1":{"fr":"Voir les rendez-vous et échéances","nl":"Afspraken en deadlines bekijken","en":"See appointments and deadlines"},"example.management.name.2":{"fr":"Par projet","nl":"Per project","en":"By project"},"example.management.details.2":{"fr":"Retrouver les notes et les documents","nl":"Notities en documenten terugvinden","en":"Find notes and documents"},"method.title":{"fr":"Du premier échange à la mise en ligne.","nl":"Van kennismaking tot publicatie.","en":"From the first conversation to launch."},"method.link":{"fr":"Voir notre méthode","nl":"Bekijk onze werkwijze","en":"See our process"},"step.0":{"fr":"Cadrage","nl":"Kennismaking","en":"Discovery"},"step.body.0":{"fr":"Nous précisons vos services, vos visiteurs et ce que le site doit leur permettre de faire.","nl":"We brengen uw diensten, bezoekers en de belangrijkste acties in kaart.","en":"We identify your services, your visitors and what they should be able to do."},"step.1":{"fr":"Création","nl":"Ontwerp","en":"Design"},"step.body.1":{"fr":"Nous vous présentons la structure des pages et une première version à parcourir.","nl":"We tonen de paginastructuur en een eerste versie die u kunt bekijken.","en":"We share the page structure and a first version you can browse."},"step.2":{"fr":"Vérifications","nl":"Controles","en":"Checks"},"step.body.2":{"fr":"Nous vérifions l’affichage sur mobile, les liens, les formulaires et le poids des images.","nl":"We controleren de mobiele weergave, links, formulieren en afbeeldingsgrootte.","en":"We check the mobile layout, links, forms and image sizes."},"step.3":{"fr":"Mise en ligne","nl":"Publicatie","en":"Launch"},"step.body.3":{"fr":"Nous préparons le domaine et l’hébergement, puis vérifions l’accès au site publié.","nl":"We bereiden domein en hosting voor en testen de gepubliceerde site.","en":"We prepare the domain and hosting, then check the published site."},"lab.title":{"fr":"Du réseau à l'écran.","nl":"Van netwerk naar scherm.","en":"From network to screen."},"lab.intro":{"fr":"Suivez le trajet d’une page web, du réseau jusqu’à son affichage sur votre écran.","nl":"Volg de route van een webpagina, van het netwerk tot uw scherm.","en":"Follow a web page from the network to your screen."},"lab.topology":{"fr":"Réseau local","nl":"Lokaal netwerk","en":"Local network"},"lab.mode.local":{"fr":"Serveur local","nl":"Lokale server","en":"Local server"},"lab.mode.internet":{"fr":"Vers Internet","nl":"Naar internet","en":"To the internet"},"lab.server":{"fr":"Serveur web","nl":"Webserver","en":"Web server"},"lab.router":{"fr":"Routeur","nl":"Router","en":"Router"},"lab.terminal":{"fr":"Terminal · simulation","nl":"Terminal · simulatie","en":"Terminal · simulation"},"lab.local-detail":{"fr":"Sur le même sous-réseau, le switch relie les postes au serveur local. Le routeur reste en attente.","nl":"Binnen hetzelfde subnet verbindt de switch de pc’s met de lokale server. De router blijft inactief.","en":"On the same subnet, the switch connects the PCs to the local server. The router stays idle."},"lab.internet-detail":{"fr":"Pour joindre une adresse extérieure, le poste passe par le switch puis par le routeur, sa passerelle vers Internet.","nl":"Voor een extern adres gaat de pc via de switch naar de router, zijn toegang tot internet.","en":"For an external address, the PC goes through the switch to the router, its gateway to the internet."},"lab.screen":{"fr":"La même page, trois écrans.","nl":"Dezelfde pagina, drie schermen.","en":"One page, three screens."},"lab.mobile":{"fr":"Mobile","nl":"Mobiel","en":"Mobile"},"lab.tablet":{"fr":"Tablette","nl":"Tablet","en":"Tablet"},"lab.desktop":{"fr":"Bureau","nl":"Desktop","en":"Desktop"},"lab.width":{"fr":"de large","nl":"breed","en":"wide"},"lab.fast":{"fr":"Des pages plus rapides à charger","nl":"Pagina’s die sneller laden","en":"Faster page loads"},"lab.fast-detail":{"fr":"Des images légères, comme le visuel du globe.","nl":"Lichte afbeeldingen, zoals het beeld van de wereldbol.","en":"Lightweight images like the globe artwork."},"lab.asset-weight":{"fr":"87 ko","nl":"87 kB","en":"87 kB"},"lab.adaptive":{"fr":"Mise en page responsive","nl":"Responsive lay-out","en":"Responsive layout"},"lab.adaptive-detail":{"fr":"Colonnes, images et boutons s’adaptent à la largeur.","nl":"Kolommen, beelden en knoppen passen zich aan de breedte aan.","en":"Columns, images and buttons adapt to the screen width."},"lab.clear":{"fr":"Lecture plus claire","nl":"Helder leesbaar","en":"Easier to read"},"lab.clear-detail":{"fr":"Titres lisibles et contenu organisé par priorité.","nl":"Leesbare titels en inhoud op volgorde van belang.","en":"Readable headings and content ordered by priority."},"route.title":{"fr":"Le trajet d’un site public.","nl":"De route naar een openbare website.","en":"The route to a public website."},"route.intro":{"fr":"Suivez les échanges déclenchés quand vous ouvrez example.com, avec une adresse IP de démonstration.","nl":"Volg wat er gebeurt wanneer u example.com opent, met een voorbeeld-IP-adres.","en":"Follow what happens when you open example.com, using an example IP address."},"route.play":{"fr":"Rejouer le trajet","nl":"Route opnieuw afspelen","en":"Replay the route"},"route.resolver":{"fr":"Résolveur DNS","nl":"DNS-resolver","en":"DNS resolver"},"route.browser":{"fr":"Navigateur","nl":"Browser","en":"Browser"},"route.host":{"fr":"Hébergement","nl":"Hosting","en":"Hosting"},"route.dns":{"fr":"Résoudre le domaine","nl":"Domein opzoeken","en":"Resolve the domain"},"route.dns.detail":{"fr":"Le résolveur DNS renvoie une adresse IP. Le résultat peut déjà être en cache.","nl":"De DNS-resolver geeft een IP-adres terug. Het resultaat kan al in de cache staan.","en":"The DNS resolver returns an IP address. The result may already be cached."},"route.tls":{"fr":"Établir HTTPS","nl":"HTTPS opzetten","en":"Establish HTTPS"},"route.tls.detail":{"fr":"Le navigateur et le serveur négocient une connexion chiffrée. Le navigateur vérifie le certificat du domaine.","nl":"De browser en server zetten een versleutelde verbinding op. De browser controleert het domeincertificaat.","en":"The browser and server negotiate an encrypted connection. The browser checks the domain’s certificate."},"route.http":{"fr":"Charger la page","nl":"Pagina laden","en":"Load the page"},"route.http.detail":{"fr":"Sur la connexion HTTPS, le navigateur demande la page. Le serveur renvoie le HTML, puis le navigateur demande les styles, scripts et images nécessaires.","nl":"Via HTTPS vraagt de browser de pagina op. De server stuurt HTML terug, waarna de browser stijlen, scripts en beelden opvraagt.","en":"Over HTTPS, the browser requests the page. The server returns HTML, then the browser requests styles, scripts and images."},"route.domain":{"fr":"Nom de domaine","nl":"Domeinnaam","en":"Domain name"},"route.domain.detail":{"fr":"L’adresse que vous enregistrez et renouvelez chez un bureau d’enregistrement.","nl":"Het adres dat u registreert en verlengt bij een registrar.","en":"The address you register and renew with a domain registrar."},"route.records":{"fr":"Un enregistrement A ou AAAA pointe vers une IP. Un CNAME sert d’alias vers un autre nom.","nl":"Een A- of AAAA-record wijst naar een IP-adres. Een CNAME is een alias voor een andere naam.","en":"An A or AAAA record points to an IP address. A CNAME aliases another name."},"route.hosting":{"fr":"Hébergement","nl":"Hosting","en":"Hosting"},"route.hosting.detail":{"fr":"Le service qui publie les fichiers du site et les envoie au navigateur.","nl":"De dienst die de sitebestanden publiceert en naar de browser stuurt.","en":"The service that publishes the site files and sends them to the browser."},"cta.title":{"fr":"Écrire à Zybo","nl":"Schrijf Zybo","en":"Write to Zybo"},"cta.lead":{"fr":"Une demande, un site à revoir ou une question technique.","nl":"Een aanvraag, een website om te vernieuwen of een technische vraag.","en":"An enquiry, a site to update or a technical question."},"meta.title":{"fr":"Zybo · Studio digital et création web","nl":"Zybo · Digitale studio en webdesign","en":"Zybo · Digital studio and web design"},"meta.description":{"fr":"Sites web, applications, automatisation, solutions informatiques, confidentialité et stockage, gestion personnelle.","nl":"Websites, applicaties, automatisering, IT-oplossingen, privacy en opslag, persoonlijke organisatie.","en":"Websites, apps, automation, IT solutions, privacy and storage, and personal organisation."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>

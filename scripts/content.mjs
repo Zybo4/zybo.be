@@ -2,7 +2,7 @@ export const services = {
   web: {
     path: "devops/index.html", icon: "window",
     name: ["Création web", "Webdesign", "Web design"],
-    headline: ["Un site qui donne envie de vous contacter.", "Een website die uitnodigt tot contact.", "A website that invites people to get in touch."],
+    headline: ["Un site clair, rapide et facile à utiliser.", "Een duidelijke, snelle en gebruiksvriendelijke website.", "A clear, fast website that’s easy to use."],
     short: ["Sites vitrines, refontes et pages de vente conçus autour de votre offre.", "Bedrijfswebsites, redesigns en landingspagina’s rond uw aanbod.", "Business websites, redesigns and landing pages built around your offer."],
     intro: ["De la page d’accueil au formulaire, chaque écran aide le visiteur à comprendre vos services et à passer à l’action.", "Van de homepage tot het formulier helpt elk scherm bezoekers uw diensten te begrijpen en actie te ondernemen.", "From the homepage to the contact form, each screen helps visitors understand your services and take the next step."],
     features: [
@@ -11,64 +11,85 @@ export const services = {
       [["Un parcours jusqu’au contact", "Een duidelijk pad naar contact", "A clear path to contact"], ["Un formulaire intégré, des coordonnées faciles à trouver et une base pensée pour évoluer.", "Een geïntegreerd formulier, makkelijk vindbare contactgegevens en een basis die kan meegroeien.", "An integrated form, easy-to-find contact details and a foundation designed to evolve."]],
     ],
   },
-  visibility: {
-    path: "marketing/index.html", icon: "graph",
-    name: ["Visibilité digitale", "Digitale zichtbaarheid", "Digital visibility"],
-    headline: ["Aidez les bonnes personnes à vous trouver.", "Help de juiste mensen u te vinden.", "Help the right people find you."],
-    short: ["Référencement local, contenus et image de marque pour vous rendre plus facile à trouver.", "Lokale SEO, content en merkidentiteit om beter vindbaar te worden.", "Local SEO, content and branding to make your business easier to find."],
-    intro: ["Zybo clarifie votre offre et structure vos pages pour aider vos futurs clients à vous trouver, à comprendre vos services et à vous contacter.", "Zybo verduidelijkt uw aanbod en structureert uw pagina’s zodat potentiële klanten u vinden, uw diensten begrijpen en contact opnemen.", "Zybo clarifies your offer and structures your pages so prospective clients can find you, understand your services and get in touch."],
+  apps: {
+    path: "applications/index.html", icon: "app",
+    name: ["Applications", "Applicaties", "Applications"],
+    headline: ["Une application pensée pour votre façon de travailler.", "Een app die past bij uw manier van werken.", "An app designed around how you work."],
+    short: ["Outils sur mesure, tableaux de bord et espaces clients.", "Maatwerktools, dashboards en klantportalen.", "Custom tools, dashboards and client portals."],
+    intro: ["Rassemblez les actions et les informations utiles dans une application conçue pour les personnes qui l’utilisent au quotidien.", "Breng nuttige acties en informatie samen in een app voor de mensen die er dagelijks mee werken.", "Bring useful actions and information together in an app designed for the people who use it every day."],
     features: [
-      [["Message et positionnement", "Boodschap en positionering", "Messaging and positioning"], ["Des titres et des textes qui expliquent vos services et les besoins auxquels ils répondent.", "Titels en teksten die uw diensten en de behoeften waarop ze inspelen helder uitleggen.", "Headlines and copy that explain your services and the needs they address."]],
-      [["Référencement local", "Lokale vindbaarheid", "Local SEO"], ["Une structure SEO de base et des informations locales lisibles pour les visiteurs et les moteurs de recherche.", "Een SEO-basis en lokale informatie die leesbaar is voor bezoekers en zoekmachines.", "An SEO foundation and local information that people and search engines can read."]],
-      [["Identité cohérente", "Een consistente identiteit", "A consistent identity"], ["Le ton, les couleurs et les contenus s’accordent sur l’ensemble du site.", "Toon, kleuren en inhoud sluiten overal op de website op elkaar aan.", "Tone, colour and content work together across the site."]],
+      [["Outils internes", "Interne tools", "Internal tools"], ["Suivez les dossiers, demandes et opérations dans une interface commune.", "Volg dossiers, aanvragen en werkzaamheden in één omgeving.", "Track records, requests and operations in a shared interface."]],
+      [["Tableaux de bord", "Dashboards", "Dashboards"], ["Consultez les informations qui vous aident à décider quoi traiter ensuite.", "Bekijk de informatie die bepaalt wat u daarna aanpakt.", "See the information you need to decide what to work on next."]],
+      [["Espaces clients", "Klantportalen", "Client portals"], ["Donnez à vos clients un espace pour consulter leurs informations ou déposer une demande.", "Geef klanten een plek om gegevens te bekijken of een aanvraag in te dienen.", "Give clients a place to see their information or submit a request."]],
+    ],
+  },
+  automation: {
+    path: "automatisation/index.html", icon: "flow",
+    name: ["Automatisation", "Automatisering", "Automation"],
+    headline: ["Réduisez les tâches qui se répètent.", "Verminder terugkerende taken.", "Reduce repetitive work."],
+    short: ["Outils connectés, relances et transferts de données automatisés.", "Gekoppelde tools, automatische opvolging en gegevensoverdracht.", "Connected tools, follow-ups and automated data transfers."],
+    intro: ["Nous partons d’une tâche que vous répétez. Ensemble, nous définissons ce qui déclenche le traitement, les étapes à automatiser et celles à valider manuellement.", "We vertrekken van een terugkerende taak. Samen bepalen we de trigger, de automatische stappen en waar controle nodig blijft.", "We start with a recurring task and map the trigger, the steps to automate and where manual review is still needed."],
+    features: [
+      [["Formulaires et demandes", "Formulieren en aanvragen", "Forms and requests"], ["Acheminez les demandes reçues vers l’outil où vous les suivez.", "Stuur binnenkomende aanvragen door naar de tool waarin u ze opvolgt.", "Send incoming requests to the tool where you track them."]],
+      [["Synchronisation", "Synchronisatie", "Sync"], ["Transférez les informations entre les outils que vous utilisez déjà.", "Draag informatie over tussen de tools die u al gebruikt.", "Transfer information between the tools you already use."]],
+      [["Rappels et relances", "Herinneringen en opvolging", "Reminders and follow-ups"], ["Déclenchez une notification quand une échéance approche ou qu’une demande attend une réponse.", "Stuur een melding wanneer een deadline nadert of een aanvraag op antwoord wacht.", "Send a notification when a deadline is approaching or a request is waiting for a reply."]],
     ],
   },
   it: {
-    path: "security/index.html", icon: "cpu",
+    path: "security/index.html", icon: "settings",
     name: ["Solutions informatiques", "IT-oplossingen", "IT solutions"],
-    headline: ["Des outils digitaux plus simples au quotidien.", "Eenvoudigere digitale tools voor elke dag.", "Simpler digital tools for everyday work."],
-    short: ["Conseil et support pour organiser vos outils et simplifier vos parcours clients.", "Advies en ondersteuning om uw tools en klanttrajecten te vereenvoudigen.", "Advice and support to organise your tools and simplify customer journeys."],
-    intro: ["Zybo vous accompagne dans le choix de vos outils, l’organisation de votre présence en ligne et la mise en place de solutions adaptées à votre activité.", "Zybo helpt u tools te kiezen, uw online aanwezigheid te organiseren en oplossingen voor uw activiteit op te zetten.", "Zybo helps you choose tools, organise your online presence and put solutions in place that fit your business."],
+    headline: ["Votre site, votre domaine et vos outils au même endroit.", "Uw site, domein en tools overzichtelijk geregeld.", "Your website, domain and tools, clearly organised."],
+    short: ["Configuration web et accompagnement pour les outils de votre activité.", "Webconfiguratie en ondersteuning voor uw bedrijfstools.", "Web configuration and support for your business tools."],
+    intro: ["De l’adresse de votre site au formulaire de contact, nous clarifions les réglages, les accès et le rôle de chaque service.", "Van uw webadres tot het contactformulier maken we instellingen, toegang en de rol van elke dienst duidelijk.", "From your web address to your contact form, we clarify settings, access and what each service does."],
     features: [
       [["Organisation des outils", "Tools organiseren", "Tool organisation"], ["Clarifiez les rôles de vos outils et repérez les étapes que vous pouvez simplifier.", "Maak duidelijk waarvoor uw tools dienen en ontdek welke stappen eenvoudiger kunnen.", "Clarify what each tool does and identify steps you can simplify."]],
-      [["Structure fiable", "Een betrouwbare structuur", "A reliable structure"], ["Des pages et des interfaces lisibles, faciles à utiliser et à faire évoluer.", "Leesbare pagina’s en interfaces die makkelijk te gebruiken en uit te breiden zijn.", "Readable pages and interfaces that are easy to use and evolve."]],
+      [["Domaine et hébergement", "Domein en hosting", "Domain and hosting"], ["Reliez votre adresse au bon hébergement et vérifiez que le site s’ouvre en HTTPS.", "Koppel uw adres aan de juiste hosting en controleer of de site via HTTPS opent.", "Connect your address to the right host and verify that your site opens over HTTPS."]],
       [["Accompagnement technique", "Technische begeleiding", "Technical guidance"], ["Un appui pour choisir vos solutions, organiser vos processus et prendre vos outils en main.", "Ondersteuning bij het kiezen van oplossingen, het organiseren van processen en het gebruik van uw tools.", "Support in choosing solutions, organising workflows and getting comfortable with your tools."]],
     ],
   },
-  estate: {
-    path: "legal/index.html", icon: "buildings",
-    name: ["Présentation immobilière", "Vastgoedpresentatie", "Property presentation"],
-    headline: ["Mettez un bien en valeur dès la première visite en ligne.", "Laat een pand opvallen vanaf het eerste online bezoek.", "Show a property at its best from the first online visit."],
-    short: ["Pages dédiées pour présenter un bien, ses atouts et ses informations clés.", "Aparte pagina’s voor een pand, met de troeven en de belangrijkste informatie.", "Dedicated pages for properties, their strengths and key details."],
-    intro: ["Pour les propriétaires et les professionnels de l’immobilier, Zybo crée des présentations digitales qui rendent les atouts d’un bien faciles à découvrir.", "Voor eigenaars en vastgoedprofessionals maakt Zybo digitale presentaties die de troeven van een pand zichtbaar maken.", "For owners and property professionals, Zybo creates digital presentations that make a property’s strengths easy to discover."],
+  privacy: {
+    path: "confidentialite/index.html", icon: "lock",
+    name: ["Confidentialité et stockage", "Privacy en opslag", "Privacy and storage"],
+    headline: ["Gardez la maîtrise de vos fichiers et de vos accès.", "Houd controle over uw bestanden en toegangsrechten.", "Stay in control of your files and access."],
+    short: ["Organisation du stockage, du partage et des sauvegardes.", "Organisatie van opslag, delen en back-ups.", "Organisation of storage, sharing and backups."],
+    intro: ["Clarifiez où sont stockées vos données, qui peut y accéder et comment récupérer les fichiers qui comptent pour vous.", "Maak duidelijk waar uw gegevens staan, wie erbij kan en hoe u belangrijke bestanden terughaalt.", "Clarify where your data is stored, who can access it and how you can recover important files."],
     features: [
-      [["Une page dédiée", "Een aparte pagina", "A dedicated page"], ["Présentez un bien, une offre ou votre activité immobilière avec une mise en page adaptée.", "Presenteer een pand, een aanbod of uw vastgoedactiviteit met een passende lay-out.", "Present a property, an offer or your property business with a layout suited to the subject."]],
-      [["Des points forts visibles", "Zichtbare troeven", "Visible selling points"], ["Donnez une place claire aux visuels, aux caractéristiques et aux informations essentielles.", "Geef beelden, kenmerken en essentiële informatie een duidelijke plaats.", "Give images, features and essential information a clear place on the page."]],
-      [["Un contact facile à trouver", "Makkelijk contact opnemen", "Easy-to-find contact details"], ["Aidez les acheteurs ou locataires à retrouver les informations utiles et à vous joindre.", "Help kopers of huurders belangrijke informatie te vinden en u te bereiken.", "Help buyers or tenants find useful information and get in touch."]],
+      [["Stockage des fichiers", "Bestandsopslag", "File storage"], ["Organisez vos documents dans un espace adapté à leur usage.", "Organiseer documenten in een omgeving die bij het gebruik past.", "Organise your documents in a space suited to how they are used."]],
+      [["Accès et partage", "Toegang en delen", "Access and sharing"], ["Définissez les personnes qui peuvent consulter ou modifier les fichiers.", "Bepaal wie bestanden mag bekijken of bewerken.", "Define who can view or edit files."]],
+      [["Sauvegardes", "Back-ups", "Backups"], ["Identifiez ce qui doit être sauvegardé et préparez une méthode de restauration.", "Bepaal wat u moet back-uppen en hoe u het terugzet.", "Identify what needs backing up and plan how to restore it."]],
+    ],
+  },
+  management: {
+    path: "gestion-personnelle/index.html", icon: "checklist",
+    name: ["Gestion personnelle", "Persoonlijke organisatie", "Personal organisation"],
+    headline: ["Retrouvez vos priorités au même endroit.", "Vind uw prioriteiten op één plek.", "Find your priorities in one place."],
+    short: ["Des outils pour organiser vos tâches, agendas et documents.", "Tools voor uw taken, agenda’s en documenten.", "Tools for organising tasks, calendars and documents."],
+    intro: ["Créez un espace de travail adapté à vos habitudes pour voir ce qui est prévu, retrouver vos notes et suivre ce qui reste à faire.", "Maak een werkruimte die bij uw gewoontes past en waarin u afspraken, notities en openstaande taken terugvindt.", "Create a workspace that fits your habits, with a clear view of your plans, notes and outstanding tasks."],
+    features: [
+      [["Tâches et priorités", "Taken en prioriteiten", "Tasks and priorities"], ["Identifiez ce qui est à faire et retrouvez la prochaine action de chaque projet.", "Zie wat er moet gebeuren en vind de volgende stap voor elk project.", "See what needs doing and find the next action for each project."]],
+      [["Agendas et échéances", "Agenda’s en deadlines", "Calendars and deadlines"], ["Rassemblez les dates importantes et associez des rappels aux échéances utiles.", "Bundel belangrijke data en koppel herinneringen aan relevante deadlines.", "Bring important dates together and attach reminders to relevant deadlines."]],
+      [["Notes et documents", "Notities en documenten", "Notes and documents"], ["Classez les informations que vous voulez pouvoir retrouver facilement.", "Orden informatie die u makkelijk wilt terugvinden.", "Organise the information you want to find easily."]],
     ],
   },
 };
 
 export const steps = [
-  [["Échange", "Kennismaking", "Discovery"], ["On définit votre activité, votre public et l’objectif du projet.", "We bepalen uw activiteit, doelgroep en projectdoel.", "We define your business, audience and project goal."]],
-  [["Création", "Ontwerp", "Design"], ["On construit la structure et la direction visuelle de votre site.", "We werken de structuur en visuele richting van uw site uit.", "We build the structure and visual direction of your site."]],
-  [["Optimisation", "Optimalisatie", "Refinement"], ["On affine les textes, le parcours et l’affichage sur mobile.", "We verfijnen de teksten, het klanttraject en de mobiele weergave.", "We refine the copy, visitor journey and mobile layout."]],
-  [["Mise en ligne", "Publicatie", "Launch"], ["Votre site est prêt à être publié et partagé.", "Uw website is klaar om te publiceren en te delen.", "Your site is ready to publish and share."]],
+  [["Cadrage", "Kennismaking", "Discovery"], ["Nous précisons vos services, vos visiteurs et ce que le site doit leur permettre de faire.", "We brengen uw diensten, bezoekers en de belangrijkste acties in kaart.", "We identify your services, your visitors and what they should be able to do."]],
+  [["Création", "Ontwerp", "Design"], ["Nous vous présentons la structure des pages et une première version à parcourir.", "We tonen de paginastructuur en een eerste versie die u kunt bekijken.", "We share the page structure and a first version you can browse."]],
+  [["Vérifications", "Controles", "Checks"], ["Nous vérifions l’affichage sur mobile, les liens, les formulaires et le poids des images.", "We controleren de mobiele weergave, links, formulieren en afbeeldingsgrootte.", "We check the mobile layout, links, forms and image sizes."]],
+  [["Mise en ligne", "Publicatie", "Launch"], ["Nous préparons le domaine et l’hébergement, puis vérifions l’accès au site publié.", "We bereiden domein en hosting voor en testen de gepubliceerde site.", "We prepare the domain and hosting, then check the published site."]],
 ];
 
 export const common = {
   expertise: ["Expertises", "Expertise", "Expertise"],
   method: ["Méthode", "Werkwijze", "Process"],
   contact: ["Contact", "Contact", "Contact"],
-  start: ["Parlons de votre projet", "Bespreek uw project", "Let’s talk about your project"],
-  seeServices: ["Découvrir les expertises", "Ontdek onze expertise", "Explore our expertise"],
+  start: ["Nous contacter", "Neem contact op", "Get in touch"],
+  seeServices: ["Voir nos services", "Bekijk onze diensten", "See our services"],
   allServices: ["Toutes les expertises", "Alle diensten", "All services"],
-  about: ["Studio digital", "Digitale studio", "Digital studio"],
   monitor: ["Monitoring", "Monitoring", "Monitoring"],
   status: ["État des services", "Servicestatus", "Service status"],
   methodHeading: ["Du premier échange à la mise en ligne.", "Van kennismaking tot publicatie.", "From the first conversation to launch."],
-  ctaTitle: ["Votre projet commence ici.", "Uw project begint hier.", "Your project starts here."],
-  ctaLead: ["Présentez-nous votre activité et ce que vous souhaitez améliorer.", "Vertel ons over uw activiteit en wat u wilt verbeteren.", "Tell us about your business and what you would like to improve."],
 };
 
 export const statusCopy = {

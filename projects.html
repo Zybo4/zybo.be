@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080d20">
+  <meta name="theme-color" content="#101329">
   <title>Expertises · Zybo</title>
-  <meta name="description" content="Explorez les services de Zybo en création web, visibilité digitale, informatique et présentation immobilière.">
+  <meta name="description" content="Créez votre site ou votre application, automatisez vos tâches et organisez vos outils, vos fichiers et votre quotidien.">
   <link rel="canonical" href="https://zybo.be/projects.html">
   <link rel="icon" href="./assets/logo-zybo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +13,23 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/studio.css">
+  <link rel="stylesheet" href="./assets/pages.css">
   <script src="./assets/site.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="./assets/experience.js" defer></script>
 </head>
 <body data-page="solutions">
   <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
   <header class="site-header">
     <div class="wrap nav-shell">
-      <a class="brand" href="./index.html" aria-label="Zybo"><img src="./assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <a class="brand" href="./index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="./assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="./assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
       <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
         <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
       </button>
@@ -45,68 +55,247 @@
     <div class="wrap page-hero-inner">
       <div class="page-hero-copy">
         <p data-copy="page.label" class="eyebrow">Expertises</p>
-        <h1 data-copy="page.headline">Des solutions digitales pour votre activité.</h1>
-        <p data-copy="page.intro" class="page-intro">Explorez les services de Zybo en création web, visibilité digitale, informatique et présentation immobilière.</p>
+        <h1 data-copy="page.headline" data-scan>Des outils adaptés à votre activité.</h1>
+        <p data-copy="page.intro" class="page-intro">Créez votre site ou votre application, automatisez vos tâches et organisez vos outils, vos fichiers et votre quotidien.</p>
       </div>
     </div>
   </section>
-      <section class="section expertise-section"><div class="wrap"><div class="service-grid">
-    <article class="service-card" data-reveal>
-      <a href="./devops/index.html" class="service-link">
-        <div class="service-art art-web" aria-hidden="true"><div class="browser-art"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-inner"><div class="browser-copy"><i></i><i></i><i></i><i></i></div><div class="browser-shape"></div></div><div class="browser-foot"><i></i><i></i><i></i></div></div></div>
-        <div class="service-info">
-          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5V5h14v-.5A1.5 1.5 0 0 0 13.5 3zM15 6H1v5.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5zM0 4.5A2.5 2.5 0 0 1 2.5 2h11A2.5 2.5 0 0 1 16 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 11.5z" fill-rule="evenodd"/></svg></div>
-          <div><h3 data-copy="service.web">Création web</h3><p data-copy="short.web">Sites vitrines, refontes et pages de vente conçus autour de votre offre.</p></div>
-          <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
-        </div>
-      </a>
-    </article>
-<article class="service-card" data-reveal>
-      <a href="./marketing/index.html" class="service-link">
-        <div class="service-art art-visibility" aria-hidden="true"><div class="graph-art"><i></i><i></i><i></i><i></i><i></i><i></i><span></span></div></div>
-        <div class="service-info">
-          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M0 0h1v14h15v1H0zm3 8h2v4H3zm4-3h2v7H7zm4-4h2v11h-2z" fill-rule="evenodd"/></svg></div>
-          <div><h3 data-copy="service.visibility">Visibilité digitale</h3><p data-copy="short.visibility">Référencement local, contenus et image de marque pour vous rendre plus facile à trouver.</p></div>
-          <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
-        </div>
-      </a>
-    </article>
-<article class="service-card" data-reveal>
-      <a href="./security/index.html" class="service-link">
-        <div class="service-art art-it" aria-hidden="true"><div class="chip-art"><div class="chip-board"><i></i><i></i><i></i><i></i><div class="chip-core"></div></div></div></div>
-        <div class="service-info">
-          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 0h1v2h1.5V0h1v2H10V0h1v2h1a2 2 0 0 1 2 2v1h2v1h-2v1.5h2v1h-2V10h2v1h-2v1a2 2 0 0 1-2 2h-1v2h-1v-2H8.5v2h-1v-2H6v2H5v-2H4a2 2 0 0 1-2-2v-1H0v-1h2V8.5H0v-1h2V6H0V5h2V4a2 2 0 0 1 2-2h1zM4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm1 2h6v6H5zm1 1v4h4V6z" fill-rule="evenodd"/></svg></div>
-          <div><h3 data-copy="service.it">Solutions informatiques</h3><p data-copy="short.it">Conseil et support pour organiser vos outils et simplifier vos parcours clients.</p></div>
-          <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
-        </div>
-      </a>
-    </article>
-<article class="service-card" data-reveal>
-      <a href="./legal/index.html" class="service-link">
-        <div class="service-art art-estate" aria-hidden="true"><img src="./assets/media/immobilier.jpg" alt="" width="1000" height="667" loading="lazy"></div>
-        <div class="service-info">
-          <div class="service-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 2h8v4h6v9H1zm1 1v11h3v-3h2v3h1V3zm7 4v7h5V7zM3 4h1v2H3zm3 0h1v2H6zM3 7h1v2H3zm3 0h1v2H6zm4 1h1v2h-1zm2 0h1v2h-1z" fill-rule="evenodd"/></svg></div>
-          <div><h3 data-copy="service.estate">Présentation immobilière</h3><p data-copy="short.estate">Pages dédiées pour présenter un bien, ses atouts et ses informations clés.</p></div>
-          <span class="card-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
-        </div>
-      </a>
-    </article>
-  </div></div></section><section class="section contact-section"><div class="wrap">
-    <div class="contact-band">
-      <div><h2 data-copy="cta.title">Votre projet commence ici.</h2><p data-copy="cta.lead">Présentez-nous votre activité et ce que vous souhaitez améliorer.</p></div>
-      <a class="button button-white" href="./contact.html"><span data-copy="cta.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      <section class="section gallery-section"><div class="wrap" data-carousel>
+    <div class="section-head">
+      <h2 data-copy="gallery.title" id="gallery-title" data-scan>Explorez nos expertises.</h2>
+      <div class="gallery-controls" hidden>
+        <button type="button" data-slide-direction="-1" aria-controls="service-slides"><span class="visually-hidden"><span data-copy="gallery.prev">Précédent</span></span><span aria-hidden="true">←</span></button>
+        <output data-slide-position aria-live="polite">01 / 06</output>
+        <button type="button" data-slide-direction="1" aria-controls="service-slides"><span class="visually-hidden"><span data-copy="gallery.next">Suivant</span></span><span aria-hidden="true">→</span></button>
+      </div>
     </div>
+    <div class="service-slides" id="service-slides" tabindex="0" role="region" aria-labelledby="gallery-title">
+      <article class="service-slide" data-slide>
+        <div class="service-slide-copy"><h3 data-copy="service.web">Création web</h3>
+          <p data-copy="short.web">Sites vitrines, refontes et pages de vente conçus autour de votre offre.</p>
+          <a class="slide-link" href="./devops/index.html"><span data-copy="gallery.open">Voir le service</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        </div>
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5V5h14v-.5A1.5 1.5 0 0 0 13.5 3zM15 6H1v5.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5zM0 4.5A2.5 2.5 0 0 1 2.5 2h11A2.5 2.5 0 0 1 16 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 11.5z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.web.title">Site d’un électricien</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.web.name.0">Prestations</dt>
+          <dd data-copy="example.web.details.0">Dépannage, installation et entretien</dd>
+        </div>
+        <div>
+          <dt data-copy="example.web.name.1">Zone d’intervention</dt>
+          <dd data-copy="example.web.details.1">Les communes où l’électricien se déplace</dd>
+        </div>
+        <div>
+          <dt data-copy="example.web.name.2">Demande de devis</dt>
+          <dd data-copy="example.web.details.2">Un formulaire pour décrire les travaux</dd>
+        </div>
+      </dl>
+    </figure>
+      </article><article class="service-slide" data-slide>
+        <div class="service-slide-copy"><h3 data-copy="service.apps">Applications</h3>
+          <p data-copy="short.apps">Outils sur mesure, tableaux de bord et espaces clients.</p>
+          <a class="slide-link" href="./applications/index.html"><span data-copy="gallery.open">Voir le service</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        </div>
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2 1h4v6H2zm1 1v4h2V2zm5-1h6v4H8zm1 1v2h4V2zm-1 5h6v8H8zm1 1v6h4V8zM2 9h4v6H2zm1 1v4h2v-4z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.apps.title">Suivi des interventions</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.apps.name.0">Nouvelle demande</dt>
+          <dd data-copy="example.apps.details.0">Le client décrit la panne</dd>
+        </div>
+        <div>
+          <dt data-copy="example.apps.name.1">Intervention planifiée</dt>
+          <dd data-copy="example.apps.details.1">L’équipe assigne un technicien</dd>
+        </div>
+        <div>
+          <dt data-copy="example.apps.name.2">Intervention terminée</dt>
+          <dd data-copy="example.apps.details.2">Le compte rendu est ajouté au dossier</dd>
+        </div>
+      </dl>
+    </figure>
+      </article><article class="service-slide" data-slide>
+        <div class="service-slide-copy"><h3 data-copy="service.automation">Automatisation</h3>
+          <p data-copy="short.automation">Outils connectés, relances et transferts de données automatisés.</p>
+          <a class="slide-link" href="./automatisation/index.html"><span data-copy="gallery.open">Voir le service</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        </div>
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 1h5v4H4v2.5h8V10h-1V8.5H4V11h2v4H1v-4h2V5H1zm1 1v2h3V2zm0 10v2h3v-2zm8-1h5v4h-5zm1 1v2h3v-2z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.automation.title">Du formulaire au suivi client</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.automation.name.0">Déclencheur</dt>
+          <dd data-copy="example.automation.details.0">Un client envoie une demande</dd>
+        </div>
+        <div>
+          <dt data-copy="example.automation.name.1">Action automatique</dt>
+          <dd data-copy="example.automation.details.1">Une fiche est créée et l’équipe est avertie</dd>
+        </div>
+        <div>
+          <dt data-copy="example.automation.name.2">Validation</dt>
+          <dd data-copy="example.automation.details.2">Vous relisez le devis avant l’envoi</dd>
+        </div>
+      </dl>
+    </figure>
+      </article><article class="service-slide" data-slide>
+        <div class="service-slide-copy"><h3 data-copy="service.it">Solutions informatiques</h3>
+          <p data-copy="short.it">Configuration web et accompagnement pour les outils de votre activité.</p>
+          <a class="slide-link" href="./security/index.html"><span data-copy="gallery.open">Voir le service</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        </div>
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 2h14v1H1zm0 5h14v1H1zm0 5h14v1H1zM4 1h2v3H4zm6 5h2v3h-2zm-5 5h2v3H5z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.it.title">Mise en service d’un site</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.it.name.0">Domaine</dt>
+          <dd data-copy="example.it.details.0">Relier l’adresse à l’hébergement</dd>
+        </div>
+        <div>
+          <dt data-copy="example.it.name.1">Accès</dt>
+          <dd data-copy="example.it.details.1">Identifier les comptes et leurs responsables</dd>
+        </div>
+        <div>
+          <dt data-copy="example.it.name.2">Formulaire</dt>
+          <dd data-copy="example.it.details.2">Vérifier où arrivent les demandes</dd>
+        </div>
+      </dl>
+    </figure>
+      </article><article class="service-slide" data-slide>
+        <div class="service-slide-copy"><h3 data-copy="service.privacy">Confidentialité et stockage</h3>
+          <p data-copy="short.privacy">Organisation du stockage, du partage et des sauvegardes.</p>
+          <a class="slide-link" href="./confidentialite/index.html"><span data-copy="gallery.open">Voir le service</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        </div>
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 6V4a3 3 0 1 1 6 0v2h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1 0h4V4a2 2 0 0 0-4 0zM4 7v7h8V7zm3.5 2h1v3h-1z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.privacy.title">Dossiers partagés avec des clients</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.privacy.name.0">Dossier interne</dt>
+          <dd data-copy="example.privacy.details.0">Accès réservé à l’équipe</dd>
+        </div>
+        <div>
+          <dt data-copy="example.privacy.name.1">Dossier client</dt>
+          <dd data-copy="example.privacy.details.1">Les fichiers que le client peut consulter</dd>
+        </div>
+        <div>
+          <dt data-copy="example.privacy.name.2">Sauvegarde</dt>
+          <dd data-copy="example.privacy.details.2">Une copie et une méthode pour la restaurer</dd>
+        </div>
+      </dl>
+    </figure>
+      </article><article class="service-slide" data-slide>
+        <div class="service-slide-copy"><h3 data-copy="service.management">Gestion personnelle</h3>
+          <p data-copy="short.management">Des outils pour organiser vos tâches, agendas et documents.</p>
+          <a class="slide-link" href="./gestion-personnelle/index.html"><span data-copy="gallery.open">Voir le service</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        </div>
+        <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 1h14v14H1zm1 1v12h12V2zm1 4 .7-.7.8.8 1.8-2 .7.7-2.5 2.8zM8 5h4v1H8zm-5 6 .7-.7.8.8 1.8-2 .7.7-2.5 2.8zM8 10h4v1H8z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.management.title">Organisation d’un indépendant</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.management.name.0">Aujourd’hui</dt>
+          <dd data-copy="example.management.details.0">Préparer les devis à envoyer</dd>
+        </div>
+        <div>
+          <dt data-copy="example.management.name.1">Cette semaine</dt>
+          <dd data-copy="example.management.details.1">Voir les rendez-vous et échéances</dd>
+        </div>
+        <div>
+          <dt data-copy="example.management.name.2">Par projet</dt>
+          <dd data-copy="example.management.details.2">Retrouver les notes et les documents</dd>
+        </div>
+      </dl>
+    </figure>
+      </article>
+    </div>
+  </div></section>
+      <section class="section detail-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="solutions.uses" data-scan>Quel est votre besoin ?</h2></div>
+        <ol class="detail-rows">
+    <li data-reveal>
+      <span class="detail-index" aria-hidden="true">01</span>
+      <h3 data-copy="solutions.use.0">Création web</h3>
+      <p data-copy="solutions.use.body.0">De la page d’accueil au formulaire, chaque écran aide le visiteur à comprendre vos services et à passer à l’action.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">02</span>
+      <h3 data-copy="solutions.use.1">Applications</h3>
+      <p data-copy="solutions.use.body.1">Rassemblez les actions et les informations utiles dans une application conçue pour les personnes qui l’utilisent au quotidien.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">03</span>
+      <h3 data-copy="solutions.use.2">Automatisation</h3>
+      <p data-copy="solutions.use.body.2">Nous partons d’une tâche que vous répétez. Ensemble, nous définissons ce qui déclenche le traitement, les étapes à automatiser et celles à valider manuellement.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">04</span>
+      <h3 data-copy="solutions.use.3">Solutions informatiques</h3>
+      <p data-copy="solutions.use.body.3">De l’adresse de votre site au formulaire de contact, nous clarifions les réglages, les accès et le rôle de chaque service.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">05</span>
+      <h3 data-copy="solutions.use.4">Confidentialité et stockage</h3>
+      <p data-copy="solutions.use.body.4">Clarifiez où sont stockées vos données, qui peut y accéder et comment récupérer les fichiers qui comptent pour vous.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">06</span>
+      <h3 data-copy="solutions.use.5">Gestion personnelle</h3>
+      <p data-copy="solutions.use.body.5">Créez un espace de travail adapté à vos habitudes pour voir ce qui est prévu, retrouver vos notes et suivre ce qui reste à faire.</p>
+    </li>
+  </ol>
+      </div></section><section class="contact-section contact-close"><div class="wrap">
+    <a class="contact-row" href="./contact.html#contact-form">
+      <div class="contact-row-copy">
+        <h2 data-copy="cta.title" data-scan>Écrire à Zybo</h2>
+        <span data-copy="cta.lead">Une demande, un site à revoir ou une question technique.</span>
+      </div>
+      <span class="contact-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+    </a>
   </div></section></main>
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-main">
-        <div><a class="brand" href="./index.html" aria-label="Zybo"><img src="./assets/logo-zybo.png" alt="" width="500" height="500"></a>
+        <div><a class="brand" href="./index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="./assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="./assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
           <p data-copy="footer.about">Création web et solutions digitales.</p></div>
         <div class="footer-links">
           <a class="" href="./devops/index.html"><span data-copy="service.web">Création web</span></a>
-<a class="" href="./marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="./applications/index.html"><span data-copy="service.apps">Applications</span></a>
+<a class="" href="./automatisation/index.html"><span data-copy="service.automation">Automatisation</span></a>
 <a class="" href="./security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
-<a class="" href="./legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
+<a class="" href="./confidentialite/index.html"><span data-copy="service.privacy">Confidentialité et stockage</span></a>
+<a class="" href="./gestion-personnelle/index.html"><span data-copy="service.management">Gestion personnelle</span></a>
         </div>
         <div class="footer-links">
           <a class="" href="./lab/index.html"><span data-copy="nav.method">Méthode</span></a>
@@ -117,6 +306,6 @@
       <div class="footer-bottom"><span>© Zybo</span><a class="" href="./server-status.html"><span data-copy="nav.status">État des services</span></a></div>
     </div>
   </footer>
-  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.label":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"page.headline":{"fr":"Des solutions digitales pour votre activité.","nl":"Digitale oplossingen voor uw activiteit.","en":"Digital solutions for your business."},"page.intro":{"fr":"Explorez les services de Zybo en création web, visibilité digitale, informatique et présentation immobilière.","nl":"Ontdek Zybo’s diensten voor webdesign, digitale zichtbaarheid, IT en vastgoedpresentatie.","en":"Explore Zybo’s web design, digital visibility, IT and property presentation services."},"short.web":{"fr":"Sites vitrines, refontes et pages de vente conçus autour de votre offre.","nl":"Bedrijfswebsites, redesigns en landingspagina’s rond uw aanbod.","en":"Business websites, redesigns and landing pages built around your offer."},"short.visibility":{"fr":"Référencement local, contenus et image de marque pour vous rendre plus facile à trouver.","nl":"Lokale SEO, content en merkidentiteit om beter vindbaar te worden.","en":"Local SEO, content and branding to make your business easier to find."},"short.it":{"fr":"Conseil et support pour organiser vos outils et simplifier vos parcours clients.","nl":"Advies en ondersteuning om uw tools en klanttrajecten te vereenvoudigen.","en":"Advice and support to organise your tools and simplify customer journeys."},"short.estate":{"fr":"Pages dédiées pour présenter un bien, ses atouts et ses informations clés.","nl":"Aparte pagina’s voor een pand, met de troeven en de belangrijkste informatie.","en":"Dedicated pages for properties, their strengths and key details."},"cta.title":{"fr":"Votre projet commence ici.","nl":"Uw project begint hier.","en":"Your project starts here."},"cta.lead":{"fr":"Présentez-nous votre activité et ce que vous souhaitez améliorer.","nl":"Vertel ons over uw activiteit en wat u wilt verbeteren.","en":"Tell us about your business and what you would like to improve."},"cta.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"meta.title":{"fr":"Expertises · Zybo","nl":"Expertise · Zybo","en":"Expertise · Zybo"},"meta.description":{"fr":"Explorez les services de Zybo en création web, visibilité digitale, informatique et présentation immobilière.","nl":"Ontdek Zybo’s diensten voor webdesign, digitale zichtbaarheid, IT en vastgoedpresentatie.","en":"Explore Zybo’s web design, digital visibility, IT and property presentation services."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.apps":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"service.automation":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.privacy":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"service.management":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.label":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"page.headline":{"fr":"Des outils adaptés à votre activité.","nl":"Tools op maat van uw activiteit.","en":"Tools suited to your work."},"page.intro":{"fr":"Créez votre site ou votre application, automatisez vos tâches et organisez vos outils, vos fichiers et votre quotidien.","nl":"Maak een website of app, automatiseer taken en organiseer uw tools, bestanden en dagelijks werk.","en":"Build a website or app, automate tasks and organise your tools, files and daily work."},"gallery.title":{"fr":"Explorez nos expertises.","nl":"Ontdek onze expertise.","en":"Explore our expertise."},"gallery.prev":{"fr":"Précédent","nl":"Vorige","en":"Previous"},"gallery.next":{"fr":"Suivant","nl":"Volgende","en":"Next"},"short.web":{"fr":"Sites vitrines, refontes et pages de vente conçus autour de votre offre.","nl":"Bedrijfswebsites, redesigns en landingspagina’s rond uw aanbod.","en":"Business websites, redesigns and landing pages built around your offer."},"gallery.open":{"fr":"Voir le service","nl":"Bekijk de dienst","en":"Explore the service"},"example.label":{"fr":"Exemple d’usage","nl":"Praktijkvoorbeeld","en":"Example use case"},"example.web.title":{"fr":"Site d’un électricien","nl":"Website van een elektricien","en":"An electrician’s website"},"example.web.name.0":{"fr":"Prestations","nl":"Diensten","en":"Services"},"example.web.details.0":{"fr":"Dépannage, installation et entretien","nl":"Herstellingen, installatie en onderhoud","en":"Repairs, installation and maintenance"},"example.web.name.1":{"fr":"Zone d’intervention","nl":"Werkgebied","en":"Service area"},"example.web.details.1":{"fr":"Les communes où l’électricien se déplace","nl":"De gemeenten waar de elektricien werkt","en":"The areas the electrician covers"},"example.web.name.2":{"fr":"Demande de devis","nl":"Offerte aanvragen","en":"Request a quote"},"example.web.details.2":{"fr":"Un formulaire pour décrire les travaux","nl":"Een formulier om de werken te beschrijven","en":"A form to describe the job"},"short.apps":{"fr":"Outils sur mesure, tableaux de bord et espaces clients.","nl":"Maatwerktools, dashboards en klantportalen.","en":"Custom tools, dashboards and client portals."},"example.apps.title":{"fr":"Suivi des interventions","nl":"Interventies opvolgen","en":"Job tracker"},"example.apps.name.0":{"fr":"Nouvelle demande","nl":"Nieuwe aanvraag","en":"New request"},"example.apps.details.0":{"fr":"Le client décrit la panne","nl":"De klant beschrijft de storing","en":"The customer describes the fault"},"example.apps.name.1":{"fr":"Intervention planifiée","nl":"Interventie gepland","en":"Job scheduled"},"example.apps.details.1":{"fr":"L’équipe assigne un technicien","nl":"Het team wijst een technicus toe","en":"The team assigns a technician"},"example.apps.name.2":{"fr":"Intervention terminée","nl":"Interventie afgerond","en":"Job complete"},"example.apps.details.2":{"fr":"Le compte rendu est ajouté au dossier","nl":"Het verslag komt in het dossier","en":"The report is added to the record"},"short.automation":{"fr":"Outils connectés, relances et transferts de données automatisés.","nl":"Gekoppelde tools, automatische opvolging en gegevensoverdracht.","en":"Connected tools, follow-ups and automated data transfers."},"example.automation.title":{"fr":"Du formulaire au suivi client","nl":"Van formulier naar klantopvolging","en":"From form to customer follow-up"},"example.automation.name.0":{"fr":"Déclencheur","nl":"Trigger","en":"Trigger"},"example.automation.details.0":{"fr":"Un client envoie une demande","nl":"Een klant verstuurt een aanvraag","en":"A customer submits a request"},"example.automation.name.1":{"fr":"Action automatique","nl":"Automatische actie","en":"Automated action"},"example.automation.details.1":{"fr":"Une fiche est créée et l’équipe est avertie","nl":"De tool maakt een fiche en meldt dit aan het team","en":"The tool creates a record and alerts the team"},"example.automation.name.2":{"fr":"Validation","nl":"Goedkeuring","en":"Approval"},"example.automation.details.2":{"fr":"Vous relisez le devis avant l’envoi","nl":"U kijkt de offerte na vóór verzending","en":"You review the quote before sending it"},"short.it":{"fr":"Configuration web et accompagnement pour les outils de votre activité.","nl":"Webconfiguratie en ondersteuning voor uw bedrijfstools.","en":"Web configuration and support for your business tools."},"example.it.title":{"fr":"Mise en service d’un site","nl":"Een website in gebruik nemen","en":"Getting a website online"},"example.it.name.0":{"fr":"Domaine","nl":"Domein","en":"Domain"},"example.it.details.0":{"fr":"Relier l’adresse à l’hébergement","nl":"Het adres koppelen aan de hosting","en":"Connect the address to the hosting service"},"example.it.name.1":{"fr":"Accès","nl":"Toegang","en":"Access"},"example.it.details.1":{"fr":"Identifier les comptes et leurs responsables","nl":"De accounts en hun beheerders vastleggen","en":"Identify the accounts and who manages them"},"example.it.name.2":{"fr":"Formulaire","nl":"Formulier","en":"Form"},"example.it.details.2":{"fr":"Vérifier où arrivent les demandes","nl":"Controleren waar aanvragen aankomen","en":"Check where enquiries are delivered"},"short.privacy":{"fr":"Organisation du stockage, du partage et des sauvegardes.","nl":"Organisatie van opslag, delen en back-ups.","en":"Organisation of storage, sharing and backups."},"example.privacy.title":{"fr":"Dossiers partagés avec des clients","nl":"Mappen delen met klanten","en":"Folders shared with clients"},"example.privacy.name.0":{"fr":"Dossier interne","nl":"Interne map","en":"Internal folder"},"example.privacy.details.0":{"fr":"Accès réservé à l’équipe","nl":"Alleen toegankelijk voor het team","en":"Access for the team only"},"example.privacy.name.1":{"fr":"Dossier client","nl":"Klantmap","en":"Client folder"},"example.privacy.details.1":{"fr":"Les fichiers que le client peut consulter","nl":"De bestanden die de klant kan bekijken","en":"Files the client can view"},"example.privacy.name.2":{"fr":"Sauvegarde","nl":"Back-up","en":"Backup"},"example.privacy.details.2":{"fr":"Une copie et une méthode pour la restaurer","nl":"Een kopie en een manier om die terug te zetten","en":"A copy and a way to restore it"},"short.management":{"fr":"Des outils pour organiser vos tâches, agendas et documents.","nl":"Tools voor uw taken, agenda’s en documenten.","en":"Tools for organising tasks, calendars and documents."},"example.management.title":{"fr":"Organisation d’un indépendant","nl":"Planning voor een zelfstandige","en":"A freelancer’s workspace"},"example.management.name.0":{"fr":"Aujourd’hui","nl":"Vandaag","en":"Today"},"example.management.details.0":{"fr":"Préparer les devis à envoyer","nl":"Te versturen offertes voorbereiden","en":"Prepare the quotes to send"},"example.management.name.1":{"fr":"Cette semaine","nl":"Deze week","en":"This week"},"example.management.details.1":{"fr":"Voir les rendez-vous et échéances","nl":"Afspraken en deadlines bekijken","en":"See appointments and deadlines"},"example.management.name.2":{"fr":"Par projet","nl":"Per project","en":"By project"},"example.management.details.2":{"fr":"Retrouver les notes et les documents","nl":"Notities en documenten terugvinden","en":"Find notes and documents"},"solutions.uses":{"fr":"Quel est votre besoin ?","nl":"Wat hebt u nodig?","en":"What do you need?"},"solutions.use.0":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"solutions.use.body.0":{"fr":"De la page d’accueil au formulaire, chaque écran aide le visiteur à comprendre vos services et à passer à l’action.","nl":"Van de homepage tot het formulier helpt elk scherm bezoekers uw diensten te begrijpen en actie te ondernemen.","en":"From the homepage to the contact form, each screen helps visitors understand your services and take the next step."},"solutions.use.1":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"solutions.use.body.1":{"fr":"Rassemblez les actions et les informations utiles dans une application conçue pour les personnes qui l’utilisent au quotidien.","nl":"Breng nuttige acties en informatie samen in een app voor de mensen die er dagelijks mee werken.","en":"Bring useful actions and information together in an app designed for the people who use it every day."},"solutions.use.2":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"solutions.use.body.2":{"fr":"Nous partons d’une tâche que vous répétez. Ensemble, nous définissons ce qui déclenche le traitement, les étapes à automatiser et celles à valider manuellement.","nl":"We vertrekken van een terugkerende taak. Samen bepalen we de trigger, de automatische stappen en waar controle nodig blijft.","en":"We start with a recurring task and map the trigger, the steps to automate and where manual review is still needed."},"solutions.use.3":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"solutions.use.body.3":{"fr":"De l’adresse de votre site au formulaire de contact, nous clarifions les réglages, les accès et le rôle de chaque service.","nl":"Van uw webadres tot het contactformulier maken we instellingen, toegang en de rol van elke dienst duidelijk.","en":"From your web address to your contact form, we clarify settings, access and what each service does."},"solutions.use.4":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"solutions.use.body.4":{"fr":"Clarifiez où sont stockées vos données, qui peut y accéder et comment récupérer les fichiers qui comptent pour vous.","nl":"Maak duidelijk waar uw gegevens staan, wie erbij kan en hoe u belangrijke bestanden terughaalt.","en":"Clarify where your data is stored, who can access it and how you can recover important files."},"solutions.use.5":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"solutions.use.body.5":{"fr":"Créez un espace de travail adapté à vos habitudes pour voir ce qui est prévu, retrouver vos notes et suivre ce qui reste à faire.","nl":"Maak een werkruimte die bij uw gewoontes past en waarin u afspraken, notities en openstaande taken terugvindt.","en":"Create a workspace that fits your habits, with a clear view of your plans, notes and outstanding tasks."},"cta.title":{"fr":"Écrire à Zybo","nl":"Schrijf Zybo","en":"Write to Zybo"},"cta.lead":{"fr":"Une demande, un site à revoir ou une question technique.","nl":"Een aanvraag, een website om te vernieuwen of een technische vraag.","en":"An enquiry, a site to update or a technical question."},"meta.title":{"fr":"Expertises · Zybo","nl":"Expertise · Zybo","en":"Expertise · Zybo"},"meta.description":{"fr":"Créez votre site ou votre application, automatisez vos tâches et organisez vos outils, vos fichiers et votre quotidien.","nl":"Maak een website of app, automatiseer taken en organiseer uw tools, bestanden en dagelijks werk.","en":"Build a website or app, automate tasks and organise your tools, files and daily work."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>

@@ -5,7 +5,6 @@
   const dictionary = JSON.parse(document.querySelector("#translations").textContent);
   const supported = ["fr", "nl", "en"];
   const parameters = new URLSearchParams(location.search);
-  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   let language = "fr";
   let savedLanguage;
 
@@ -116,14 +115,23 @@
     const button = contactForm.querySelector('button[type="submit"]');
     const feedback = contactForm.querySelector(".form-status");
     const subject = contactForm.elements.namedItem("subject");
-    const service = parameters.get("service");
-    const serviceKey = "service." + service;
+    let serviceKey = "service." + parameters.get("service");
     let previousSuggestion = "";
+    const topics = contactForm.querySelector(".contact-topics");
+    const topicButtons = topics ? [...topics.querySelectorAll("[data-contact-topic]")] : [];
+
+    function updateTopics() {
+      for (const topic of topicButtons) {
+        const selected = "service." + topic.dataset.contactTopic === serviceKey && subject.value === previousSuggestion;
+        topic.setAttribute("aria-pressed", String(selected));
+      }
+    }
 
     function suggestSubject() {
       if (!Object.hasOwn(dictionary, serviceKey) || subject.value !== previousSuggestion) return;
       previousSuggestion = translate(serviceKey);
       subject.value = previousSuggestion;
+      updateTopics();
     }
 
     function showFeedback(key, state) {
@@ -133,6 +141,15 @@
     }
 
     suggestSubject();
+    if (topics) topics.hidden = false;
+    for (const topic of topicButtons) {
+      topic.addEventListener("click", () => {
+        serviceKey = "service." + topic.dataset.contactTopic;
+        previousSuggestion = subject.value;
+        suggestSubject();
+      });
+    }
+    subject.addEventListener("input", updateTopics);
     document.addEventListener("zybo:language", () => {
       suggestSubject();
       if (feedback.dataset.copy) feedback.textContent = translate(feedback.dataset.copy);
@@ -250,28 +267,4 @@
     setInterval(check, 10000);
   }
 
-  if (!reducedMotion.matches) {
-    const reveals = [...document.querySelectorAll("[data-reveal]")];
-    if (reveals.length && "IntersectionObserver" in window) {
-      import("https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm").then(({ animate, inView }) => {
-        if (reducedMotion.matches) return;
-        inView(reveals, node => {
-          animate(node, { opacity: [0.45, 1], y: [16, 0] }, { duration: .52, ease: [0.2, 0.65, 0.2, 1] });
-        }, { amount: .15 });
-      }).catch(() => {
-        // All sections are readable before the animation library loads.
-      });
-    }
-
-    const hero = document.querySelector("[data-scene]");
-    if (hero && location.protocol !== "file:") {
-      const loadScene = () => import("./hero-3d.mjs")
-        .then(({ enhanceHero }) => enhanceHero(hero, reducedMotion))
-        .catch(() => {
-          // The poster is displayed when WebGL or the library is unavailable.
-        });
-      if ("requestIdleCallback" in window) requestIdleCallback(loadScene, { timeout: 1800 });
-      else setTimeout(loadScene, 400);
-    }
-  }
 })();

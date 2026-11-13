@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080d20">
+  <meta name="theme-color" content="#101329">
   <title>Solutions informatiques · Zybo</title>
-  <meta name="description" content="Conseil et support pour organiser vos outils et simplifier vos parcours clients.">
+  <meta name="description" content="Configuration web et accompagnement pour les outils de votre activité.">
   <link rel="canonical" href="https://zybo.be/security/">
   <link rel="icon" href="../assets/logo-zybo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +13,23 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/studio.css">
+  <link rel="stylesheet" href="../assets/pages.css">
   <script src="../assets/site.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/experience.js" defer></script>
 </head>
 <body data-page="it">
   <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
   <header class="site-header">
     <div class="wrap nav-shell">
-      <a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
       <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
         <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
       </button>
@@ -45,43 +55,107 @@
     <div class="wrap page-hero-inner split-hero">
       <div class="page-hero-copy">
         <p data-copy="page.label" class="eyebrow">Solutions informatiques</p>
-        <h1 data-copy="page.headline">Des outils digitaux plus simples au quotidien.</h1>
-        <p data-copy="page.intro" class="page-intro">Zybo vous accompagne dans le choix de vos outils, l’organisation de votre présence en ligne et la mise en place de solutions adaptées à votre activité.</p>
-        <a class="button button-primary" href="../contact.html?service=it"><span data-copy="service.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        <h1 data-copy="page.headline" data-scan>Votre site, votre domaine et vos outils au même endroit.</h1>
+        <p data-copy="page.intro" class="page-intro">De l’adresse de votre site au formulaire de contact, nous clarifions les réglages, les accès et le rôle de chaque service.</p>
+        <a class="button button-primary" href="../contact.html?service=it#contact-form"><span data-copy="service.start">Nous contacter</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
       </div>
-      <div class="service-art art-it" aria-hidden="true"><div class="chip-art"><div class="chip-board"><i></i><i></i><i></i><i></i><div class="chip-core"></div></div></div></div>
+      <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 2h14v1H1zm0 5h14v1H1zm0 5h14v1H1zM4 1h2v3H4zm6 5h2v3h-2zm-5 5h2v3H5z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.it.title">Mise en service d’un site</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.it.name.0">Domaine</dt>
+          <dd data-copy="example.it.details.0">Relier l’adresse à l’hébergement</dd>
+        </div>
+        <div>
+          <dt data-copy="example.it.name.1">Accès</dt>
+          <dd data-copy="example.it.details.1">Identifier les comptes et leurs responsables</dd>
+        </div>
+        <div>
+          <dt data-copy="example.it.name.2">Formulaire</dt>
+          <dd data-copy="example.it.details.2">Vérifier où arrivent les demandes</dd>
+        </div>
+      </dl>
+    </figure>
     </div>
   </section>
       <section class="section feature-section"><div class="wrap">
-        <div class="section-head"><h2 data-copy="feature.heading">Ce que nous pouvons faire pour vous</h2></div>
+        <div class="section-head"><h2 data-copy="feature.heading" data-scan>Configuration et accès</h2></div>
         <div class="features-grid">
     <article class="feature" data-reveal>
       <h3 data-copy="feature.0">Organisation des outils</h3><p data-copy="feature.body.0">Clarifiez les rôles de vos outils et repérez les étapes que vous pouvez simplifier.</p>
     </article>
 <article class="feature" data-reveal>
-      <h3 data-copy="feature.1">Structure fiable</h3><p data-copy="feature.body.1">Des pages et des interfaces lisibles, faciles à utiliser et à faire évoluer.</p>
+      <h3 data-copy="feature.1">Domaine et hébergement</h3><p data-copy="feature.body.1">Reliez votre adresse au bon hébergement et vérifiez que le site s’ouvre en HTTPS.</p>
     </article>
 <article class="feature" data-reveal>
       <h3 data-copy="feature.2">Accompagnement technique</h3><p data-copy="feature.body.2">Un appui pour choisir vos solutions, organiser vos processus et prendre vos outils en main.</p>
     </article>
   </div>
+      </div></section>
+      <section class="section detail-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="detail.title" data-scan>Les réglages qui font fonctionner votre site.</h2></div>
+        <ol class="detail-rows">
+    <li data-reveal>
+      <span class="detail-index" aria-hidden="true">01</span>
+      <h3 data-copy="detail.0">Domaine et DNS</h3>
+      <p data-copy="detail.body.0">Repérez le fournisseur du domaine et la zone DNS à modifier pour relier le site.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">02</span>
+      <h3 data-copy="detail.1">Hébergement et HTTPS</h3>
+      <p data-copy="detail.body.1">Associez le domaine à l’hébergement, puis vérifiez le certificat et l’ouverture du site.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">03</span>
+      <h3 data-copy="detail.2">Formulaires et accès</h3>
+      <p data-copy="detail.body.2">Identifiez les comptes utiles et vérifiez où arrivent les demandes de contact.</p>
+    </li>
+  </ol>
+      </div></section>
+      <section class="section faq-section"><div class="wrap faq-layout">
+    <h2 data-copy="faq.title" data-scan>Questions fréquentes</h2>
+    <div class="faq-list"><details>
+      <summary><span data-copy="faq.q.0">Le domaine et l’hébergement doivent-ils être chez le même fournisseur ?</span><span aria-hidden="true">+</span></summary>
+      <p data-copy="faq.a.0">Vous pouvez garder le domaine chez un fournisseur et héberger le site ailleurs. Les réglages DNS relient les deux.</p>
+    </details><details>
+      <summary><span data-copy="faq.q.1">Que vérifier si le site ne répond plus ?</span><span aria-hidden="true">+</span></summary>
+      <p data-copy="faq.a.1">Commencez par tester l’adresse et le certificat, puis vérifiez la réponse de l’hébergement. Un test depuis une autre connexion aide à situer le problème.</p>
+    </details></div>
+  </div></section>
+      <div class="wrap related-links">
+        <a class="text-link" href="../devops/index.html"><span data-copy="service.related">Création web</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        <a class="text-link" href="../index.html#trajet-web"><span data-copy="service.route">Voir le trajet d’un site</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
         <a class="text-link" href="../projects.html"><span data-copy="service.all">Toutes les expertises</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
-      </div></section><section class="section contact-section"><div class="wrap">
-    <div class="contact-band">
-      <div><h2 data-copy="cta.title">Votre projet commence ici.</h2><p data-copy="cta.lead">Présentez-nous votre activité et ce que vous souhaitez améliorer.</p></div>
-      <a class="button button-white" href="../contact.html?service=it"><span data-copy="cta.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
-    </div>
+      </div><section class="contact-section contact-close"><div class="wrap">
+    <a class="contact-row" href="../contact.html?service=it#contact-form">
+      <div class="contact-row-copy">
+        <h2 data-copy="cta.title" data-scan>Écrire à Zybo</h2>
+        <span data-copy="cta.lead">Une demande, un site à revoir ou une question technique.</span>
+      </div>
+      <span class="contact-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+    </a>
   </div></section></main>
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-main">
-        <div><a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+        <div><a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
           <p data-copy="footer.about">Création web et solutions digitales.</p></div>
         <div class="footer-links">
           <a class="" href="../devops/index.html"><span data-copy="service.web">Création web</span></a>
-<a class="" href="../marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="../applications/index.html"><span data-copy="service.apps">Applications</span></a>
+<a class="" href="../automatisation/index.html"><span data-copy="service.automation">Automatisation</span></a>
 <a class="" href="../security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
-<a class="" href="../legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
+<a class="" href="../confidentialite/index.html"><span data-copy="service.privacy">Confidentialité et stockage</span></a>
+<a class="" href="../gestion-personnelle/index.html"><span data-copy="service.management">Gestion personnelle</span></a>
         </div>
         <div class="footer-links">
           <a class="" href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
@@ -92,6 +166,6 @@
       <div class="footer-bottom"><span>© Zybo</span><a class="" href="../server-status.html"><span data-copy="nav.status">État des services</span></a></div>
     </div>
   </footer>
-  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"service.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"page.label":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"page.headline":{"fr":"Des outils digitaux plus simples au quotidien.","nl":"Eenvoudigere digitale tools voor elke dag.","en":"Simpler digital tools for everyday work."},"page.intro":{"fr":"Zybo vous accompagne dans le choix de vos outils, l’organisation de votre présence en ligne et la mise en place de solutions adaptées à votre activité.","nl":"Zybo helpt u tools te kiezen, uw online aanwezigheid te organiseren en oplossingen voor uw activiteit op te zetten.","en":"Zybo helps you choose tools, organise your online presence and put solutions in place that fit your business."},"feature.heading":{"fr":"Ce que nous pouvons faire pour vous","nl":"Wat we voor u kunnen doen","en":"What we can do for you"},"feature.0":{"fr":"Organisation des outils","nl":"Tools organiseren","en":"Tool organisation"},"feature.body.0":{"fr":"Clarifiez les rôles de vos outils et repérez les étapes que vous pouvez simplifier.","nl":"Maak duidelijk waarvoor uw tools dienen en ontdek welke stappen eenvoudiger kunnen.","en":"Clarify what each tool does and identify steps you can simplify."},"feature.1":{"fr":"Structure fiable","nl":"Een betrouwbare structuur","en":"A reliable structure"},"feature.body.1":{"fr":"Des pages et des interfaces lisibles, faciles à utiliser et à faire évoluer.","nl":"Leesbare pagina’s en interfaces die makkelijk te gebruiken en uit te breiden zijn.","en":"Readable pages and interfaces that are easy to use and evolve."},"feature.2":{"fr":"Accompagnement technique","nl":"Technische begeleiding","en":"Technical guidance"},"feature.body.2":{"fr":"Un appui pour choisir vos solutions, organiser vos processus et prendre vos outils en main.","nl":"Ondersteuning bij het kiezen van oplossingen, het organiseren van processen en het gebruik van uw tools.","en":"Support in choosing solutions, organising workflows and getting comfortable with your tools."},"service.all":{"fr":"Toutes les expertises","nl":"Alle diensten","en":"All services"},"cta.title":{"fr":"Votre projet commence ici.","nl":"Uw project begint hier.","en":"Your project starts here."},"cta.lead":{"fr":"Présentez-nous votre activité et ce que vous souhaitez améliorer.","nl":"Vertel ons over uw activiteit en wat u wilt verbeteren.","en":"Tell us about your business and what you would like to improve."},"cta.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"meta.title":{"fr":"Solutions informatiques · Zybo","nl":"IT-oplossingen · Zybo","en":"IT solutions · Zybo"},"meta.description":{"fr":"Conseil et support pour organiser vos outils et simplifier vos parcours clients.","nl":"Advies en ondersteuning om uw tools en klanttrajecten te vereenvoudigen.","en":"Advice and support to organise your tools and simplify customer journeys."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.apps":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"service.automation":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.privacy":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"service.management":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"example.label":{"fr":"Exemple d’usage","nl":"Praktijkvoorbeeld","en":"Example use case"},"example.it.title":{"fr":"Mise en service d’un site","nl":"Een website in gebruik nemen","en":"Getting a website online"},"example.it.name.0":{"fr":"Domaine","nl":"Domein","en":"Domain"},"example.it.details.0":{"fr":"Relier l’adresse à l’hébergement","nl":"Het adres koppelen aan de hosting","en":"Connect the address to the hosting service"},"example.it.name.1":{"fr":"Accès","nl":"Toegang","en":"Access"},"example.it.details.1":{"fr":"Identifier les comptes et leurs responsables","nl":"De accounts en hun beheerders vastleggen","en":"Identify the accounts and who manages them"},"example.it.name.2":{"fr":"Formulaire","nl":"Formulier","en":"Form"},"example.it.details.2":{"fr":"Vérifier où arrivent les demandes","nl":"Controleren waar aanvragen aankomen","en":"Check where enquiries are delivered"},"service.start":{"fr":"Nous contacter","nl":"Neem contact op","en":"Get in touch"},"page.label":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"page.headline":{"fr":"Votre site, votre domaine et vos outils au même endroit.","nl":"Uw site, domein en tools overzichtelijk geregeld.","en":"Your website, domain and tools, clearly organised."},"page.intro":{"fr":"De l’adresse de votre site au formulaire de contact, nous clarifions les réglages, les accès et le rôle de chaque service.","nl":"Van uw webadres tot het contactformulier maken we instellingen, toegang en de rol van elke dienst duidelijk.","en":"From your web address to your contact form, we clarify settings, access and what each service does."},"feature.heading":{"fr":"Configuration et accès","nl":"Configuratie en toegang","en":"Configuration and access"},"feature.0":{"fr":"Organisation des outils","nl":"Tools organiseren","en":"Tool organisation"},"feature.body.0":{"fr":"Clarifiez les rôles de vos outils et repérez les étapes que vous pouvez simplifier.","nl":"Maak duidelijk waarvoor uw tools dienen en ontdek welke stappen eenvoudiger kunnen.","en":"Clarify what each tool does and identify steps you can simplify."},"feature.1":{"fr":"Domaine et hébergement","nl":"Domein en hosting","en":"Domain and hosting"},"feature.body.1":{"fr":"Reliez votre adresse au bon hébergement et vérifiez que le site s’ouvre en HTTPS.","nl":"Koppel uw adres aan de juiste hosting en controleer of de site via HTTPS opent.","en":"Connect your address to the right host and verify that your site opens over HTTPS."},"feature.2":{"fr":"Accompagnement technique","nl":"Technische begeleiding","en":"Technical guidance"},"feature.body.2":{"fr":"Un appui pour choisir vos solutions, organiser vos processus et prendre vos outils en main.","nl":"Ondersteuning bij het kiezen van oplossingen, het organiseren van processen en het gebruik van uw tools.","en":"Support in choosing solutions, organising workflows and getting comfortable with your tools."},"detail.title":{"fr":"Les réglages qui font fonctionner votre site.","nl":"De instellingen die uw site laten werken.","en":"The settings that keep your site working."},"detail.0":{"fr":"Domaine et DNS","nl":"Domein en DNS","en":"Domain and DNS"},"detail.body.0":{"fr":"Repérez le fournisseur du domaine et la zone DNS à modifier pour relier le site.","nl":"Zoek de domeinprovider en de DNS-zone waarmee u de site koppelt.","en":"Identify the domain provider and the DNS zone that connects the site."},"detail.1":{"fr":"Hébergement et HTTPS","nl":"Hosting en HTTPS","en":"Hosting and HTTPS"},"detail.body.1":{"fr":"Associez le domaine à l’hébergement, puis vérifiez le certificat et l’ouverture du site.","nl":"Koppel het domein aan de hosting en controleer het certificaat en de site.","en":"Connect the domain to the host, then check the certificate and confirm the site opens."},"detail.2":{"fr":"Formulaires et accès","nl":"Formulieren en toegang","en":"Forms and access"},"detail.body.2":{"fr":"Identifiez les comptes utiles et vérifiez où arrivent les demandes de contact.","nl":"Breng de nodige accounts in kaart en controleer waar contactaanvragen aankomen.","en":"Identify the accounts you need and verify where contact enquiries arrive."},"faq.title":{"fr":"Questions fréquentes","nl":"Veelgestelde vragen","en":"Frequently asked questions"},"faq.q.0":{"fr":"Le domaine et l’hébergement doivent-ils être chez le même fournisseur ?","nl":"Moeten domein en hosting bij dezelfde provider zitten?","en":"Do my domain and hosting need the same provider?"},"faq.a.0":{"fr":"Vous pouvez garder le domaine chez un fournisseur et héberger le site ailleurs. Les réglages DNS relient les deux.","nl":"U kunt uw domein bij één provider houden en uw site elders hosten. DNS koppelt beide.","en":"You can keep the domain with one provider and host the site elsewhere. DNS connects the two."},"faq.q.1":{"fr":"Que vérifier si le site ne répond plus ?","nl":"Wat controleer ik als de site niet meer reageert?","en":"What should I check if the site stops responding?"},"faq.a.1":{"fr":"Commencez par tester l’adresse et le certificat, puis vérifiez la réponse de l’hébergement. Un test depuis une autre connexion aide à situer le problème.","nl":"Test eerst het adres en het certificaat en controleer daarna het antwoord van de hosting. Een test via een andere verbinding helpt de oorzaak te vinden.","en":"Check the address and certificate first, then test the host’s response. Trying another connection can help locate the problem."},"service.related":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.route":{"fr":"Voir le trajet d’un site","nl":"Bekijk de route van een site","en":"See a website’s route"},"service.all":{"fr":"Toutes les expertises","nl":"Alle diensten","en":"All services"},"cta.title":{"fr":"Écrire à Zybo","nl":"Schrijf Zybo","en":"Write to Zybo"},"cta.lead":{"fr":"Une demande, un site à revoir ou une question technique.","nl":"Een aanvraag, een website om te vernieuwen of een technische vraag.","en":"An enquiry, a site to update or a technical question."},"meta.title":{"fr":"Solutions informatiques · Zybo","nl":"IT-oplossingen · Zybo","en":"IT solutions · Zybo"},"meta.description":{"fr":"Configuration web et accompagnement pour les outils de votre activité.","nl":"Webconfiguratie en ondersteuning voor uw bedrijfstools.","en":"Web configuration and support for your business tools."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>

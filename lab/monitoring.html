@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080d20">
+  <meta name="theme-color" content="#101329">
   <title>Monitoring · Zybo</title>
   <meta name="description" content="Découvrez comment suivre la disponibilité et les temps de réponse de pages, d’API et de services digitaux.">
   <link rel="canonical" href="https://zybo.be/lab/monitoring.html">
@@ -13,13 +13,23 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/studio.css">
+  <link rel="stylesheet" href="../assets/pages.css">
   <script src="../assets/site.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/experience.js" defer></script>
 </head>
 <body data-page="monitoring">
   <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
   <header class="site-header">
     <div class="wrap nav-shell">
-      <a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
       <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
         <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
       </button>
@@ -45,13 +55,15 @@
     <div class="wrap page-hero-inner">
       <div class="page-hero-copy">
         <p data-copy="page.label" class="eyebrow">Monitoring</p>
-        <h1 data-copy="page.headline">Suivez vos services web.</h1>
+        <h1 data-copy="page.headline" data-scan>Comprenez ce que votre site renvoie.</h1>
         <p data-copy="page.intro" class="page-intro">Découvrez comment suivre la disponibilité et les temps de réponse de pages, d’API et de services digitaux.</p>
         <a class="button button-primary" href="../server-status.html"><span data-copy="monitor.status">État des services</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
       </div>
     </div>
   </section>
-      <section class="section feature-section"><div class="wrap"><div class="features-grid">
+      <section class="section feature-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="monitor.features" data-scan>Trois façons de suivre un service.</h2></div>
+        <div class="features-grid">
     <article class="feature" data-reveal>
       <h3 data-copy="feature.0">Disponibilité</h3><p data-copy="feature.body.0">Vérifiez si vos pages et services répondent.</p>
     </article>
@@ -61,22 +73,51 @@
 <article class="feature" data-reveal>
       <h3 data-copy="feature.2">Cas d’usage</h3><p data-copy="feature.body.2">Tableaux de bord internes, suivi de pages stratégiques et reporting.</p>
     </article>
-  </div></div></section><section class="section contact-section"><div class="wrap">
-    <div class="contact-band">
-      <div><h2 data-copy="cta.title">Votre projet commence ici.</h2><p data-copy="cta.lead">Présentez-nous votre activité et ce que vous souhaitez améliorer.</p></div>
-      <a class="button button-white" href="../contact.html"><span data-copy="cta.start">Parlons de votre projet</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
-    </div>
+  </div>
+      </div></section>
+      <section class="section detail-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="monitor.signals" data-scan>Comment lire un contrôle HTTP.</h2></div>
+        <ol class="detail-rows">
+    <li data-reveal>
+      <span class="detail-index" aria-hidden="true">01</span>
+      <h3 data-copy="monitor.signal.0">200 OK</h3>
+      <p data-copy="monitor.signal.body.0">Le service a répondu avec succès. Vérifiez le contenu si vous devez contrôler une fonction précise.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">02</span>
+      <h3 data-copy="monitor.signal.1">404 ou 5xx</h3>
+      <p data-copy="monitor.signal.body.1">Un 404 indique une ressource introuvable. Un 5xx signale une erreur côté serveur.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">03</span>
+      <h3 data-copy="monitor.signal.2">Temps de réponse</h3>
+      <p data-copy="monitor.signal.body.2">Le temps mesuré varie avec la connexion, l’emplacement et le traitement de la demande.</p>
+    </li>
+  </ol>
+      </div></section><section class="contact-section contact-close"><div class="wrap">
+    <a class="contact-row" href="../contact.html#contact-form">
+      <div class="contact-row-copy">
+        <h2 data-copy="cta.title" data-scan>Écrire à Zybo</h2>
+        <span data-copy="cta.lead">Une demande, un site à revoir ou une question technique.</span>
+      </div>
+      <span class="contact-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+    </a>
   </div></section></main>
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-main">
-        <div><a class="brand" href="../index.html" aria-label="Zybo"><img src="../assets/logo-zybo.png" alt="" width="500" height="500"></a>
+        <div><a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
           <p data-copy="footer.about">Création web et solutions digitales.</p></div>
         <div class="footer-links">
           <a class="" href="../devops/index.html"><span data-copy="service.web">Création web</span></a>
-<a class="" href="../marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="../applications/index.html"><span data-copy="service.apps">Applications</span></a>
+<a class="" href="../automatisation/index.html"><span data-copy="service.automation">Automatisation</span></a>
 <a class="" href="../security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
-<a class="" href="../legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
+<a class="" href="../confidentialite/index.html"><span data-copy="service.privacy">Confidentialité et stockage</span></a>
+<a class="" href="../gestion-personnelle/index.html"><span data-copy="service.management">Gestion personnelle</span></a>
         </div>
         <div class="footer-links">
           <a class="" href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
@@ -87,6 +128,6 @@
       <div class="footer-bottom"><span>© Zybo</span><a class="" href="../server-status.html"><span data-copy="nav.status">État des services</span></a></div>
     </div>
   </footer>
-  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"monitor.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.label":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"page.headline":{"fr":"Suivez vos services web.","nl":"Volg uw webdiensten op.","en":"Monitor your web services."},"page.intro":{"fr":"Découvrez comment suivre la disponibilité et les temps de réponse de pages, d’API et de services digitaux.","nl":"Ontdek hoe u de beschikbaarheid en responstijd van pagina’s, API’s en digitale diensten volgt.","en":"See how to track the availability and response times of pages, APIs and digital services."},"feature.0":{"fr":"Disponibilité","nl":"Beschikbaarheid","en":"Availability"},"feature.body.0":{"fr":"Vérifiez si vos pages et services répondent.","nl":"Controleer of uw pagina’s en diensten antwoorden.","en":"Check whether your pages and services respond."},"feature.1":{"fr":"Performances","nl":"Prestaties","en":"Performance"},"feature.body.1":{"fr":"Repérez les lenteurs et les réponses inattendues.","nl":"Merk trage en onverwachte antwoorden op.","en":"Spot slow and unexpected responses."},"feature.2":{"fr":"Cas d’usage","nl":"Toepassingen","en":"Use cases"},"feature.body.2":{"fr":"Tableaux de bord internes, suivi de pages stratégiques et reporting.","nl":"Interne dashboards, opvolging van belangrijke pagina’s en rapportage.","en":"Internal dashboards, monitoring key pages and reporting."},"cta.title":{"fr":"Votre projet commence ici.","nl":"Uw project begint hier.","en":"Your project starts here."},"cta.lead":{"fr":"Présentez-nous votre activité et ce que vous souhaitez améliorer.","nl":"Vertel ons over uw activiteit en wat u wilt verbeteren.","en":"Tell us about your business and what you would like to improve."},"cta.start":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"meta.title":{"fr":"Monitoring · Zybo","nl":"Monitoring · Zybo","en":"Monitoring · Zybo"},"meta.description":{"fr":"Découvrez comment suivre la disponibilité et les temps de réponse de pages, d’API et de services digitaux.","nl":"Ontdek hoe u de beschikbaarheid en responstijd van pagina’s, API’s en digitale diensten volgt.","en":"See how to track the availability and response times of pages, APIs and digital services."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.apps":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"service.automation":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.privacy":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"service.management":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"monitor.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.label":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"page.headline":{"fr":"Comprenez ce que votre site renvoie.","nl":"Begrijp wat uw website terugstuurt.","en":"Understand how your website responds."},"page.intro":{"fr":"Découvrez comment suivre la disponibilité et les temps de réponse de pages, d’API et de services digitaux.","nl":"Ontdek hoe u de beschikbaarheid en responstijd van pagina’s, API’s en digitale diensten volgt.","en":"See how to track the availability and response times of pages, APIs and digital services."},"monitor.features":{"fr":"Trois façons de suivre un service.","nl":"Drie manieren om een dienst te volgen.","en":"Three ways to monitor a service."},"feature.0":{"fr":"Disponibilité","nl":"Beschikbaarheid","en":"Availability"},"feature.body.0":{"fr":"Vérifiez si vos pages et services répondent.","nl":"Controleer of uw pagina’s en diensten antwoorden.","en":"Check whether your pages and services respond."},"feature.1":{"fr":"Performances","nl":"Prestaties","en":"Performance"},"feature.body.1":{"fr":"Repérez les lenteurs et les réponses inattendues.","nl":"Merk trage en onverwachte antwoorden op.","en":"Spot slow and unexpected responses."},"feature.2":{"fr":"Cas d’usage","nl":"Toepassingen","en":"Use cases"},"feature.body.2":{"fr":"Tableaux de bord internes, suivi de pages stratégiques et reporting.","nl":"Interne dashboards, opvolging van belangrijke pagina’s en rapportage.","en":"Internal dashboards, monitoring key pages and reporting."},"monitor.signals":{"fr":"Comment lire un contrôle HTTP.","nl":"Een HTTP-controle lezen.","en":"How to read an HTTP check."},"monitor.signal.0":{"fr":"200 OK","nl":"200 OK","en":"200 OK"},"monitor.signal.body.0":{"fr":"Le service a répondu avec succès. Vérifiez le contenu si vous devez contrôler une fonction précise.","nl":"De dienst heeft succesvol geantwoord. Controleer de inhoud als u een specifieke functie wilt testen.","en":"The service responded successfully. Check the content if you need to test a specific feature."},"monitor.signal.1":{"fr":"404 ou 5xx","nl":"404 of 5xx","en":"404 or 5xx"},"monitor.signal.body.1":{"fr":"Un 404 indique une ressource introuvable. Un 5xx signale une erreur côté serveur.","nl":"Een 404 betekent dat de bron niet is gevonden. Een 5xx wijst op een serverfout.","en":"A 404 means the resource was not found. A 5xx signals a server-side error."},"monitor.signal.2":{"fr":"Temps de réponse","nl":"Responstijd","en":"Response time"},"monitor.signal.body.2":{"fr":"Le temps mesuré varie avec la connexion, l’emplacement et le traitement de la demande.","nl":"De gemeten tijd varieert met verbinding, locatie en verwerking van het verzoek.","en":"The measured time varies with the connection, location and how the request is processed."},"cta.title":{"fr":"Écrire à Zybo","nl":"Schrijf Zybo","en":"Write to Zybo"},"cta.lead":{"fr":"Une demande, un site à revoir ou une question technique.","nl":"Een aanvraag, een website om te vernieuwen of een technische vraag.","en":"An enquiry, a site to update or a technical question."},"meta.title":{"fr":"Monitoring · Zybo","nl":"Monitoring · Zybo","en":"Monitoring · Zybo"},"meta.description":{"fr":"Découvrez comment suivre la disponibilité et les temps de réponse de pages, d’API et de services digitaux.","nl":"Ontdek hoe u de beschikbaarheid en responstijd van pagina’s, API’s en digitale diensten volgt.","en":"See how to track the availability and response times of pages, APIs and digital services."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101329">
+  <title>Applications · Zybo</title>
+  <meta name="description" content="Outils sur mesure, tableaux de bord et espaces clients.">
+  <link rel="canonical" href="https://zybo.be/applications/">
+  <link rel="icon" href="../assets/logo-zybo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/studio.css">
+  <link rel="stylesheet" href="../assets/pages.css">
+  <script src="../assets/site.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/experience.js" defer></script>
+</head>
+<body data-page="apps">
+  <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navigation principale">
+        <a href="../projects.html" aria-current="true"><span data-copy="nav.expertise">Expertises</span></a>
+        <a href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+        <a class="mobile-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+      </nav>
+      <div class="nav-actions">
+        <details class="languages">
+          <summary aria-label="Langue / Taal / Language"><span data-current-lang>FR</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" fill-rule="evenodd"/></svg></summary>
+          <div class="language-list">
+            <button type="button" data-language="fr" lang="fr" aria-pressed="true">Français</button>
+            <button type="button" data-language="nl" lang="nl" aria-pressed="false">Nederlands</button>
+            <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
+          </div>
+        </details>
+        <a class="nav-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><section class="page-hero">
+    <div class="wrap page-hero-inner split-hero">
+      <div class="page-hero-copy">
+        <p data-copy="page.label" class="eyebrow">Applications</p>
+        <h1 data-copy="page.headline" data-scan>Une application pensée pour votre façon de travailler.</h1>
+        <p data-copy="page.intro" class="page-intro">Rassemblez les actions et les informations utiles dans une application conçue pour les personnes qui l’utilisent au quotidien.</p>
+        <a class="button button-primary" href="../contact.html?service=apps#contact-form"><span data-copy="service.start">Nous contacter</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
+      <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2 1h4v6H2zm1 1v4h2V2zm5-1h6v4H8zm1 1v2h4V2zm-1 5h6v8H8zm1 1v6h4V8zM2 9h4v6H2zm1 1v4h2v-4z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.apps.title">Suivi des interventions</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.apps.name.0">Nouvelle demande</dt>
+          <dd data-copy="example.apps.details.0">Le client décrit la panne</dd>
+        </div>
+        <div>
+          <dt data-copy="example.apps.name.1">Intervention planifiée</dt>
+          <dd data-copy="example.apps.details.1">L’équipe assigne un technicien</dd>
+        </div>
+        <div>
+          <dt data-copy="example.apps.name.2">Intervention terminée</dt>
+          <dd data-copy="example.apps.details.2">Le compte rendu est ajouté au dossier</dd>
+        </div>
+      </dl>
+    </figure>
+    </div>
+  </section>
+      <section class="section feature-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="feature.heading" data-scan>Des applications qui répondent à un besoin</h2></div>
+        <div class="features-grid">
+    <article class="feature" data-reveal>
+      <h3 data-copy="feature.0">Outils internes</h3><p data-copy="feature.body.0">Suivez les dossiers, demandes et opérations dans une interface commune.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.1">Tableaux de bord</h3><p data-copy="feature.body.1">Consultez les informations qui vous aident à décider quoi traiter ensuite.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.2">Espaces clients</h3><p data-copy="feature.body.2">Donnez à vos clients un espace pour consulter leurs informations ou déposer une demande.</p>
+    </article>
+  </div>
+      </div></section>
+      <section class="section detail-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="detail.title" data-scan>Du premier écran à l’usage quotidien.</h2></div>
+        <ol class="detail-rows">
+    <li data-reveal>
+      <span class="detail-index" aria-hidden="true">01</span>
+      <h3 data-copy="detail.0">Parcours et écrans</h3>
+      <p data-copy="detail.body.0">Définissez les actions à accomplir et testez leur enchaînement dans un prototype.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">02</span>
+      <h3 data-copy="detail.1">Rôles utilisateurs</h3>
+      <p data-copy="detail.body.1">Identifiez qui saisit, consulte ou valide les informations.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">03</span>
+      <h3 data-copy="detail.2">Données existantes</h3>
+      <p data-copy="detail.body.2">Repérez les données à importer et les outils à connecter.</p>
+    </li>
+  </ol>
+      </div></section>
+      <section class="section faq-section"><div class="wrap faq-layout">
+    <h2 data-copy="faq.title" data-scan>Questions fréquentes</h2>
+    <div class="faq-list"><details>
+      <summary><span data-copy="faq.q.0">Peut-on partir d’un fichier Excel ?</span><span aria-hidden="true">+</span></summary>
+      <p data-copy="faq.a.0">Oui. Un fichier existant aide à comprendre les champs, les calculs et les étapes à reprendre dans l’application.</p>
+    </details></div>
+  </div></section>
+      <div class="wrap related-links">
+        <a class="text-link" href="../automatisation/index.html"><span data-copy="service.related">Automatisation</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        <a class="text-link" href="../projects.html"><span data-copy="service.all">Toutes les expertises</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div><section class="contact-section contact-close"><div class="wrap">
+    <a class="contact-row" href="../contact.html?service=apps#contact-form">
+      <div class="contact-row-copy">
+        <h2 data-copy="cta.title" data-scan>Écrire à Zybo</h2>
+        <span data-copy="cta.lead">Une demande, un site à revoir ou une question technique.</span>
+      </div>
+      <span class="contact-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+    </a>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
+          <p data-copy="footer.about">Création web et solutions digitales.</p></div>
+        <div class="footer-links">
+          <a class="" href="../devops/index.html"><span data-copy="service.web">Création web</span></a>
+<a class="" href="../applications/index.html"><span data-copy="service.apps">Applications</span></a>
+<a class="" href="../automatisation/index.html"><span data-copy="service.automation">Automatisation</span></a>
+<a class="" href="../security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
+<a class="" href="../confidentialite/index.html"><span data-copy="service.privacy">Confidentialité et stockage</span></a>
+<a class="" href="../gestion-personnelle/index.html"><span data-copy="service.management">Gestion personnelle</span></a>
+        </div>
+        <div class="footer-links">
+          <a class="" href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+          <a class="" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+          <a class="" href="../lab/monitoring.html"><span data-copy="nav.monitor">Monitoring</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© Zybo</span><a class="" href="../server-status.html"><span data-copy="nav.status">État des services</span></a></div>
+    </div>
+  </footer>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.apps":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"service.automation":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.privacy":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"service.management":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"example.label":{"fr":"Exemple d’usage","nl":"Praktijkvoorbeeld","en":"Example use case"},"example.apps.title":{"fr":"Suivi des interventions","nl":"Interventies opvolgen","en":"Job tracker"},"example.apps.name.0":{"fr":"Nouvelle demande","nl":"Nieuwe aanvraag","en":"New request"},"example.apps.details.0":{"fr":"Le client décrit la panne","nl":"De klant beschrijft de storing","en":"The customer describes the fault"},"example.apps.name.1":{"fr":"Intervention planifiée","nl":"Interventie gepland","en":"Job scheduled"},"example.apps.details.1":{"fr":"L’équipe assigne un technicien","nl":"Het team wijst een technicus toe","en":"The team assigns a technician"},"example.apps.name.2":{"fr":"Intervention terminée","nl":"Interventie afgerond","en":"Job complete"},"example.apps.details.2":{"fr":"Le compte rendu est ajouté au dossier","nl":"Het verslag komt in het dossier","en":"The report is added to the record"},"service.start":{"fr":"Nous contacter","nl":"Neem contact op","en":"Get in touch"},"page.label":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"page.headline":{"fr":"Une application pensée pour votre façon de travailler.","nl":"Een app die past bij uw manier van werken.","en":"An app designed around how you work."},"page.intro":{"fr":"Rassemblez les actions et les informations utiles dans une application conçue pour les personnes qui l’utilisent au quotidien.","nl":"Breng nuttige acties en informatie samen in een app voor de mensen die er dagelijks mee werken.","en":"Bring useful actions and information together in an app designed for the people who use it every day."},"feature.heading":{"fr":"Des applications qui répondent à un besoin","nl":"Apps voor een concrete behoefte","en":"Apps for a practical need"},"feature.0":{"fr":"Outils internes","nl":"Interne tools","en":"Internal tools"},"feature.body.0":{"fr":"Suivez les dossiers, demandes et opérations dans une interface commune.","nl":"Volg dossiers, aanvragen en werkzaamheden in één omgeving.","en":"Track records, requests and operations in a shared interface."},"feature.1":{"fr":"Tableaux de bord","nl":"Dashboards","en":"Dashboards"},"feature.body.1":{"fr":"Consultez les informations qui vous aident à décider quoi traiter ensuite.","nl":"Bekijk de informatie die bepaalt wat u daarna aanpakt.","en":"See the information you need to decide what to work on next."},"feature.2":{"fr":"Espaces clients","nl":"Klantportalen","en":"Client portals"},"feature.body.2":{"fr":"Donnez à vos clients un espace pour consulter leurs informations ou déposer une demande.","nl":"Geef klanten een plek om gegevens te bekijken of een aanvraag in te dienen.","en":"Give clients a place to see their information or submit a request."},"detail.title":{"fr":"Du premier écran à l’usage quotidien.","nl":"Van het eerste scherm tot dagelijks gebruik.","en":"From the first screen to everyday use."},"detail.0":{"fr":"Parcours et écrans","nl":"Schermen en stappen","en":"Screens and journeys"},"detail.body.0":{"fr":"Définissez les actions à accomplir et testez leur enchaînement dans un prototype.","nl":"Bepaal welke acties nodig zijn en test de volgorde in een prototype.","en":"Define the actions people need to take and test their sequence in a prototype."},"detail.1":{"fr":"Rôles utilisateurs","nl":"Gebruikersrollen","en":"User roles"},"detail.body.1":{"fr":"Identifiez qui saisit, consulte ou valide les informations.","nl":"Bepaal wie gegevens invoert, bekijkt of goedkeurt.","en":"Identify who enters, views or approves information."},"detail.2":{"fr":"Données existantes","nl":"Bestaande gegevens","en":"Existing data"},"detail.body.2":{"fr":"Repérez les données à importer et les outils à connecter.","nl":"Bepaal welke gegevens u importeert en welke tools u koppelt.","en":"Identify which data to import and which tools to connect."},"faq.title":{"fr":"Questions fréquentes","nl":"Veelgestelde vragen","en":"Frequently asked questions"},"faq.q.0":{"fr":"Peut-on partir d’un fichier Excel ?","nl":"Kunnen we vertrekken van een Excel-bestand?","en":"Can we start from a spreadsheet?"},"faq.a.0":{"fr":"Oui. Un fichier existant aide à comprendre les champs, les calculs et les étapes à reprendre dans l’application.","nl":"Ja. Een bestaand bestand toont welke velden, berekeningen en stappen de app nodig heeft.","en":"Yes. An existing spreadsheet helps identify the fields, calculations and steps the app needs."},"service.related":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.all":{"fr":"Toutes les expertises","nl":"Alle diensten","en":"All services"},"cta.title":{"fr":"Écrire à Zybo","nl":"Schrijf Zybo","en":"Write to Zybo"},"cta.lead":{"fr":"Une demande, un site à revoir ou une question technique.","nl":"Een aanvraag, een website om te vernieuwen of een technische vraag.","en":"An enquiry, a site to update or a technical question."},"meta.title":{"fr":"Applications · Zybo","nl":"Applicaties · Zybo","en":"Applications · Zybo"},"meta.description":{"fr":"Outils sur mesure, tableaux de bord et espaces clients.","nl":"Maatwerktools, dashboards en klantportalen.","en":"Custom tools, dashboards and client portals."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
+</body>
+</html>

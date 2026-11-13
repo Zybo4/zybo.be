@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101329">
+  <title>Automatisation · Zybo</title>
+  <meta name="description" content="Outils connectés, relances et transferts de données automatisés.">
+  <link rel="canonical" href="https://zybo.be/automatisation/">
+  <link rel="icon" href="../assets/logo-zybo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/studio.css">
+  <link rel="stylesheet" href="../assets/pages.css">
+  <script src="../assets/site.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/experience.js" defer></script>
+</head>
+<body data-page="automation">
+  <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navigation principale">
+        <a href="../projects.html" aria-current="true"><span data-copy="nav.expertise">Expertises</span></a>
+        <a href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+        <a class="mobile-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+      </nav>
+      <div class="nav-actions">
+        <details class="languages">
+          <summary aria-label="Langue / Taal / Language"><span data-current-lang>FR</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" fill-rule="evenodd"/></svg></summary>
+          <div class="language-list">
+            <button type="button" data-language="fr" lang="fr" aria-pressed="true">Français</button>
+            <button type="button" data-language="nl" lang="nl" aria-pressed="false">Nederlands</button>
+            <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
+          </div>
+        </details>
+        <a class="nav-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><section class="page-hero">
+    <div class="wrap page-hero-inner split-hero">
+      <div class="page-hero-copy">
+        <p data-copy="page.label" class="eyebrow">Automatisation</p>
+        <h1 data-copy="page.headline" data-scan>Réduisez les tâches qui se répètent.</h1>
+        <p data-copy="page.intro" class="page-intro">Nous partons d’une tâche que vous répétez. Ensemble, nous définissons ce qui déclenche le traitement, les étapes à automatiser et celles à valider manuellement.</p>
+        <a class="button button-primary" href="../contact.html?service=automation#contact-form"><span data-copy="service.start">Nous contacter</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
+      <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 1h5v4H4v2.5h8V10h-1V8.5H4V11h2v4H1v-4h2V5H1zm1 1v2h3V2zm0 10v2h3v-2zm8-1h5v4h-5zm1 1v2h3v-2z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.automation.title">Du formulaire au suivi client</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.automation.name.0">Déclencheur</dt>
+          <dd data-copy="example.automation.details.0">Un client envoie une demande</dd>
+        </div>
+        <div>
+          <dt data-copy="example.automation.name.1">Action automatique</dt>
+          <dd data-copy="example.automation.details.1">Une fiche est créée et l’équipe est avertie</dd>
+        </div>
+        <div>
+          <dt data-copy="example.automation.name.2">Validation</dt>
+          <dd data-copy="example.automation.details.2">Vous relisez le devis avant l’envoi</dd>
+        </div>
+      </dl>
+    </figure>
+    </div>
+  </section>
+      <section class="section feature-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="feature.heading" data-scan>Des tâches à automatiser</h2></div>
+        <div class="features-grid">
+    <article class="feature" data-reveal>
+      <h3 data-copy="feature.0">Formulaires et demandes</h3><p data-copy="feature.body.0">Acheminez les demandes reçues vers l’outil où vous les suivez.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.1">Synchronisation</h3><p data-copy="feature.body.1">Transférez les informations entre les outils que vous utilisez déjà.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.2">Rappels et relances</h3><p data-copy="feature.body.2">Déclenchez une notification quand une échéance approche ou qu’une demande attend une réponse.</p>
+    </article>
+  </div>
+      </div></section>
+      <section class="section detail-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="detail.title" data-scan>Déclenchement, traitement et suivi.</h2></div>
+        <ol class="detail-rows">
+    <li data-reveal>
+      <span class="detail-index" aria-hidden="true">01</span>
+      <h3 data-copy="detail.0">Déclencheur</h3>
+      <p data-copy="detail.body.0">Une nouvelle demande, une date ou un changement de statut démarre le traitement.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">02</span>
+      <h3 data-copy="detail.1">Étapes</h3>
+      <p data-copy="detail.body.1">Le processus récupère les informations utiles et les envoie vers les bons outils.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">03</span>
+      <h3 data-copy="detail.2">Exceptions</h3>
+      <p data-copy="detail.body.2">Prévoyez quoi faire si une donnée manque ou si un service ne répond pas.</p>
+    </li>
+  </ol>
+      </div></section>
+      <section class="section faq-section"><div class="wrap faq-layout">
+    <h2 data-copy="faq.title" data-scan>Questions fréquentes</h2>
+    <div class="faq-list"><details>
+      <summary><span data-copy="faq.q.0">Puis-je garder une validation manuelle ?</span><span aria-hidden="true">+</span></summary>
+      <p data-copy="faq.a.0">Oui. Une étape peut attendre votre accord avant de reprendre le traitement.</p>
+    </details></div>
+  </div></section>
+      <div class="wrap related-links">
+        <a class="text-link" href="../applications/index.html"><span data-copy="service.related">Applications</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        <a class="text-link" href="../projects.html"><span data-copy="service.all">Toutes les expertises</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div><section class="contact-section contact-close"><div class="wrap">
+    <a class="contact-row" href="../contact.html?service=automation#contact-form">
+      <div class="contact-row-copy">
+        <h2 data-copy="cta.title" data-scan>Écrire à Zybo</h2>
+        <span data-copy="cta.lead">Une demande, un site à revoir ou une question technique.</span>
+      </div>
+      <span class="contact-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+    </a>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
+          <p data-copy="footer.about">Création web et solutions digitales.</p></div>
+        <div class="footer-links">
+          <a class="" href="../devops/index.html"><span data-copy="service.web">Création web</span></a>
+<a class="" href="../applications/index.html"><span data-copy="service.apps">Applications</span></a>
+<a class="" href="../automatisation/index.html"><span data-copy="service.automation">Automatisation</span></a>
+<a class="" href="../security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
+<a class="" href="../confidentialite/index.html"><span data-copy="service.privacy">Confidentialité et stockage</span></a>
+<a class="" href="../gestion-personnelle/index.html"><span data-copy="service.management">Gestion personnelle</span></a>
+        </div>
+        <div class="footer-links">
+          <a class="" href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+          <a class="" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+          <a class="" href="../lab/monitoring.html"><span data-copy="nav.monitor">Monitoring</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© Zybo</span><a class="" href="../server-status.html"><span data-copy="nav.status">État des services</span></a></div>
+    </div>
+  </footer>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.apps":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"service.automation":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.privacy":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"service.management":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"example.label":{"fr":"Exemple d’usage","nl":"Praktijkvoorbeeld","en":"Example use case"},"example.automation.title":{"fr":"Du formulaire au suivi client","nl":"Van formulier naar klantopvolging","en":"From form to customer follow-up"},"example.automation.name.0":{"fr":"Déclencheur","nl":"Trigger","en":"Trigger"},"example.automation.details.0":{"fr":"Un client envoie une demande","nl":"Een klant verstuurt een aanvraag","en":"A customer submits a request"},"example.automation.name.1":{"fr":"Action automatique","nl":"Automatische actie","en":"Automated action"},"example.automation.details.1":{"fr":"Une fiche est créée et l’équipe est avertie","nl":"De tool maakt een fiche en meldt dit aan het team","en":"The tool creates a record and alerts the team"},"example.automation.name.2":{"fr":"Validation","nl":"Goedkeuring","en":"Approval"},"example.automation.details.2":{"fr":"Vous relisez le devis avant l’envoi","nl":"U kijkt de offerte na vóór verzending","en":"You review the quote before sending it"},"service.start":{"fr":"Nous contacter","nl":"Neem contact op","en":"Get in touch"},"page.label":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"page.headline":{"fr":"Réduisez les tâches qui se répètent.","nl":"Verminder terugkerende taken.","en":"Reduce repetitive work."},"page.intro":{"fr":"Nous partons d’une tâche que vous répétez. Ensemble, nous définissons ce qui déclenche le traitement, les étapes à automatiser et celles à valider manuellement.","nl":"We vertrekken van een terugkerende taak. Samen bepalen we de trigger, de automatische stappen en waar controle nodig blijft.","en":"We start with a recurring task and map the trigger, the steps to automate and where manual review is still needed."},"feature.heading":{"fr":"Des tâches à automatiser","nl":"Taken om te automatiseren","en":"Tasks you can automate"},"feature.0":{"fr":"Formulaires et demandes","nl":"Formulieren en aanvragen","en":"Forms and requests"},"feature.body.0":{"fr":"Acheminez les demandes reçues vers l’outil où vous les suivez.","nl":"Stuur binnenkomende aanvragen door naar de tool waarin u ze opvolgt.","en":"Send incoming requests to the tool where you track them."},"feature.1":{"fr":"Synchronisation","nl":"Synchronisatie","en":"Sync"},"feature.body.1":{"fr":"Transférez les informations entre les outils que vous utilisez déjà.","nl":"Draag informatie over tussen de tools die u al gebruikt.","en":"Transfer information between the tools you already use."},"feature.2":{"fr":"Rappels et relances","nl":"Herinneringen en opvolging","en":"Reminders and follow-ups"},"feature.body.2":{"fr":"Déclenchez une notification quand une échéance approche ou qu’une demande attend une réponse.","nl":"Stuur een melding wanneer een deadline nadert of een aanvraag op antwoord wacht.","en":"Send a notification when a deadline is approaching or a request is waiting for a reply."},"detail.title":{"fr":"Déclenchement, traitement et suivi.","nl":"Trigger, verwerking en opvolging.","en":"Trigger, processing and follow-up."},"detail.0":{"fr":"Déclencheur","nl":"Trigger","en":"Trigger"},"detail.body.0":{"fr":"Une nouvelle demande, une date ou un changement de statut démarre le traitement.","nl":"Een aanvraag, datum of statuswijziging start de verwerking.","en":"An enquiry, a date or a status change starts the workflow."},"detail.1":{"fr":"Étapes","nl":"Stappen","en":"Steps"},"detail.body.1":{"fr":"Le processus récupère les informations utiles et les envoie vers les bons outils.","nl":"De workflow haalt de nodige informatie op en stuurt die naar de juiste tools.","en":"The workflow collects relevant information and sends it to the right tools."},"detail.2":{"fr":"Exceptions","nl":"Uitzonderingen","en":"Exceptions"},"detail.body.2":{"fr":"Prévoyez quoi faire si une donnée manque ou si un service ne répond pas.","nl":"Bepaal wat er gebeurt als gegevens ontbreken of een dienst niet reageert.","en":"Decide what happens when data is missing or a service fails to respond."},"faq.title":{"fr":"Questions fréquentes","nl":"Veelgestelde vragen","en":"Frequently asked questions"},"faq.q.0":{"fr":"Puis-je garder une validation manuelle ?","nl":"Kan ik een handmatige goedkeuring behouden?","en":"Can I keep a manual approval step?"},"faq.a.0":{"fr":"Oui. Une étape peut attendre votre accord avant de reprendre le traitement.","nl":"Ja. Een stap kan wachten op uw goedkeuring voordat de verwerking verdergaat.","en":"Yes. A step can wait for your approval before the workflow continues."},"service.related":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"service.all":{"fr":"Toutes les expertises","nl":"Alle diensten","en":"All services"},"cta.title":{"fr":"Écrire à Zybo","nl":"Schrijf Zybo","en":"Write to Zybo"},"cta.lead":{"fr":"Une demande, un site à revoir ou une question technique.","nl":"Een aanvraag, een website om te vernieuwen of een technische vraag.","en":"An enquiry, a site to update or a technical question."},"meta.title":{"fr":"Automatisation · Zybo","nl":"Automatisering · Zybo","en":"Automation · Zybo"},"meta.description":{"fr":"Outils connectés, relances et transferts de données automatisés.","nl":"Gekoppelde tools, automatische opvolging en gegevensoverdracht.","en":"Connected tools, follow-ups and automated data transfers."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
+</body>
+</html>

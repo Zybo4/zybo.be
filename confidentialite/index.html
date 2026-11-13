@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101329">
+  <title>Confidentialité et stockage · Zybo</title>
+  <meta name="description" content="Organisation du stockage, du partage et des sauvegardes.">
+  <link rel="canonical" href="https://zybo.be/confidentialite/">
+  <link rel="icon" href="../assets/logo-zybo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/studio.css">
+  <link rel="stylesheet" href="../assets/pages.css">
+  <script src="../assets/site.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/experience.js" defer></script>
+</head>
+<body data-page="privacy">
+  <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navigation principale">
+        <a href="../projects.html" aria-current="true"><span data-copy="nav.expertise">Expertises</span></a>
+        <a href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+        <a class="mobile-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+      </nav>
+      <div class="nav-actions">
+        <details class="languages">
+          <summary aria-label="Langue / Taal / Language"><span data-current-lang>FR</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" fill-rule="evenodd"/></svg></summary>
+          <div class="language-list">
+            <button type="button" data-language="fr" lang="fr" aria-pressed="true">Français</button>
+            <button type="button" data-language="nl" lang="nl" aria-pressed="false">Nederlands</button>
+            <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
+          </div>
+        </details>
+        <a class="nav-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><section class="page-hero">
+    <div class="wrap page-hero-inner split-hero">
+      <div class="page-hero-copy">
+        <p data-copy="page.label" class="eyebrow">Confidentialité et stockage</p>
+        <h1 data-copy="page.headline" data-scan>Gardez la maîtrise de vos fichiers et de vos accès.</h1>
+        <p data-copy="page.intro" class="page-intro">Clarifiez où sont stockées vos données, qui peut y accéder et comment récupérer les fichiers qui comptent pour vous.</p>
+        <a class="button button-primary" href="../contact.html?service=privacy#contact-form"><span data-copy="service.start">Nous contacter</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
+      <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 6V4a3 3 0 1 1 6 0v2h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1 0h4V4a2 2 0 0 0-4 0zM4 7v7h8V7zm3.5 2h1v3h-1z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.privacy.title">Dossiers partagés avec des clients</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.privacy.name.0">Dossier interne</dt>
+          <dd data-copy="example.privacy.details.0">Accès réservé à l’équipe</dd>
+        </div>
+        <div>
+          <dt data-copy="example.privacy.name.1">Dossier client</dt>
+          <dd data-copy="example.privacy.details.1">Les fichiers que le client peut consulter</dd>
+        </div>
+        <div>
+          <dt data-copy="example.privacy.name.2">Sauvegarde</dt>
+          <dd data-copy="example.privacy.details.2">Une copie et une méthode pour la restaurer</dd>
+        </div>
+      </dl>
+    </figure>
+    </div>
+  </section>
+      <section class="section feature-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="feature.heading" data-scan>Stockage, partage et sauvegarde</h2></div>
+        <div class="features-grid">
+    <article class="feature" data-reveal>
+      <h3 data-copy="feature.0">Stockage des fichiers</h3><p data-copy="feature.body.0">Organisez vos documents dans un espace adapté à leur usage.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.1">Accès et partage</h3><p data-copy="feature.body.1">Définissez les personnes qui peuvent consulter ou modifier les fichiers.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.2">Sauvegardes</h3><p data-copy="feature.body.2">Identifiez ce qui doit être sauvegardé et préparez une méthode de restauration.</p>
+    </article>
+  </div>
+      </div></section>
+      <section class="section detail-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="detail.title" data-scan>Des fichiers organisés et des accès clairs.</h2></div>
+        <ol class="detail-rows">
+    <li data-reveal>
+      <span class="detail-index" aria-hidden="true">01</span>
+      <h3 data-copy="detail.0">Faire l’inventaire</h3>
+      <p data-copy="detail.body.0">Repérez les dossiers, leurs emplacements et les personnes qui les utilisent.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">02</span>
+      <h3 data-copy="detail.1">Structurer le partage</h3>
+      <p data-copy="detail.body.1">Distinguez les dossiers personnels, partagés et destinés aux invités.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">03</span>
+      <h3 data-copy="detail.2">Préparer une restauration</h3>
+      <p data-copy="detail.body.2">Définissez quoi récupérer en priorité si un fichier est perdu.</p>
+    </li>
+  </ol>
+      </div></section>
+      <section class="section faq-section"><div class="wrap faq-layout">
+    <h2 data-copy="faq.title" data-scan>Questions fréquentes</h2>
+    <div class="faq-list"><details>
+      <summary><span data-copy="faq.q.0">Puis-je garder mon espace de stockage actuel ?</span><span aria-hidden="true">+</span></summary>
+      <p data-copy="faq.a.0">On commence par examiner vos outils et vos besoins. L’espace actuel peut être conservé s’il permet le partage et les sauvegardes dont vous avez besoin.</p>
+    </details></div>
+  </div></section>
+      <div class="wrap related-links">
+        <a class="text-link" href="../security/index.html"><span data-copy="service.related">Solutions informatiques</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        <a class="text-link" href="../projects.html"><span data-copy="service.all">Toutes les expertises</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div><section class="contact-section contact-close"><div class="wrap">
+    <a class="contact-row" href="../contact.html?service=privacy#contact-form">
+      <div class="contact-row-copy">
+        <h2 data-copy="cta.title" data-scan>Écrire à Zybo</h2>
+        <span data-copy="cta.lead">Une demande, un site à revoir ou une question technique.</span>
+      </div>
+      <span class="contact-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+    </a>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
+          <p data-copy="footer.about">Création web et solutions digitales.</p></div>
+        <div class="footer-links">
+          <a class="" href="../devops/index.html"><span data-copy="service.web">Création web</span></a>
+<a class="" href="../applications/index.html"><span data-copy="service.apps">Applications</span></a>
+<a class="" href="../automatisation/index.html"><span data-copy="service.automation">Automatisation</span></a>
+<a class="" href="../security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
+<a class="" href="../confidentialite/index.html"><span data-copy="service.privacy">Confidentialité et stockage</span></a>
+<a class="" href="../gestion-personnelle/index.html"><span data-copy="service.management">Gestion personnelle</span></a>
+        </div>
+        <div class="footer-links">
+          <a class="" href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+          <a class="" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+          <a class="" href="../lab/monitoring.html"><span data-copy="nav.monitor">Monitoring</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© Zybo</span><a class="" href="../server-status.html"><span data-copy="nav.status">État des services</span></a></div>
+    </div>
+  </footer>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.apps":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"service.automation":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.privacy":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"service.management":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"example.label":{"fr":"Exemple d’usage","nl":"Praktijkvoorbeeld","en":"Example use case"},"example.privacy.title":{"fr":"Dossiers partagés avec des clients","nl":"Mappen delen met klanten","en":"Folders shared with clients"},"example.privacy.name.0":{"fr":"Dossier interne","nl":"Interne map","en":"Internal folder"},"example.privacy.details.0":{"fr":"Accès réservé à l’équipe","nl":"Alleen toegankelijk voor het team","en":"Access for the team only"},"example.privacy.name.1":{"fr":"Dossier client","nl":"Klantmap","en":"Client folder"},"example.privacy.details.1":{"fr":"Les fichiers que le client peut consulter","nl":"De bestanden die de klant kan bekijken","en":"Files the client can view"},"example.privacy.name.2":{"fr":"Sauvegarde","nl":"Back-up","en":"Backup"},"example.privacy.details.2":{"fr":"Une copie et une méthode pour la restaurer","nl":"Een kopie en een manier om die terug te zetten","en":"A copy and a way to restore it"},"service.start":{"fr":"Nous contacter","nl":"Neem contact op","en":"Get in touch"},"page.label":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"page.headline":{"fr":"Gardez la maîtrise de vos fichiers et de vos accès.","nl":"Houd controle over uw bestanden en toegangsrechten.","en":"Stay in control of your files and access."},"page.intro":{"fr":"Clarifiez où sont stockées vos données, qui peut y accéder et comment récupérer les fichiers qui comptent pour vous.","nl":"Maak duidelijk waar uw gegevens staan, wie erbij kan en hoe u belangrijke bestanden terughaalt.","en":"Clarify where your data is stored, who can access it and how you can recover important files."},"feature.heading":{"fr":"Stockage, partage et sauvegarde","nl":"Opslag, delen en back-up","en":"Storage, sharing and backup"},"feature.0":{"fr":"Stockage des fichiers","nl":"Bestandsopslag","en":"File storage"},"feature.body.0":{"fr":"Organisez vos documents dans un espace adapté à leur usage.","nl":"Organiseer documenten in een omgeving die bij het gebruik past.","en":"Organise your documents in a space suited to how they are used."},"feature.1":{"fr":"Accès et partage","nl":"Toegang en delen","en":"Access and sharing"},"feature.body.1":{"fr":"Définissez les personnes qui peuvent consulter ou modifier les fichiers.","nl":"Bepaal wie bestanden mag bekijken of bewerken.","en":"Define who can view or edit files."},"feature.2":{"fr":"Sauvegardes","nl":"Back-ups","en":"Backups"},"feature.body.2":{"fr":"Identifiez ce qui doit être sauvegardé et préparez une méthode de restauration.","nl":"Bepaal wat u moet back-uppen en hoe u het terugzet.","en":"Identify what needs backing up and plan how to restore it."},"detail.title":{"fr":"Des fichiers organisés et des accès clairs.","nl":"Geordende bestanden en duidelijke toegang.","en":"Organised files and clear access."},"detail.0":{"fr":"Faire l’inventaire","nl":"Inventaris maken","en":"Take inventory"},"detail.body.0":{"fr":"Repérez les dossiers, leurs emplacements et les personnes qui les utilisent.","nl":"Breng mappen, locaties en gebruikers in kaart.","en":"Identify your folders, their locations and who uses them."},"detail.1":{"fr":"Structurer le partage","nl":"Delen organiseren","en":"Organise sharing"},"detail.body.1":{"fr":"Distinguez les dossiers personnels, partagés et destinés aux invités.","nl":"Maak onderscheid tussen persoonlijke, gedeelde en gastmappen.","en":"Separate personal, shared and guest folders."},"detail.2":{"fr":"Préparer une restauration","nl":"Herstel voorbereiden","en":"Plan a restore"},"detail.body.2":{"fr":"Définissez quoi récupérer en priorité si un fichier est perdu.","nl":"Bepaal wat u eerst wilt herstellen als een bestand verloren gaat.","en":"Decide what to recover first if a file is lost."},"faq.title":{"fr":"Questions fréquentes","nl":"Veelgestelde vragen","en":"Frequently asked questions"},"faq.q.0":{"fr":"Puis-je garder mon espace de stockage actuel ?","nl":"Kan ik mijn huidige opslagruimte behouden?","en":"Can I keep my current storage service?"},"faq.a.0":{"fr":"On commence par examiner vos outils et vos besoins. L’espace actuel peut être conservé s’il permet le partage et les sauvegardes dont vous avez besoin.","nl":"We bekijken eerst uw tools en behoeften. U kunt uw huidige opslag behouden als die het nodige delen en back-uppen ondersteunt.","en":"We review your tools and needs first. You can keep your current storage if it supports the sharing and backups you need."},"service.related":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.all":{"fr":"Toutes les expertises","nl":"Alle diensten","en":"All services"},"cta.title":{"fr":"Écrire à Zybo","nl":"Schrijf Zybo","en":"Write to Zybo"},"cta.lead":{"fr":"Une demande, un site à revoir ou une question technique.","nl":"Een aanvraag, een website om te vernieuwen of een technische vraag.","en":"An enquiry, a site to update or a technical question."},"meta.title":{"fr":"Confidentialité et stockage · Zybo","nl":"Privacy en opslag · Zybo","en":"Privacy and storage · Zybo"},"meta.description":{"fr":"Organisation du stockage, du partage et des sauvegardes.","nl":"Organisatie van opslag, delen en back-ups.","en":"Organisation of storage, sharing and backups."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
+</body>
+</html>

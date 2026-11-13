@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101329">
+  <title>Gestion personnelle · Zybo</title>
+  <meta name="description" content="Des outils pour organiser vos tâches, agendas et documents.">
+  <link rel="canonical" href="https://zybo.be/gestion-personnelle/">
+  <link rel="icon" href="../assets/logo-zybo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/studio.css">
+  <link rel="stylesheet" href="../assets/pages.css">
+  <script src="../assets/site.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/experience.js" defer></script>
+</head>
+<body data-page="management">
+  <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navigation principale">
+        <a href="../projects.html" aria-current="true"><span data-copy="nav.expertise">Expertises</span></a>
+        <a href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+        <a class="mobile-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+      </nav>
+      <div class="nav-actions">
+        <details class="languages">
+          <summary aria-label="Langue / Taal / Language"><span data-current-lang>FR</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" fill-rule="evenodd"/></svg></summary>
+          <div class="language-list">
+            <button type="button" data-language="fr" lang="fr" aria-pressed="true">Français</button>
+            <button type="button" data-language="nl" lang="nl" aria-pressed="false">Nederlands</button>
+            <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
+          </div>
+        </details>
+        <a class="nav-contact" href="../contact.html"><span data-copy="nav.contact">Contact</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><section class="page-hero">
+    <div class="wrap page-hero-inner split-hero">
+      <div class="page-hero-copy">
+        <p data-copy="page.label" class="eyebrow">Gestion personnelle</p>
+        <h1 data-copy="page.headline" data-scan>Retrouvez vos priorités au même endroit.</h1>
+        <p data-copy="page.intro" class="page-intro">Créez un espace de travail adapté à vos habitudes pour voir ce qui est prévu, retrouver vos notes et suivre ce qui reste à faire.</p>
+        <a class="button button-primary" href="../contact.html?service=management#contact-form"><span data-copy="service.start">Nous contacter</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div>
+      <figure class="service-example">
+      <figcaption>
+        <span class="example-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 1h14v14H1zm1 1v12h12V2zm1 4 .7-.7.8.8 1.8-2 .7.7-2.5 2.8zM8 5h4v1H8zm-5 6 .7-.7.8.8 1.8-2 .7.7-2.5 2.8zM8 10h4v1H8z" fill-rule="evenodd"/></svg></span>
+        <span>
+          <span data-copy="example.label" class="example-label">Exemple d’usage</span>
+          <strong data-copy="example.management.title">Organisation d’un indépendant</strong>
+        </span>
+      </figcaption>
+      <dl>
+        <div>
+          <dt data-copy="example.management.name.0">Aujourd’hui</dt>
+          <dd data-copy="example.management.details.0">Préparer les devis à envoyer</dd>
+        </div>
+        <div>
+          <dt data-copy="example.management.name.1">Cette semaine</dt>
+          <dd data-copy="example.management.details.1">Voir les rendez-vous et échéances</dd>
+        </div>
+        <div>
+          <dt data-copy="example.management.name.2">Par projet</dt>
+          <dd data-copy="example.management.details.2">Retrouver les notes et les documents</dd>
+        </div>
+      </dl>
+    </figure>
+    </div>
+  </section>
+      <section class="section feature-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="feature.heading" data-scan>Tâches, agenda et documents</h2></div>
+        <div class="features-grid">
+    <article class="feature" data-reveal>
+      <h3 data-copy="feature.0">Tâches et priorités</h3><p data-copy="feature.body.0">Identifiez ce qui est à faire et retrouvez la prochaine action de chaque projet.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.1">Agendas et échéances</h3><p data-copy="feature.body.1">Rassemblez les dates importantes et associez des rappels aux échéances utiles.</p>
+    </article>
+<article class="feature" data-reveal>
+      <h3 data-copy="feature.2">Notes et documents</h3><p data-copy="feature.body.2">Classez les informations que vous voulez pouvoir retrouver facilement.</p>
+    </article>
+  </div>
+      </div></section>
+      <section class="section detail-section"><div class="wrap">
+        <div class="section-head"><h2 data-copy="detail.title" data-scan>Un espace adapté à votre quotidien.</h2></div>
+        <ol class="detail-rows">
+    <li data-reveal>
+      <span class="detail-index" aria-hidden="true">01</span>
+      <h3 data-copy="detail.0">Voir les prochaines actions</h3>
+      <p data-copy="detail.body.0">Présentez les tâches à venir par projet ou par échéance.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">02</span>
+      <h3 data-copy="detail.1">Préparer la semaine</h3>
+      <p data-copy="detail.body.1">Regroupez les rendez-vous, les rappels et les échéances importantes.</p>
+    </li><li data-reveal>
+      <span class="detail-index" aria-hidden="true">03</span>
+      <h3 data-copy="detail.2">Retrouver ses informations</h3>
+      <p data-copy="detail.body.2">Reliez les notes et fichiers utiles aux projets auxquels ils appartiennent.</p>
+    </li>
+  </ol>
+      </div></section>
+      <section class="section faq-section"><div class="wrap faq-layout">
+    <h2 data-copy="faq.title" data-scan>Questions fréquentes</h2>
+    <div class="faq-list"><details>
+      <summary><span data-copy="faq.q.0">Dois-je changer d’agenda ou de liste de tâches ?</span><span aria-hidden="true">+</span></summary>
+      <p data-copy="faq.a.0">On part des outils que vous utilisez déjà et des habitudes qui vous conviennent.</p>
+    </details></div>
+  </div></section>
+      <div class="wrap related-links">
+        <a class="text-link" href="../automatisation/index.html"><span data-copy="service.related">Automatisation</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+        <a class="text-link" href="../projects.html"><span data-copy="service.all">Toutes les expertises</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
+      </div><section class="contact-section contact-close"><div class="wrap">
+    <a class="contact-row" href="../contact.html?service=management#contact-form">
+      <div class="contact-row-copy">
+        <h2 data-copy="cta.title" data-scan>Écrire à Zybo</h2>
+        <span data-copy="cta.lead">Une demande, un site à revoir ou une question technique.</span>
+      </div>
+      <span class="contact-arrow"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></span>
+    </a>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="../index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="../assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="../assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
+          <p data-copy="footer.about">Création web et solutions digitales.</p></div>
+        <div class="footer-links">
+          <a class="" href="../devops/index.html"><span data-copy="service.web">Création web</span></a>
+<a class="" href="../applications/index.html"><span data-copy="service.apps">Applications</span></a>
+<a class="" href="../automatisation/index.html"><span data-copy="service.automation">Automatisation</span></a>
+<a class="" href="../security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
+<a class="" href="../confidentialite/index.html"><span data-copy="service.privacy">Confidentialité et stockage</span></a>
+<a class="" href="../gestion-personnelle/index.html"><span data-copy="service.management">Gestion personnelle</span></a>
+        </div>
+        <div class="footer-links">
+          <a class="" href="../lab/index.html"><span data-copy="nav.method">Méthode</span></a>
+          <a class="" href="../contact.html"><span data-copy="nav.contact">Contact</span></a>
+          <a class="" href="../lab/monitoring.html"><span data-copy="nav.monitor">Monitoring</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© Zybo</span><a class="" href="../server-status.html"><span data-copy="nav.status">État des services</span></a></div>
+    </div>
+  </footer>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.apps":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"service.automation":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.privacy":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"service.management":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"example.label":{"fr":"Exemple d’usage","nl":"Praktijkvoorbeeld","en":"Example use case"},"example.management.title":{"fr":"Organisation d’un indépendant","nl":"Planning voor een zelfstandige","en":"A freelancer’s workspace"},"example.management.name.0":{"fr":"Aujourd’hui","nl":"Vandaag","en":"Today"},"example.management.details.0":{"fr":"Préparer les devis à envoyer","nl":"Te versturen offertes voorbereiden","en":"Prepare the quotes to send"},"example.management.name.1":{"fr":"Cette semaine","nl":"Deze week","en":"This week"},"example.management.details.1":{"fr":"Voir les rendez-vous et échéances","nl":"Afspraken en deadlines bekijken","en":"See appointments and deadlines"},"example.management.name.2":{"fr":"Par projet","nl":"Per project","en":"By project"},"example.management.details.2":{"fr":"Retrouver les notes et les documents","nl":"Notities en documenten terugvinden","en":"Find notes and documents"},"service.start":{"fr":"Nous contacter","nl":"Neem contact op","en":"Get in touch"},"page.label":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"page.headline":{"fr":"Retrouvez vos priorités au même endroit.","nl":"Vind uw prioriteiten op één plek.","en":"Find your priorities in one place."},"page.intro":{"fr":"Créez un espace de travail adapté à vos habitudes pour voir ce qui est prévu, retrouver vos notes et suivre ce qui reste à faire.","nl":"Maak een werkruimte die bij uw gewoontes past en waarin u afspraken, notities en openstaande taken terugvindt.","en":"Create a workspace that fits your habits, with a clear view of your plans, notes and outstanding tasks."},"feature.heading":{"fr":"Tâches, agenda et documents","nl":"Taken, agenda en documenten","en":"Tasks, calendar and documents"},"feature.0":{"fr":"Tâches et priorités","nl":"Taken en prioriteiten","en":"Tasks and priorities"},"feature.body.0":{"fr":"Identifiez ce qui est à faire et retrouvez la prochaine action de chaque projet.","nl":"Zie wat er moet gebeuren en vind de volgende stap voor elk project.","en":"See what needs doing and find the next action for each project."},"feature.1":{"fr":"Agendas et échéances","nl":"Agenda’s en deadlines","en":"Calendars and deadlines"},"feature.body.1":{"fr":"Rassemblez les dates importantes et associez des rappels aux échéances utiles.","nl":"Bundel belangrijke data en koppel herinneringen aan relevante deadlines.","en":"Bring important dates together and attach reminders to relevant deadlines."},"feature.2":{"fr":"Notes et documents","nl":"Notities en documenten","en":"Notes and documents"},"feature.body.2":{"fr":"Classez les informations que vous voulez pouvoir retrouver facilement.","nl":"Orden informatie die u makkelijk wilt terugvinden.","en":"Organise the information you want to find easily."},"detail.title":{"fr":"Un espace adapté à votre quotidien.","nl":"Een ruimte die bij uw dagelijkse werk past.","en":"A workspace for your daily routine."},"detail.0":{"fr":"Voir les prochaines actions","nl":"Volgende stappen zien","en":"See what’s next"},"detail.body.0":{"fr":"Présentez les tâches à venir par projet ou par échéance.","nl":"Bekijk komende taken per project of deadline.","en":"See upcoming tasks by project or deadline."},"detail.1":{"fr":"Préparer la semaine","nl":"De week voorbereiden","en":"Plan the week"},"detail.body.1":{"fr":"Regroupez les rendez-vous, les rappels et les échéances importantes.","nl":"Bundel afspraken, herinneringen en belangrijke deadlines.","en":"Bring appointments, reminders and important deadlines together."},"detail.2":{"fr":"Retrouver ses informations","nl":"Informatie terugvinden","en":"Find your information"},"detail.body.2":{"fr":"Reliez les notes et fichiers utiles aux projets auxquels ils appartiennent.","nl":"Koppel notities en bestanden aan de juiste projecten.","en":"Link useful notes and files to the projects they belong to."},"faq.title":{"fr":"Questions fréquentes","nl":"Veelgestelde vragen","en":"Frequently asked questions"},"faq.q.0":{"fr":"Dois-je changer d’agenda ou de liste de tâches ?","nl":"Moet ik van agenda of takenlijst veranderen?","en":"Do I need a new calendar or task list?"},"faq.a.0":{"fr":"On part des outils que vous utilisez déjà et des habitudes qui vous conviennent.","nl":"We vertrekken van de tools die u al gebruikt en de gewoontes die voor u werken.","en":"We start with the tools you already use and the habits that work for you."},"service.related":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.all":{"fr":"Toutes les expertises","nl":"Alle diensten","en":"All services"},"cta.title":{"fr":"Écrire à Zybo","nl":"Schrijf Zybo","en":"Write to Zybo"},"cta.lead":{"fr":"Une demande, un site à revoir ou une question technique.","nl":"Een aanvraag, een website om te vernieuwen of een technische vraag.","en":"An enquiry, a site to update or a technical question."},"meta.title":{"fr":"Gestion personnelle · Zybo","nl":"Persoonlijke organisatie · Zybo","en":"Personal organisation · Zybo"},"meta.description":{"fr":"Des outils pour organiser vos tâches, agendas et documents.","nl":"Tools voor uw taken, agenda’s en documenten.","en":"Tools for organising tasks, calendars and documents."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
+</body>
+</html>

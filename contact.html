@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080d20">
+  <meta name="theme-color" content="#101329">
   <title>Contact · Zybo</title>
-  <meta name="description" content="Contactez Zybo pour discuter d’une création de site, d’une refonte, de votre visibilité, de vos outils ou d’une présentation immobilière.">
+  <meta name="description" content="Un site à créer, une application à développer ou une tâche à automatiser. Dites-nous ce dont vous avez besoin.">
   <link rel="canonical" href="https://zybo.be/contact.html">
   <link rel="icon" href="./assets/logo-zybo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +13,24 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400..700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/studio.css">
+  <link rel="stylesheet" href="./assets/pages.css">
   <script src="./assets/site.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="./assets/experience.js" defer></script>
+  <script src="./assets/globe.js" defer></script>
 </head>
 <body data-page="contact">
   <a class="skip-link visually-hidden-focusable" href="#main"><span data-copy="skip">Aller au contenu</span></a>
   <header class="site-header">
     <div class="wrap nav-shell">
-      <a class="brand" href="./index.html" aria-label="Zybo"><img src="./assets/logo-zybo.png" alt="" width="500" height="500"></a>
+      <a class="brand" href="./index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="./assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="./assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
       <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
         <span class="menu-lines" aria-hidden="true"></span><span data-copy="menu">Menu</span>
       </button>
@@ -41,47 +52,66 @@
       </div>
     </div>
   </header>
-  <main id="main" tabindex="-1"><section class="page-hero">
-    <div class="wrap page-hero-inner">
-      <div class="page-hero-copy">
-        <p data-copy="page.label" class="eyebrow">Contact</p>
-        <h1 data-copy="page.headline">Parlons de votre projet</h1>
-        <p data-copy="page.intro" class="page-intro">Contactez Zybo pour discuter d’une création de site, d’une refonte, de votre visibilité, de vos outils ou d’une présentation immobilière.</p>
-      </div>
+  <main id="main" tabindex="-1"><section class="contact-stage" aria-labelledby="contact-title">
+      <div class="wrap contact-layout">
+        <div class="contact-intro">
+          <p data-copy="page.label" class="eyebrow">Contact</p>
+          <h1 data-copy="page.headline" id="contact-title" data-scan>Écrivez-nous.</h1>
+          <p data-copy="page.intro">Un site à créer, une application à développer ou une tâche à automatiser. Dites-nous ce dont vous avez besoin.</p>
+          <div class="contact-globe" aria-hidden="true">
+    <div class="hero-art-image" data-globe>
+      <img class="hero-poster" src="./assets/media/zybo-globe.webp" width="900" height="790" alt="" fetchpriority="low">
+      <img class="moon-texture" src="./assets/media/zybo-moon.webp" width="256" height="256" alt="" decoding="async" fetchpriority="low" hidden>
+      <canvas class="hero-globe"></canvas>
     </div>
-  </section>
-      <section class="section form-section"><div class="wrap contact-layout">
-        <aside class="contact-aside">
-          <h2 data-copy="contact.aside">Sur quoi pouvons-nous vous aider ?</h2>
-          <div class="contact-services">
-            <a href="./devops/index.html"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5V5h14v-.5A1.5 1.5 0 0 0 13.5 3zM15 6H1v5.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5zM0 4.5A2.5 2.5 0 0 1 2.5 2h11A2.5 2.5 0 0 1 16 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 11.5z" fill-rule="evenodd"/></svg><span data-copy="service.web">Création web</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
-<a href="./marketing/index.html"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M0 0h1v14h15v1H0zm3 8h2v4H3zm4-3h2v7H7zm4-4h2v11h-2z" fill-rule="evenodd"/></svg><span data-copy="service.visibility">Visibilité digitale</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
-<a href="./security/index.html"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 0h1v2h1.5V0h1v2H10V0h1v2h1a2 2 0 0 1 2 2v1h2v1h-2v1.5h2v1h-2V10h2v1h-2v1a2 2 0 0 1-2 2h-1v2h-1v-2H8.5v2h-1v-2H6v2H5v-2H4a2 2 0 0 1-2-2v-1H0v-1h2V8.5H0v-1h2V6H0V5h2V4a2 2 0 0 1 2-2h1zM4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm1 2h6v6H5zm1 1v4h4V6z" fill-rule="evenodd"/></svg><span data-copy="service.it">Solutions informatiques</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
-<a href="./legal/index.html"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 2h8v4h6v9H1zm1 1v11h3v-3h2v3h1V3zm7 4v7h5V7zM3 4h1v2H3zm3 0h1v2H6zM3 7h1v2H3zm3 0h1v2H6zm4 1h1v2h-1zm2 0h1v2h-1z" fill-rule="evenodd"/></svg><span data-copy="service.estate">Présentation immobilière</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></a>
-          </div>
-        </aside>
+  </div>
+        </div>
         <form class="contact-form" id="contact-form" action="https://formspree.io/f/xblzdnaj" method="post">
-          <h2 data-copy="contact.form">Décrivez votre projet</h2>
+          <h2 data-copy="contact.form">Votre message</h2>
+          <fieldset class="contact-topics" hidden>
+            <legend data-copy="contact.topics">Choisir un sujet</legend>
+            <div><button type="button" data-contact-topic="web" aria-pressed="false"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5V5h14v-.5A1.5 1.5 0 0 0 13.5 3zM15 6H1v5.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5zM0 4.5A2.5 2.5 0 0 1 2.5 2h11A2.5 2.5 0 0 1 16 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 11.5z" fill-rule="evenodd"/></svg><span data-copy="service.web">Création web</span></button><button type="button" data-contact-topic="apps" aria-pressed="false"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2 1h4v6H2zm1 1v4h2V2zm5-1h6v4H8zm1 1v2h4V2zm-1 5h6v8H8zm1 1v6h4V8zM2 9h4v6H2zm1 1v4h2v-4z" fill-rule="evenodd"/></svg><span data-copy="service.apps">Applications</span></button><button type="button" data-contact-topic="automation" aria-pressed="false"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 1h5v4H4v2.5h8V10h-1V8.5H4V11h2v4H1v-4h2V5H1zm1 1v2h3V2zm0 10v2h3v-2zm8-1h5v4h-5zm1 1v2h3v-2z" fill-rule="evenodd"/></svg><span data-copy="service.automation">Automatisation</span></button><button type="button" data-contact-topic="it" aria-pressed="false"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 2h14v1H1zm0 5h14v1H1zm0 5h14v1H1zM4 1h2v3H4zm6 5h2v3h-2zm-5 5h2v3H5z" fill-rule="evenodd"/></svg><span data-copy="service.it">Solutions informatiques</span></button><button type="button" data-contact-topic="privacy" aria-pressed="false"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 6V4a3 3 0 1 1 6 0v2h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1 0h4V4a2 2 0 0 0-4 0zM4 7v7h8V7zm3.5 2h1v3h-1z" fill-rule="evenodd"/></svg><span data-copy="service.privacy">Confidentialité et stockage</span></button><button type="button" data-contact-topic="management" aria-pressed="false"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 1h14v14H1zm1 1v12h12V2zm1 4 .7-.7.8.8 1.8-2 .7.7-2.5 2.8zM8 5h4v1H8zm-5 6 .7-.7.8.8 1.8-2 .7.7-2.5 2.8zM8 10h4v1H8z" fill-rule="evenodd"/></svg><span data-copy="service.management">Gestion personnelle</span></button></div>
+          </fieldset>
           <div class="form-row">
             <div><label for="name"><span data-copy="form.name">Nom</span></label><input id="name" name="name" autocomplete="name" required maxlength="120"></div>
             <div><label for="email"><span data-copy="form.email">Adresse e-mail</span></label><input id="email" type="email" name="email" autocomplete="email" required maxlength="254"></div>
           </div>
           <div><label for="subject"><span data-copy="form.subject">Sujet</span></label><input id="subject" name="subject" required maxlength="160"></div>
-          <div><label for="message"><span data-copy="form.message">Message</span></label><textarea id="message" name="message" rows="6" required maxlength="6000"></textarea></div>
+          <div><label for="message"><span data-copy="form.message">Message</span></label><textarea id="message" name="message" rows="4" required maxlength="6000" aria-describedby="contact-message-tip"></textarea>
+            <p data-copy="contact.tip" id="contact-message-tip">Décrivez ce que vous aimeriez améliorer. Ajoutez le lien de votre site ou le nom de l’outil que vous utilisez, si cela aide à comprendre votre demande.</p>
+          </div>
           <button class="button button-primary" type="submit"><span data-copy="form.submit">Envoyer le message</span><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 2.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0 0 1h6.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V10.5a.5.5 0 0 0 1 0z" fill-rule="evenodd"/></svg></button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
-      </div></section></main>
+      </div>
+    </section>
+    <section class="section faq-section"><div class="wrap faq-layout">
+    <h2 data-copy="faq.title" data-scan>Questions fréquentes</h2>
+    <div class="faq-list"><details>
+      <summary><span data-copy="faq.q.0">Que préparer avant de commencer ?</span><span aria-hidden="true">+</span></summary>
+      <p data-copy="faq.a.0">Une liste de vos services, vos coordonnées et, si vous en avez, votre logo, vos photos et l’adresse du site actuel.</p>
+    </details><details>
+      <summary><span data-copy="faq.q.1">Puis-je conserver mon nom de domaine ?</span><span aria-hidden="true">+</span></summary>
+      <p data-copy="faq.a.1">Oui. Lors d’une refonte, le domaine peut rester chez son fournisseur actuel. On prépare la bascule vers le nouvel hébergement et on vérifie les réglages liés à la messagerie.</p>
+    </details></div>
+  </div></section></main>
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-main">
-        <div><a class="brand" href="./index.html" aria-label="Zybo"><img src="./assets/logo-zybo.png" alt="" width="500" height="500"></a>
+        <div><a class="brand" href="./index.html" aria-label="Zybo"><span class="wordmark" aria-hidden="true">
+    <span class="wordmark-bar wordmark-bar-top"></span>
+    <span class="wordmark-bar wordmark-bar-bottom"></span>
+    <span class="wordmark-letters wordmark-zy"><img src="./assets/logo-zy.png" alt="" width="88" height="42"></span>
+    <span class="wordmark-letters wordmark-bo"><img src="./assets/logo-bo.png" alt="" width="96" height="43"></span>
+  </span></a>
           <p data-copy="footer.about">Création web et solutions digitales.</p></div>
         <div class="footer-links">
           <a class="" href="./devops/index.html"><span data-copy="service.web">Création web</span></a>
-<a class="" href="./marketing/index.html"><span data-copy="service.visibility">Visibilité digitale</span></a>
+<a class="" href="./applications/index.html"><span data-copy="service.apps">Applications</span></a>
+<a class="" href="./automatisation/index.html"><span data-copy="service.automation">Automatisation</span></a>
 <a class="" href="./security/index.html"><span data-copy="service.it">Solutions informatiques</span></a>
-<a class="" href="./legal/index.html"><span data-copy="service.estate">Présentation immobilière</span></a>
+<a class="" href="./confidentialite/index.html"><span data-copy="service.privacy">Confidentialité et stockage</span></a>
+<a class="" href="./gestion-personnelle/index.html"><span data-copy="service.management">Gestion personnelle</span></a>
         </div>
         <div class="footer-links">
           <a class="" href="./lab/index.html"><span data-copy="nav.method">Méthode</span></a>
@@ -92,6 +122,6 @@
       <div class="footer-bottom"><span>© Zybo</span><a class="" href="./server-status.html"><span data-copy="nav.status">État des services</span></a></div>
     </div>
   </footer>
-  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.visibility":{"fr":"Visibilité digitale","nl":"Digitale zichtbaarheid","en":"Digital visibility"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.estate":{"fr":"Présentation immobilière","nl":"Vastgoedpresentatie","en":"Property presentation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.label":{"fr":"Contact","nl":"Contact","en":"Contact"},"page.headline":{"fr":"Parlons de votre projet","nl":"Bespreek uw project","en":"Let’s talk about your project"},"page.intro":{"fr":"Contactez Zybo pour discuter d’une création de site, d’une refonte, de votre visibilité, de vos outils ou d’une présentation immobilière.","nl":"Neem contact op met Zybo over een website, redesign, digitale zichtbaarheid, tools of vastgoedpresentatie.","en":"Contact Zybo to discuss a website, redesign, digital visibility, IT tools or property presentation."},"contact.aside":{"fr":"Sur quoi pouvons-nous vous aider ?","nl":"Waarmee kunnen we u helpen?","en":"What can we help you with?"},"contact.form":{"fr":"Décrivez votre projet","nl":"Beschrijf uw project","en":"Tell us about your project"},"form.name":{"fr":"Nom","nl":"Naam","en":"Name"},"form.email":{"fr":"Adresse e-mail","nl":"E-mailadres","en":"Email address"},"form.subject":{"fr":"Sujet","nl":"Onderwerp","en":"Subject"},"form.message":{"fr":"Message","nl":"Bericht","en":"Message"},"form.submit":{"fr":"Envoyer le message","nl":"Verstuur het bericht","en":"Send message"},"form.sending":{"fr":"Envoi en cours…","nl":"Bezig met verzenden…","en":"Sending…"},"form.sent":{"fr":"Votre message a été envoyé. Merci !","nl":"Uw bericht is verzonden. Bedankt!","en":"Your message has been sent. Thank you!"},"form.error":{"fr":"L’envoi a échoué. Votre message est toujours dans le formulaire. Réessayez dans un instant.","nl":"Verzenden is mislukt. Uw bericht staat nog in het formulier. Probeer het zo opnieuw.","en":"Sending failed. Your message is still in the form. Try again in a moment."},"meta.title":{"fr":"Contact · Zybo","nl":"Contact · Zybo","en":"Contact · Zybo"},"meta.description":{"fr":"Contactez Zybo pour discuter d’une création de site, d’une refonte, de votre visibilité, de vos outils ou d’une présentation immobilière.","nl":"Neem contact op met Zybo over een website, redesign, digitale zichtbaarheid, tools of vastgoedpresentatie.","en":"Contact Zybo to discuss a website, redesign, digital visibility, IT tools or property presentation."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
+  <script type="application/json" id="translations">{"menu":{"fr":"Menu","nl":"Menu","en":"Menu"},"nav.expertise":{"fr":"Expertises","nl":"Expertise","en":"Expertise"},"nav.method":{"fr":"Méthode","nl":"Werkwijze","en":"Process"},"nav.contact":{"fr":"Contact","nl":"Contact","en":"Contact"},"footer.about":{"fr":"Création web et solutions digitales.","nl":"Webdesign en digitale oplossingen.","en":"Web design and digital solutions."},"service.web":{"fr":"Création web","nl":"Webdesign","en":"Web design"},"service.apps":{"fr":"Applications","nl":"Applicaties","en":"Applications"},"service.automation":{"fr":"Automatisation","nl":"Automatisering","en":"Automation"},"service.it":{"fr":"Solutions informatiques","nl":"IT-oplossingen","en":"IT solutions"},"service.privacy":{"fr":"Confidentialité et stockage","nl":"Privacy en opslag","en":"Privacy and storage"},"service.management":{"fr":"Gestion personnelle","nl":"Persoonlijke organisatie","en":"Personal organisation"},"nav.monitor":{"fr":"Monitoring","nl":"Monitoring","en":"Monitoring"},"nav.status":{"fr":"État des services","nl":"Servicestatus","en":"Service status"},"page.label":{"fr":"Contact","nl":"Contact","en":"Contact"},"page.headline":{"fr":"Écrivez-nous.","nl":"Schrijf ons.","en":"Write to us."},"page.intro":{"fr":"Un site à créer, une application à développer ou une tâche à automatiser. Dites-nous ce dont vous avez besoin.","nl":"Een website, een app of een taak om te automatiseren. Vertel ons wat u nodig hebt.","en":"A website, an app or a task to automate. Tell us what you need."},"contact.form":{"fr":"Votre message","nl":"Uw bericht","en":"Your message"},"contact.topics":{"fr":"Choisir un sujet","nl":"Kies een onderwerp","en":"Choose a topic"},"form.name":{"fr":"Nom","nl":"Naam","en":"Name"},"form.email":{"fr":"Adresse e-mail","nl":"E-mailadres","en":"Email address"},"form.subject":{"fr":"Sujet","nl":"Onderwerp","en":"Subject"},"form.message":{"fr":"Message","nl":"Bericht","en":"Message"},"contact.tip":{"fr":"Décrivez ce que vous aimeriez améliorer. Ajoutez le lien de votre site ou le nom de l’outil que vous utilisez, si cela aide à comprendre votre demande.","nl":"Beschrijf wat u wilt verbeteren. Voeg indien nuttig uw webadres toe of noem de tool die u gebruikt.","en":"Describe what you want to improve. Include your website address or the name of the tool you use if it helps explain your request."},"form.submit":{"fr":"Envoyer le message","nl":"Verstuur het bericht","en":"Send message"},"faq.title":{"fr":"Questions fréquentes","nl":"Veelgestelde vragen","en":"Frequently asked questions"},"faq.q.0":{"fr":"Que préparer avant de commencer ?","nl":"Wat bereid ik vooraf voor?","en":"What should I prepare?"},"faq.a.0":{"fr":"Une liste de vos services, vos coordonnées et, si vous en avez, votre logo, vos photos et l’adresse du site actuel.","nl":"Een lijst van uw diensten, uw contactgegevens en eventueel uw logo, foto’s en huidige webadres.","en":"A list of your services and contact details, plus your logo, photos and current website address if you have them."},"faq.q.1":{"fr":"Puis-je conserver mon nom de domaine ?","nl":"Kan ik mijn domeinnaam behouden?","en":"Can I keep my domain name?"},"faq.a.1":{"fr":"Oui. Lors d’une refonte, le domaine peut rester chez son fournisseur actuel. On prépare la bascule vers le nouvel hébergement et on vérifie les réglages liés à la messagerie.","nl":"Ja. Bij een redesign kan het domein bij de huidige provider blijven. We bereiden de overstap naar de nieuwe hosting voor en controleren de e-mailinstellingen.","en":"Yes. Your domain can stay with its current provider. We prepare the move to the new host and check the settings that affect email."},"form.sending":{"fr":"Envoi en cours…","nl":"Bezig met verzenden…","en":"Sending…"},"form.sent":{"fr":"Votre message a été envoyé. Merci !","nl":"Uw bericht is verzonden. Bedankt!","en":"Your message has been sent. Thank you!"},"form.error":{"fr":"L’envoi a échoué. Votre message est toujours dans le formulaire. Réessayez dans un instant.","nl":"Verzenden is mislukt. Uw bericht staat nog in het formulier. Probeer het zo opnieuw.","en":"Sending failed. Your message is still in the form. Try again in a moment."},"meta.title":{"fr":"Contact · Zybo","nl":"Contact · Zybo","en":"Contact · Zybo"},"meta.description":{"fr":"Un site à créer, une application à développer ou une tâche à automatiser. Dites-nous ce dont vous avez besoin.","nl":"Een website, een app of een taak om te automatiseren. Vertel ons wat u nodig hebt.","en":"A website, an app or a task to automate. Tell us what you need."},"skip":{"fr":"Aller au contenu","nl":"Naar de inhoud","en":"Skip to content"}}</script>
 </body>
 </html>
